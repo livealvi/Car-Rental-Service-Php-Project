@@ -13,7 +13,7 @@ function db_connect(){
 }
 
 //Function to close connection to database
-function Dispose($connection) {
+function db_disconnect($connection) {
     $connection -> close();
 }
 
