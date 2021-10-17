@@ -17,4 +17,3 @@ function Dispose($connection) {
     $connection -> close();
 }
 
-?>
