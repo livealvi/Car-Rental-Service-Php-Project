@@ -6,6 +6,7 @@ class Car{
     private $car_model_name;
     private $car_reg_no;
     private $is_available;
+    private $car_img_url;
 
     //default Constructor
     public function __construct()
@@ -15,6 +16,7 @@ class Car{
         $this->car_model_name = "";
         $this->car_reg_no = "";
         $this->is_available = "";
+        $this->car_img_url = "";
     }
 
     //getter and setter methods
@@ -67,5 +69,16 @@ class Car{
     {
         $this->is_available = $is_available;
     }
+
+    public function getCarImgUrl()
+    {
+        return $this->car_img_url;
+    }
+
+    public function setCarImgUrl($car_img_url)
+    {
+        $this->car_img_url = $car_img_url;
+    }
+
 
 }
