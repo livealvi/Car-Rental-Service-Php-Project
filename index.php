@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-<?php
-=======
 <!--Index page/ Landing page-->
 
 <!doctype html>
@@ -38,10 +35,9 @@
         </td>
     </tr>
 </table>
-<!--Home welcome section end
+<!--Home welcome section end-->
 
 <!--Footer inclusion-->
 <?php include 'View/footer.php' ?>
 </body>
 </html>
->>>>>>> Stashed changes

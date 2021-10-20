@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 <!--This is the footer portion for all pages-->
 
 <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#353535">
@@ -24,4 +22,4 @@
         </td>
     </tr>
 </table>
->>>>>>> Stashed changes
+
