@@ -1,3 +1,5 @@
+<!--This is the header and navbar portion for all pages-->
+
 <?php
 if (isset($_SESSION['uname'])) {
 ?>
