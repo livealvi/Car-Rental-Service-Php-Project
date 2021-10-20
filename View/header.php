@@ -14,21 +14,21 @@ if (isset($_SESSION['uname'])) {
                             </font>
                         </td>
                         <td width="30%">&nbsp;</td>
-                        <td><a href="#home">
+                        <td><a href="../index.php">
                                 <font face="arial" color="#ffffff" size="3">
                                     Home
                                 </font></a>
                         </td>
-                        <td><a href="#about">
-                                <font face="arial" color="#ffffff" size="3">
-                                    About
-                                </font></a>
-                        </td>
-                        <td><a href="#contact">
-                                <font face="arial" color="#ffffff" size="3">
-                                    Contact
-                                </font></a>
-                        </td>
+<!--                        <td><a href="#about">-->
+<!--                                <font face="arial" color="#ffffff" size="3">-->
+<!--                                    About-->
+<!--                                </font></a>-->
+<!--                        </td>-->
+<!--                        <td><a href="#contact">-->
+<!--                                <font face="arial" color="#ffffff" size="3">-->
+<!--                                    Contact-->
+<!--                                </font></a>-->
+<!--                        </td>-->
                         <td>
                                 <font face="arial" color="#ffffff" size="3">
                                     Signed in as: <a href=""><?php echo $_SESSION['uname']?></a>
@@ -73,15 +73,21 @@ if (isset($_SESSION['uname'])) {
                                     Contact
                                 </font></a>
                         </td>
-                        <td><a href="#signin">
-                                <font face="arial" color="#ffffff" size="3">
-                                    <button>Sign in</button>
-                                </font></a>
+                        <td><a href="login.php">
+                                <button>
+                                    <font face="arial" color="#000" size="3">
+                                        Sign in
+                                    </font>
+                                </button>
+                            </a>
                         </td>
-                        <td><a href="#register">
-                                <font face="arial" color="#ffffff" size="3">
-                                    <button>Register</button>
-                                </font></a>
+                        <td><a href="register.php">
+                                <button>
+                                    <font face="arial" color="#000" size="3">
+                                        Register
+                                    </font>
+                                </button>
+                            </a>
                         </td>
                     </tr>
                 </table>
