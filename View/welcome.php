@@ -125,7 +125,7 @@
 <!--About section end-->
 
 <!--Contact section start-->
-<form method="post" action="contact_handler.php">
+<form method="post" action="../Controller/contact_handler.php">
 <table border="0" id="contact" width="100%" cellpadding="0" cellspacing="0" bgcolor="#b8e3ff">
     <tr>
         <td>
