@@ -37,17 +37,17 @@
                                         <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#0077b6">
                                             <tr>
                                                 <th width="33%" align="centre">
-                                                    <button type="submit" name="submit" value="login">
+                                                    <button type="submit" name="submit" value="register_employee">
                                                         <font size="5" face="arial">Employee</font>
                                                     </button>
                                                 </th>
                                                 <th width="33%">
-                                                    <button type="submit" name="submit" value="login">
+                                                    <button type="submit" name="submit" value="register_owner">
                                                         <font size="5" face="arial">Car Owner</font>
                                                     </button>
                                                 </th>
                                                 <th width="33%">
-                                                    <button type="submit" name="submit" value="login">
+                                                    <button type="submit" name="submit" value="register_renter">
                                                         <font size="5" face="arial">Renter</font>
                                                     </button>
                                                 </th>
