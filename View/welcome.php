@@ -55,7 +55,7 @@
                 <!-- Heading  End-->
                 <tr>
                     <td width="35%">
-                        <img src="Img/car-rent.jpg" width="100%" alt="car" />
+                        <img src="Common_Image/car-rent.jpg" width="100%" alt="car" />
                     </td>
                     <td width="65%" valign="top">
                         <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
