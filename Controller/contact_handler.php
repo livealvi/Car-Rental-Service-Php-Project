@@ -1,3 +1,3 @@
 <?php
-if(isset($_POST['submit'])) echo 'page reached';
-else echo 'submit empty';
+if(isset($_POST['submit'])) echo 'Contact handler reached';
+else echo 'contact handler not functioning';
