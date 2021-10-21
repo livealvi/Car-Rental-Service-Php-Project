@@ -23,7 +23,7 @@
                     <tr>
                         <td height="160" align="center" valign="middle">
                             <font face="arial" size="6" color=" #000000">
-                                Register
+                                Register As?
                             </font>
                             <hr width="70" color="#000000">
                         </td>
@@ -36,57 +36,21 @@
                                     <td>
                                         <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#0077b6">
                                             <tr>
-                                                <td width="30%">
-                                                    <font face="arial" size="4" color="#ffffff">
-                                                        Email
-                                                    </font>
-
-                                                </td>
-                                                <td width="70%">
-                                                    <input type="text" size="50">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="30%">
-                                                    <font face="arial" size="4" color="#ffffff">
-                                                        Password
-                                                    </font>
-                                                </td>
-                                                <td width="70%">
-                                                    <input type="password" size="50">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="30%">
-
-                                                </td>
-                                                <td width="70%">
-                                                    <font size="3" face="arial">
-                                                        <input type="checkbox" name="remember" value="yes">Remember me
-                                                    </font>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="30%">
-                                                    &nbsp;
-                                                </td>
-                                                <td width="70%">
-                                                    <font size="3" face="arial">Don't have an account?</font>
-                                                    &nbsp;
-                                                    <a href="register.php">
-                                                        <font size="3" face="arial" color="#a9a9a9">Register</font>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="30%">
-                                                    &nbsp;
-                                                </td>
-                                                <td width="70%">
+                                                <th width="33%" align="centre">
                                                     <button type="submit" name="submit" value="login">
-                                                        <font size="5" face="arial">Log in</font>
+                                                        <font size="5" face="arial">Employee</font>
                                                     </button>
-                                                </td>
+                                                </th>
+                                                <th width="33%">
+                                                    <button type="submit" name="submit" value="login">
+                                                        <font size="5" face="arial">Car Owner</font>
+                                                    </button>
+                                                </th>
+                                                <th width="33%">
+                                                    <button type="submit" name="submit" value="login">
+                                                        <font size="5" face="arial">Renter</font>
+                                                    </button>
+                                                </th>
                                             </tr>
                                         </table>
                                     </td>
