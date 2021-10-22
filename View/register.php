@@ -15,62 +15,66 @@
 <?php include 'header.php' ?>
 
 <!--Login section start-->
-<form method="post" action="../Controller/login_handler.php">
-    <table border="0" id="contact" width="100%" cellpadding="0" cellspacing="0" bgcolor="#b8e3ff">
-        <tr>
-            <td>
-                <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
-                    <!-- Heading Start-->
-                    <tr>
-                        <td height="160" align="center" valign="middle">
-                            <font face="arial" size="6" color=" #000000">
-                                Register As?
-                            </font>
-                            <hr width="70" color="#000000">
-                        </td>
-                    </tr>
-                    <!-- Heading  End-->
-                    <tr>
-                        <td align="center" valign="top">
-                            <table border="0" width="55%" cellpadding="20" cellspacing="0" align="center" bgcolor="#0077b6">
-                                <tr>
-                                    <td>
-                                        <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#0077b6">
-                                            <tr>
-                                                <th width="33%" align="centre">
-                                                    <button type="submit" name="submit" value="register_employee">
+<table border="0" id="contact" width="100%" cellpadding="0" cellspacing="0" bgcolor="#b8e3ff">
+    <tr>
+        <td>
+            <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
+                <!-- Heading Start-->
+                <tr>
+                    <td height="160" align="center" valign="middle">
+                        <font face="arial" size="6" color=" #000000">
+                            Register As?
+                        </font>
+                        <hr width="70" color="#000000">
+                    </td>
+                </tr>
+                <!-- Heading  End-->
+                <tr>
+                    <td align="center" valign="top">
+                        <table border="0" width="55%" cellpadding="20" cellspacing="0" align="center" bgcolor="#0077b6">
+                            <tr>
+                                <td>
+                                    <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#0077b6">
+                                        <tr>
+                                            <th width="33%" align="centre">
+                                                <a href="login.php">
+                                                    <button>
                                                         <font size="5" face="arial">Employee</font>
                                                     </button>
-                                                </th>
-                                                <th width="33%">
-                                                    <button type="submit" name="submit" value="register_owner">
+                                                </a>
+                                            </th>
+                                            <th width="33%">
+                                                <a href="login.php">
+                                                    <button>
                                                         <font size="5" face="arial">Car Owner</font>
                                                     </button>
-                                                </th>
-                                                <th width="33%">
-                                                    <button type="submit" name="submit" value="register_renter">
+                                                </a>
+                                            </th>
+                                            <th width="33%">
+                                                <a href="login.php">
+                                                    <button>
                                                         <font size="5" face="arial">Renter</font>
                                                     </button>
-                                                </th>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <!-- section padding bottom -->
-                    <tr>
-                        <td height="60">
+                                                </a>
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- section padding bottom -->
+                <tr>
+                    <td height="60">
 
-                        </td>
-                    </tr>
-                    <!-- section padding bottom End-->
-                </table>
-            </td>
-        </tr>
-    </table>
-</form>
+                    </td>
+                </tr>
+                <!-- section padding bottom End-->
+            </table>
+        </td>
+    </tr>
+</table>
 <!--Contact section end-->
 
 <!--Footer inclusion-->
