@@ -129,8 +129,10 @@ setcookie ("password", "");
 </table>
 <!--About section end-->
 
+<?php include '../Controller/contact_handler.php';?>
+
 <!--Contact section start-->
-<form method="post" action="../Controller/contact_handler.php">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <table border="0" id="contact" width="100%" cellpadding="0" cellspacing="0" bgcolor="#b8e3ff">
     <tr>
         <td>
@@ -158,7 +160,7 @@ setcookie ("password", "");
                                                 </font>
                                             </td>
                                             <td width="70%">
-                                                <input type="text" size="50">
+                                                <input type="text" name="name" size="50">
                                             </td>
                                         </tr>
                                         <tr>
@@ -169,7 +171,7 @@ setcookie ("password", "");
 
                                             </td>
                                             <td width="70%">
-                                                <input type="text" size="50">
+                                                <input type="text" name="email" size="50">
                                             </td>
                                         </tr>
                                         <tr>
@@ -179,7 +181,7 @@ setcookie ("password", "");
                                                 </font>
                                             </td>
                                             <td width="70%">
-                                                <input type="text" size="50">
+                                                <input type="text" name="subject" size="50">
                                             </td>
                                         </tr>
                                         <tr>
@@ -189,7 +191,7 @@ setcookie ("password", "");
                                                 </font>
                                             </td>
                                             <td width="70%">
-                                                <textarea cols="51" rows="4"></textarea>
+                                                <textarea cols="51" name="message" rows="4"></textarea>
                                             </td>
                                         </tr>
                                         <tr>
@@ -202,6 +204,7 @@ setcookie ("password", "");
                                                 </button>
                                             </td>
                                         </tr>
+                                        <?php include '../Controller/contact_processor.php';?>
                                     </table>
                                 </td>
                             </tr>
