@@ -11,7 +11,7 @@ require_once 'Classes/User.php';
 function user_login_validate($user_name, $password){
     $connection = new db();
     $con_obj=$connection->open_con();
-    $result = $con_obj->query("SELECT * FROM User WHERE user_name='". $user_name."' AND user_password='". $password."'");
+    $result = $con_obj->query("SELECT * FROM User WHERE user_name='$user_name' AND user_password='$password'");
     if($result->num_rows == 1){
         $row = $result->fetch_assoc();
         $user = new User();

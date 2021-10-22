@@ -32,6 +32,9 @@ if((isset($_POST['submit']))){
         else array_push($val_err, "Please enter a valid User name.");
     }
     if(empty($_POST["password"])) array_push($req_err, "Password field cannot be empty.");
+    else{
+        $password = trimmer($_POST["password"]);
+    }
     if(isset($_POST["remember"])) $remember = true;
 
     if (empty($val_err) && empty($req_err)){

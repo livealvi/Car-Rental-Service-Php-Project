@@ -107,7 +107,7 @@ if(isset($_SESSION['user_type'])){
                                                                 &nbsp;
                                                             </td>
                                                             <td width="70%">
-                                                                <font size="3" face="arial">'.$r_err.'</font>
+                                                                <font size="3" face="arial" color="red">'.$r_err.'</font>
                                                             </td>
                                                           </tr>';
                                                 }
@@ -117,7 +117,7 @@ if(isset($_SESSION['user_type'])){
                                                                 &nbsp;
                                                             </td>
                                                             <td width="70%">
-                                                                <font size="3" face="arial">'.$v_err.'</font>
+                                                                <font size="3" face="arial" color="red">'.$v_err.'</font>
                                                             </td>
                                                           </tr>';
                                                 }
@@ -127,7 +127,7 @@ if(isset($_SESSION['user_type'])){
                                                                 &nbsp;
                                                             </td>
                                                             <td width="70%">
-                                                                <font size="3" face="arial">'.$u_v_err.'</font>
+                                                                <font size="3" face="arial" color="red">'.$u_v_err.'</font>
                                                             </td>
                                                           </tr>';
                                                 }

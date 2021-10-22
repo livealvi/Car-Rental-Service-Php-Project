@@ -1,7 +1,7 @@
 <!--This is the header and navbar portion for all pages-->
 
 <?php
-if (isset($_SESSION['uname'])) {
+if (isset($_SESSION['user_name'])) {
 ?>
     <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#3d5a80">
         <tr>
@@ -31,10 +31,10 @@ if (isset($_SESSION['uname'])) {
 <!--                        </td>-->
                         <td>
                                 <font face="arial" color="#ffffff" size="3">
-                                    Signed in as: <a href=""><?php echo $_SESSION['uname']?></a>
+                                    Signed in as: <a href=""><?php echo $_SESSION['user_name']?></a>
                                 </font>
                         </td>
-                        <td><a href="">
+                        <td><a href="login.php">
                                 <font face="arial" color="#ffffff" size="3">
                                     Logout
                                 </font></a>
@@ -58,7 +58,7 @@ if (isset($_SESSION['uname'])) {
                             </font>
                         </td>
                         <td width="30%">&nbsp;</td>
-                        <td><a href="#home">
+                        <td><a href="welcome.php">
                                 <font face="arial" color="#ffffff" size="3">
                                     Home
                                 </font></a>
