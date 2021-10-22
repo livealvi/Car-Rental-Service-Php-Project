@@ -1,19 +1,30 @@
 <?php
+//database accessor class
+class Db{
 
 //Function to connect to database
-function db_connect(){
-    $servername = "144.208.125.220";
-    $username = "alvihasa_CarRental";
-    $password = "CarRental1";
-    $dbname = "alvihasa_CarRentalDB";
+    function open_con()
+    {
+        $servername = "144.208.125.220";
+        $username = "alvihasa_CarRental";
+        $password = "CarRental1";
+        $dbname = "alvihasa_CarRentalServiceDB";
 
-    $connection = new mysqli($servername, $username, $password, $dbname) or die("Could not connect to DataBase ". $connection -> connect_error);
+        $connection = new mysqli($servername, $username, $password, $dbname);
 
-    return $connection;
-}
+        if ($connection->connect_error) {
+            die("Connection failed: " . $connection->connect_error);
+        }
+        else {
+            return $connection;
+        }
+
+    }
 
 //Function to close connection to database
-function db_disconnect($connection) {
-    $connection -> close();
+    function close_con($connection)
+    {
+        $connection->close();
+    }
 }
 

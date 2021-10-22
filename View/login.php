@@ -1,4 +1,13 @@
 <!--Login page-->
+<?php include '../Controller/login_handler.php';
+
+if(isset($_SESSION['user_type'])){
+    if($_SESSION['user_type'] == 'admin') header("location: Admin/admin_dash.php");
+    if($_SESSION['user_type'] == 'renter') header("location: ");
+    if($_SESSION['user_type'] == 'owner') header("location: ");
+    if($_SESSION['user_type'] == 'employee') header("location: ");
+}
+?>
 
 <!doctype html>
 <html lang="en">
@@ -14,7 +23,7 @@
 <?php include 'header.php' ?>
 
 <!--Login section start-->
-<form method="post" action="../Controller/login_handler.php">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <table border="0" id="contact" width="100%" cellpadding="0" cellspacing="0" bgcolor="#b8e3ff">
         <tr>
             <td>
@@ -38,12 +47,11 @@
                                             <tr>
                                                 <td width="30%">
                                                     <font face="arial" size="4" color="#ffffff">
-                                                        Email
+                                                        User Name
                                                     </font>
-
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" size="50">
+                                                    <input type="text" name="user_name" size="50">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -53,7 +61,7 @@
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="password" size="50">
+                                                    <input type="password" name="password" size="50">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -88,6 +96,43 @@
                                                     </button>
                                                 </td>
                                             </tr>
+                                            <?php
+                                            if (empty($val_err) && empty($req_err) && empty($user_validation_error)){
+                                                echo '';
+                                            }
+                                            else{
+                                                foreach ($req_err as $r_err){
+                                                    echo '<tr>
+                                                            <td width="30%">
+                                                                &nbsp;
+                                                            </td>
+                                                            <td width="70%">
+                                                                <font size="3" face="arial">'.$r_err.'</font>
+                                                            </td>
+                                                          </tr>';
+                                                }
+                                                foreach ($val_err as $v_err){
+                                                    echo '<tr>
+                                                            <td width="30%">
+                                                                &nbsp;
+                                                            </td>
+                                                            <td width="70%">
+                                                                <font size="3" face="arial">'.$v_err.'</font>
+                                                            </td>
+                                                          </tr>';
+                                                }
+                                                foreach ($user_validation_error as $u_v_err){
+                                                    echo '<tr>
+                                                            <td width="30%">
+                                                                &nbsp;
+                                                            </td>
+                                                            <td width="70%">
+                                                                <font size="3" face="arial">'.$u_v_err.'</font>
+                                                            </td>
+                                                          </tr>';
+                                                }
+                                            }
+                                            ?>
                                         </table>
                                     </td>
                                 </tr>

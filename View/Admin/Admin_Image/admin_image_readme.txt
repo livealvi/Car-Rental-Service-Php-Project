@@ -1,0 +1,1 @@
+Add only the Admin view related images here
