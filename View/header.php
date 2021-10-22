@@ -1,6 +1,12 @@
 <!--This is the header and navbar portion for all pages-->
 
 <?php
+if(isset($_SESSION['user_type'])){
+    if($_SESSION['user_type'] == 'admin') $account_forward_url = 'Admin/admin_dash.php';
+    else if($_SESSION['user_type'] == 'renter') $account_forward_url = '';
+    else if($_SESSION['user_type'] == 'owner') $account_forward_url = '';
+    else if($_SESSION['user_type'] == 'employee') $account_forward_url = '';
+}
 if (isset($_SESSION['user_name'])) {
 ?>
     <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#3d5a80">
@@ -31,7 +37,9 @@ if (isset($_SESSION['user_name'])) {
 <!--                        </td>-->
                         <td>
                                 <font face="arial" color="#ffffff" size="3">
-                                    Signed in as: <a href=""><font face="arial" color="#ffffff" size="3"><?php echo $_SESSION['user_name']?></font></a>
+                                    Signed in as: <a href="<?php echo $account_forward_url ?>">
+                                        <font face="arial" color="#ffffff" size="3"><?php echo $_SESSION['user_name']?></font>
+                                    </a>
                                 </font>
                         </td>
                         <td><a href="logout.php">
