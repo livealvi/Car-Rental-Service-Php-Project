@@ -29,4 +29,15 @@ function user_login_validate($user_name, $password){
     }
 }
 
+//function to get number of certain type of user
+function get_user_num_by_type($user_type){
+    $connection = new db();
+    $con_obj=$connection->open_con();
+    $result = $con_obj->query("SELECT * FROM User WHERE user_type='$user_type'");
+    $num = $result->num_rows;
+
+    $connection->close_con($con_obj);
+    return $num;
+}
+
 ?>

@@ -4,6 +4,9 @@ session_start();
 if(empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION["user_type"] != 'admin')) {
     header("Location:../login.php");
 }
+
+include '../../Controller/AdminController/admin_dash_handler.php';
+
 ?>
 
 <!doctype html>
@@ -22,24 +25,173 @@ if(empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION[
 <!--Main table structure-->
 <table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#b8e3ff">
     <tr>
-        <td >
+        <td width="400">
             <?php include 'admin_side_panel.php' ?>
         </td>
-        <td>
-            <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center">
+        <td align="center" valign="top">
+            <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" >
                 <tr>
-                    <td align="center" valign="middle" height="300">
-                        <h3>
-                            <font face="arial" color="#ffffff" size="6">
-                                Welcome to
-                            </font>
-                        </h3>
-                        <h1>
-                            <font face="arial" color="#000000" size="7">
-                                Elite Rentals
-                            </font>
-                        </h1>
+                    <td align="left" valign="top" height="50">
+                        <font face="arial" color="#000000" size="4">
+                            Dash Board
+                        </font>
                     </td>
+                    <td align="right" valign="top" height="50">
+                        <font face="arial" color="#000000" size="4">
+                            Feedbacks:
+                        </font>
+                        &nbsp;
+                        <font face="arial" color="#000000" size="4">
+                            <?php echo $feedbacks ?>
+                        </font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" valign="top" width="300" height="50">
+                        <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#ffffff">
+                            <tr>
+                                <th>
+                                    <font face="arial" color="#000000" size="4">
+                                        Total Car Owner
+                                    </font>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <font face="arial" color="#000000" size="6">
+                                        <?php echo $num_of_owners ?>
+                                    </font>
+                                </th>
+                            </tr>
+                        </table>
+                    </td>
+                    <td align="center" valign="top" width="300">
+                        <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#ffffff">
+                            <tr>
+                                <th>
+                                    <font face="arial" color="#000000" size="4">
+                                        Total Car Renters
+                                    </font>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <font face="arial" color="#000000" size="6">
+                                        <?php echo $num_of_renters ?>
+                                    </font>
+                                </th>
+                            </tr>
+                        </table>
+                    </td>
+                    <td align="center" valign="top" width="300">
+                        <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#ffffff">
+                            <tr>
+                                <th>
+                                    <font face="arial" color="#000000" size="4">
+                                        Total Cars
+                                    </font>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <font face="arial" color="#000000" size="6">
+                                        <?php echo $num_of_cars ?>
+                                    </font>
+                                </th>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" valign="top" height="25">
+                        <font face="arial" color="#000000" size="4">
+                            Bookings:
+                        </font>
+                    </td>
+                </tr>
+                <tr>
+                    <th align="center" valign="top" colspan="4">
+                        <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#ffffff">
+                            <tr>
+                                <th align="centre" valign="top">
+                                    <font face="arial" color="#000000" size="3">
+                                        Rent Id
+                                    </font>
+                                </th>
+                                <th align="centre" valign="top">
+                                    <font face="arial" color="#000000" size="3">
+                                        Rent Date
+                                    </font>
+                                </th>
+                                <th align="centre" valign="top">
+                                    <font face="arial" color="#000000" size="3">
+                                        Rent Return Date
+                                    </font>
+                                </th>
+                                <th align="centre" valign="top">
+                                    <font face="arial" color="#000000" size="3">
+                                        Car Id
+                                    </font>
+                                </th>
+                                <th align="centre" valign="top">
+                                    <font face="arial" color="#000000" size="3">
+                                        Owner Id
+                                    </font>
+                                </th>
+                                <th align="centre" valign="top">
+                                    <font face="arial" color="#000000" size="3">
+                                        Renter Id
+                                    </font>
+                                </th>
+                                <th align="centre" valign="top">
+                                    <font face="arial" color="#000000" size="3">
+                                        Employee Id
+                                    </font>
+                                </th>
+                            </tr>
+                            <?php
+                                foreach ($rents as $rent){
+                                    echo '<tr>
+                                            <th align="centre" valign="top">
+                                                <font face="arial" color="#000000" size="3">
+                                                    '.$rent->getRentId().'
+                                                </font>
+                                            </th>
+                                            <th align="centre" valign="top">
+                                                <font face="arial" color="#000000" size="3">
+                                                    '.date('d/m/y',strtotime($rent->getRentDate())).'
+                                                </font>
+                                            </th>
+                                            <th align="centre" valign="top">
+                                                <font face="arial" color="#000000" size="3">
+                                                    '.date('d/m/y',strtotime($rent->getRentReturnDate())).'
+                                                </font>
+                                            </th>
+                                            <th align="centre" valign="top">
+                                                <font face="arial" color="#000000" size="3">
+                                                    '.$rent->getCarId().'
+                                                </font>
+                                            </th>
+                                            <th align="centre" valign="top">
+                                                <font face="arial" color="#000000" size="3">
+                                                    '.$rent->getOwnerId().'
+                                                </font>
+                                            </th>
+                                            <th align="centre" valign="top">
+                                                <font face="arial" color="#000000" size="3">
+                                                    '.$rent->getRenterId().'
+                                                </font>
+                                            </th>
+                                            <th align="centre" valign="top">
+                                                <font face="arial" color="#000000" size="3">
+                                                    '.$rent->getEmployeeId().'
+                                                </font>
+                                            </th>
+                                        </tr>';
+                                }
+                            ?>
+                        </table>
+                    </th>
                 </tr>
             </table>
         </td>

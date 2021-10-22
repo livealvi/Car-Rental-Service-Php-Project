@@ -42,12 +42,12 @@ class Rent{
         $this->rent_date = $rent_date;
     }
 
-    public function getRentDuration()
+    public function getRentReturnDate()
     {
         return $this->rent_return_date;
     }
 
-    public function setRentDuration($rent_return_date)
+    public function setRentReturnDate($rent_return_date)
     {
         $this->rent_return_date = $rent_return_date;
     }

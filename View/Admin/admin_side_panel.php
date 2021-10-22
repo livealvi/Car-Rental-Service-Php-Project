@@ -1,4 +1,4 @@
-<table border="0" width="60%" cellpadding="15" cellspacing="0" align="left" height="600" bgcolor="#0077b6">
+<table border="0" width="400px" cellpadding="15" cellspacing="0" align="left" height="600" bgcolor="#0077b6">
     <tr>
         <td align="center" valign="middle">
             <a href="admin_dash.php">

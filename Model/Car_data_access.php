@@ -6,7 +6,17 @@ required methods in control layer methods. PLease maintain proper
 naming convention to prevent ambiguity among method names*/
 
 require_once 'Db_connector.php';
-require_once './Classes/Car.php';
+require_once 'Classes/Car.php';
 
+//function to get number of cars
+function get_car_num(){
+    $connection = new db();
+    $con_obj=$connection->open_con();
+    $result = $con_obj->query("SELECT * FROM Car");
+    $num = $result->num_rows;
+
+    $connection->close_con($con_obj);
+    return $num;
+}
 
 ?>
