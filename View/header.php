@@ -34,7 +34,7 @@ if (isset($_SESSION['user_name'])) {
                                     Signed in as: <a href=""><font face="arial" color="#ffffff" size="3"><?php echo $_SESSION['user_name']?></font></a>
                                 </font>
                         </td>
-                        <td><a href="login.php">
+                        <td><a href="logout.php">
                                 <font face="arial" color="#ffffff" size="3">
                                     Logout
                                 </font></a>

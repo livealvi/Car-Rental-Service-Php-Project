@@ -1,7 +1,7 @@
 <!--Admin dash page-->
 <?php
 session_start();
-if(empty($_SESSION["user_name"]) || empty($_SESSION["user_type"])) {
+if(empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION["user_type"] != 'admin')) {
     header("Location:../login.php");
 }
 ?>
