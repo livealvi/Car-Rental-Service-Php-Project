@@ -42,7 +42,7 @@ if (isset($_SESSION['user_name'])) {
                                     </a>
                                 </font>
                         </td>
-                        <td><a href="logout.php">
+                        <td><a href="../Controller/logout_handler.php">
                                 <font face="arial" color="#ffffff" size="3">
                                     Logout
                                 </font></a>
