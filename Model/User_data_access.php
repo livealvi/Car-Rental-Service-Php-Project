@@ -8,6 +8,7 @@ naming convention to prevent ambiguity among method names*/
 require_once 'Db_connector.php';
 require_once 'Classes/User.php';
 
+//function to validate user login
 function user_login_validate($user_name, $password){
     $connection = new db();
     $con_obj=$connection->open_con();
