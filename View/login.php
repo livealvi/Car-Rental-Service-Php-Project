@@ -1,12 +1,23 @@
 <!--Login page-->
 <?php include '../Controller/login_handler.php';
 
-if(isset($_SESSION['user_type'])){
+if(isset($_SESSION['user_type']) && isset($_SESSION['user_name'])){
     if($_SESSION['user_type'] == 'admin') header("location: Admin/admin_dash.php");
     if($_SESSION['user_type'] == 'renter') header("location: ");
     if($_SESSION['user_type'] == 'owner') header("location: ");
     if($_SESSION['user_type'] == 'employee') header("location: ");
 }
+
+if(isset($_COOKIE['user_name']) && isset($_COOKIE['password'])){
+    $user_name_cookie = $_COOKIE['user_name'];
+    $user_password_cookie = $_COOKIE['password'];
+}
+else{
+    $user_name_cookie = '';
+    $user_password_cookie = '';
+}
+
+
 ?>
 
 <!doctype html>
@@ -51,7 +62,7 @@ if(isset($_SESSION['user_type'])){
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="user_name" size="50">
+                                                    <input type="text" name="user_name" size="50" value="<?php echo $user_name_cookie?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -61,7 +72,7 @@ if(isset($_SESSION['user_type'])){
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="password" name="password" size="50">
+                                                    <input type="password" name="password" size="50" value="<?php echo $user_password_cookie?>">
                                                 </td>
                                             </tr>
                                             <tr>

@@ -31,7 +31,7 @@ if (isset($_SESSION['user_name'])) {
 <!--                        </td>-->
                         <td>
                                 <font face="arial" color="#ffffff" size="3">
-                                    Signed in as: <a href=""><?php echo $_SESSION['user_name']?></a>
+                                    Signed in as: <a href=""><font face="arial" color="#ffffff" size="3"><?php echo $_SESSION['user_name']?></font></a>
                                 </font>
                         </td>
                         <td><a href="login.php">

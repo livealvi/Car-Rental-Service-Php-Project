@@ -1,4 +1,5 @@
-<!--Landing page-->
+<!--Admin dash page-->
+<?php session_start() ?>
 
 <!doctype html>
 <html lang="en">
@@ -11,7 +12,7 @@
 </head>
 <body>
 <!--Header inclusion-->
-<?php include '../header.php' ?>
+<?php include 'admin_header.php' ?>
 
 <!--Main table structure-->
 <table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#b8e3ff">
@@ -51,6 +52,6 @@
 
 
 <!--Footer inclusion-->
-<?php include '../footer.php' ?>
+<?php include 'admin_footer.php' ?>
 </body>
 </html>

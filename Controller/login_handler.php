@@ -1,6 +1,8 @@
 <?php
 include '../Model/User_data_access.php';
 session_start();
+setcookie ("user_name", "");
+setcookie ("password", "");
 
 //function to check username
 function test_name($name){
