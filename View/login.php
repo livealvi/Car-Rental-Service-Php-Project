@@ -17,7 +17,6 @@ else{
     $user_password_cookie = '';
 }
 
-
 ?>
 
 <!doctype html>
