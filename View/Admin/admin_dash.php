@@ -1,5 +1,10 @@
 <!--Admin dash page-->
-<?php session_start() ?>
+<?php
+session_start();
+if(empty($_SESSION["user_name"]) || empty($_SESSION["user_type"])) {
+    header("Location:../login.php");
+}
+?>
 
 <!doctype html>
 <html lang="en">
