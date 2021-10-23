@@ -37,7 +37,7 @@ include '../../Controller/AdminController/add_car_handler.php';
                         </font>
                     </td>
                     <td align="right" valign="top" height="50">
-                        <a href="renter_list_page.php">
+                        <a href="car_list_page.php">
                             <button>
                                 <font size="3" face="arial">Cancel add operation</font>
                             </button>
