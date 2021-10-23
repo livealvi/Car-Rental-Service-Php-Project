@@ -1,11 +1,11 @@
-<!--Renter information List page-->
+<!--Owner information List page-->
 <?php
 session_start();
 if(empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION["user_type"] != 'admin')) {
     header("Location:../login.php");
 }
 
-include '../../Controller/AdminController/renter_list_handler.php';
+include '../../Controller/AdminController/owner_list_handler.php';
 
 ?>
 
@@ -16,7 +16,7 @@ include '../../Controller/AdminController/renter_list_handler.php';
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Renter List</title>
+    <title>Owner List</title>
 </head>
 <body>
 <!--Header inclusion-->
@@ -33,27 +33,27 @@ include '../../Controller/AdminController/renter_list_handler.php';
                 <tr>
                     <td align="left" valign="top" height="50">
                         <font face="arial" color="#000000" size="6">
-                            Renter List Page
+                            Owner List Page
                         </font>
                     </td>
                     <td align="right" valign="top" height="50">
                         <a href="">
                             <button>
-                                <font size="3" face="arial">Add Renter</font>
+                                <font size="3" face="arial">Add Owner</font>
                             </button>
                         </a>
                     </td>
                     <td align="center" valign="top" height="50">
                         <a href="">
                             <button>
-                                <font size="3" face="arial">Edit Renter</font>
+                                <font size="3" face="arial">Edit Owner</font>
                             </button>
                         </a>
                     </td>
                     <td align="left" valign="top" height="50">
                         <a href="">
                             <button>
-                                <font size="3" face="arial">Remove Renter</font>
+                                <font size="3" face="arial">Remove Owner</font>
                             </button>
                         </a>
                     </td>
@@ -62,7 +62,7 @@ include '../../Controller/AdminController/renter_list_handler.php';
                 <tr>
                     <td align="left" valign="top" height="25">
                         <font face="arial" color="#000000" size="4">
-                            Renters:
+                            Owners:
                         </font>
                     </td>
                 </tr>
@@ -72,31 +72,31 @@ include '../../Controller/AdminController/renter_list_handler.php';
                             <tr>
                                 <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
-                                        Renter Id
+                                        Owner Id
                                     </font>
                                 </th>
                                 <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
-                                        Renter name
+                                        Owner name
                                     </font>
                                 </th>
                                 <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
-                                        Renter Email
+                                        Owner Email
                                     </font>
                                 </th>
                                 <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
-                                        Renter Mobile Number
+                                        Owner Mobile Number
                                     </font>
                                 </th>
                                 <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
-                                        Renter Image
+                                        Owner Image
                                     </font>
                                 </th>
                             </tr>
-                            <?php include '../../Controller/AdminController/renter_list_processor.php' ?>
+                            <?php include '../../Controller/AdminController/owner_list_processor.php' ?>
                         </table>
                     </th>
                 </tr>

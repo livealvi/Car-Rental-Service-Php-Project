@@ -1,29 +1,30 @@
-<!--output processor for renter list page-->
+<!--output processor for owner list page-->
 <?php
-foreach ($renters as $renter){
+
+foreach ($owners as $owner) {
     echo '<tr>
             <td align="center" valign="top">
                 <font face="arial" color="#000000" size="3">
-                    '.$renter->getUserId().'
+                    ' . $owner->getUserId() . '
                 </font>
             </td>
             <td align="center" valign="top">
                 <font face="arial" color="#000000" size="3">
-                    '.$renter->getUserName().'
+                    ' . $owner->getUserName() . '
                 </font>
             </td>
             <td align="center" valign="top">
                 <font face="arial" color="#000000" size="3">
-                    '.$renter->getUserEmail().'
+                    ' . $owner->getUserEmail() . '
                 </font>
             </td>
             <td align="center" valign="top">
                 <font face="arial" color="#000000" size="3">
-                    '.$renter->getUserMobile().'
+                    ' . $owner->getUserMobile() . '
                 </font>
             </td>
             <td align="center" valign="top">
-                <img src="'.$renter->getUserImgUrl().'" alt="user_img">
+                <img src="' . $owner->getUserImgUrl() . '" alt="user_img">
             </td>
         </tr>';
 }

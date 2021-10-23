@@ -23,7 +23,7 @@
     </tr>
     <tr>
         <td align="center" valign="middle">
-            <a href="">
+            <a href="owner_list_page.php">
                 <button>
                     <font face="arial" color="#000000" size="4">
                         Car Owner list
@@ -37,7 +37,7 @@
             <a href="">
                 <button>
                     <font face="arial" color="#000000" size="4">
-                        Employee information
+                        Employee List
                     </font>
                 </button>
             </a>
@@ -48,7 +48,7 @@
             <a href="">
                 <button>
                     <font face="arial" color="#000000" size="4">
-                        Car information
+                        Car List
                     </font>
                 </button>
             </a>
@@ -59,7 +59,7 @@
             <a href="">
                 <button>
                     <font face="arial" color="#000000" size="4">
-                        Rented cars' information
+                        Bookings list
                     </font>
                 </button>
             </a>
@@ -82,6 +82,17 @@
                 <button>
                     <font face="arial" color="#000000" size="4">
                         User documents
+                    </font>
+                </button>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" valign="middle">
+            <a href="">
+                <button>
+                    <font face="arial" color="#000000" size="4">
+                        Employee documents
                     </font>
                 </button>
             </a>
