@@ -37,7 +37,7 @@ include '../../Controller/AdminController/employee_list_handler.php';
                         </font>
                     </td>
                     <td align="right" valign="top" height="50">
-                        <a href="">
+                        <a href="add_employee_page.php">
                             <button>
                                 <font size="3" face="arial">Add Employee</font>
                             </button>
