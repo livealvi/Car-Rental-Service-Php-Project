@@ -36,13 +36,13 @@ include '../../Controller/AdminController/booking_list_handler.php';
                             Booking List Page
                         </font>
                     </td>
-                    <td align="right" valign="top" height="50">
+                    <!--<td align="right" valign="top" height="50">
                         <a href="">
                             <button>
                                 <font size="3" face="arial">Add Booking</font>
                             </button>
                         </a>
-                    </td>
+                    </td>-->
                     <td align="center" valign="top" height="50">
                         <a href="">
                             <button>
