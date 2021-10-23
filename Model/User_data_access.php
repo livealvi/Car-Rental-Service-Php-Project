@@ -29,6 +29,34 @@ function user_login_validate($user_name, $password){
     }
 }
 
+//function to get all user of certain type
+function get_all_user_by_type($user_type){
+    $connection = new db();
+    $con_obj=$connection->open_con();
+    $result = $con_obj->query("SELECT * FROM User WHERE user_type='$user_type'");
+    if($result->num_rows > 0) {
+        $user_list = [];
+        while ($row = $result->fetch_assoc()) {
+            $user = new User();
+            $user->setUserId($row["user_id"]);
+            $user->setUserName($row["user_name"]);
+            $user->setUserEmail($row["user_email"]);
+            $user->setUserMobile($row["user_mobile"]);
+            $user->setUserPassword($row["user_password"]);
+            $user->setUserType($row["user_type"]);
+            $user->setUserImgUrl($row["user_img_url"]);
+            array_push($user_list, $user);
+        }
+        $connection->close_con($con_obj);
+        return $user_list;
+    }
+    else{
+        $connection->close_con($con_obj);
+        return null;
+    }
+
+}
+
 //function to get number of certain type of user
 function get_user_num_by_type($user_type){
     $connection = new db();
