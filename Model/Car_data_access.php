@@ -59,4 +59,13 @@ function get_car_name_by_id($car_id){
     else return '';
 }
 
+//function to add car
+function add_car($owner_id, $car_model_name, $car_reg_no, $is_available, $car_img_url){
+    $connection = new db();
+    $con_obj=$connection->open_con();
+    $result = $con_obj->query("INSERT INTO Car (owner_id, car_model_name, car_reg_no, is_available, car_img_url)
+                                     VALUES ('$owner_id', '$car_model_name', '$car_reg_no', '$is_available', '$car_img_url')");
+    return $result;
+}
+
 ?>

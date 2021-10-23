@@ -50,7 +50,7 @@ if((isset($_POST['submit']))){
     }
     if(empty($val_err) && empty($req_err)){
         $success = add_user($user_name, $user_email, $user_mobile, $user_password, $user_type, $user_img_url);
-        if($success == false) array_push($val_err, "Renter could not be added");
+        if($success == false) array_push($val_err, "Owner could not be added");
     }
 }
 
