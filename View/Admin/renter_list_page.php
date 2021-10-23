@@ -1,11 +1,11 @@
-<!--Admin dash page-->
+<!--Renter information List page-->
 <?php
 session_start();
 if(empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION["user_type"] != 'admin')) {
     header("Location:../login.php");
 }
 
-include '../../Controller/AdminController/admin_dash_handler.php';
+
 
 ?>
 
@@ -111,41 +111,41 @@ include '../../Controller/AdminController/admin_dash_handler.php';
                 </tr>
                 <tr>
                     <th align="center" valign="top" colspan="4">
-                        <table border="2" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#ffffff">
+                        <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#ffffff">
                             <tr>
-                                <th align="center" valign="top">
+                                <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
                                         Rent Id
                                     </font>
                                 </th>
-                                <th align="center" valign="top">
+                                <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
                                         Rent Date
                                     </font>
                                 </th>
-                                <th align="center" valign="top">
+                                <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
                                         Rent Return Date
                                     </font>
                                 </th>
-                                <th align="center valign="top">
+                                <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
-                                        Car Model
+                                        Car Id
                                     </font>
                                 </th>
-                                <th align="center valign="top">
+                                <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
-                                        Owner name
+                                        Owner Id
                                     </font>
                                 </th>
-                                <th align="center valign="top">
+                                <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
-                                        Renter name
+                                        Renter Id
                                     </font>
                                 </th>
-                                <th align="center valign="top">
+                                <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
-                                        Issuing Employee
+                                        Employee Id
                                     </font>
                                 </th>
                             </tr>
