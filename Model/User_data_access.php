@@ -82,4 +82,13 @@ function get_user_name_by_id($user_id){
     else return '';
 }
 
+//function to add user
+function add_user($user_name, $user_email, $user_mobile, $user_password, $user_type, $user_img_url){
+    $connection = new db();
+    $con_obj=$connection->open_con();
+    $result = $con_obj->query("INSERT INTO User (user_name, user_email, user_mobile, user_password, user_type, user_img_url)
+                                     VALUES ('$user_name', '$user_email', '$user_mobile', '$user_password', '$user_type', '$user_img_url')");
+    return $result;
+}
+
 ?>
