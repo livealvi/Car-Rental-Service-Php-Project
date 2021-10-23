@@ -44,7 +44,7 @@
                                                 </a>
                                             </th>
                                             <th width="33%">
-                                                <a href="login.php">
+                                                <a href="Owner/registration.php">
                                                     <button>
                                                         <font size="5" face="arial">Car Owner</font>
                                                     </button>
