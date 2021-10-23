@@ -3,9 +3,9 @@
 
 if(isset($_SESSION['user_type']) && isset($_SESSION['user_name'])){
     if($_SESSION['user_type'] == 'admin') header("location: Admin/admin_dash.php");
-    else if($_SESSION['user_type'] == 'renter') header("location: ");
-    else if($_SESSION['user_type'] == 'owner') header("location: ");
-    else if($_SESSION['user_type'] == 'employee') header("location: ");
+    else if($_SESSION['user_type'] == 'renter') header("location: welcome.php");
+    else if($_SESSION['user_type'] == 'owner') header("location: welcome.php");
+    else if($_SESSION['user_type'] == 'employee') header("location: welcome.php");
 }
 
 if(isset($_COOKIE['user_name']) && isset($_COOKIE['password'])){
