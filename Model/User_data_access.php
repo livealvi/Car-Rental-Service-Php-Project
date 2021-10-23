@@ -40,4 +40,18 @@ function get_user_num_by_type($user_type){
     return $num;
 }
 
+//function to get user_name by ID
+function get_user_name_by_id($user_id){
+    $connection = new db();
+    $con_obj=$connection->open_con();
+    $result = $con_obj->query("SELECT * FROM User WHERE user_id='$user_id'");
+    if($result->num_rows == 1){
+        $row = $result->fetch_assoc();
+
+        $connection->close_con($con_obj);
+        return $row["user_name"];
+    }
+    else return '';
+}
+
 ?>

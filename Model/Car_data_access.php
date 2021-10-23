@@ -19,4 +19,18 @@ function get_car_num(){
     return $num;
 }
 
+//function to get car_name by ID
+function get_car_name_by_id($car_id){
+    $connection = new db();
+    $con_obj=$connection->open_con();
+    $result = $con_obj->query("SELECT * FROM Car WHERE car_id='$car_id'");
+    if($result->num_rows == 1){
+        $row = $result->fetch_assoc();
+
+        $connection->close_con($con_obj);
+        return $row["car_model_name"];
+    }
+    else return '';
+}
+
 ?>

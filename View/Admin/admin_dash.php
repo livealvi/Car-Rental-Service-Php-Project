@@ -149,47 +149,7 @@ include '../../Controller/AdminController/admin_dash_handler.php';
                                     </font>
                                 </th>
                             </tr>
-                            <?php
-                                foreach ($rents as $rent){
-                                    echo '<tr>
-                                            <th align="centre" valign="top">
-                                                <font face="arial" color="#000000" size="3">
-                                                    '.$rent->getRentId().'
-                                                </font>
-                                            </th>
-                                            <th align="centre" valign="top">
-                                                <font face="arial" color="#000000" size="3">
-                                                    '.date('d/m/y',strtotime($rent->getRentDate())).'
-                                                </font>
-                                            </th>
-                                            <th align="centre" valign="top">
-                                                <font face="arial" color="#000000" size="3">
-                                                    '.date('d/m/y',strtotime($rent->getRentReturnDate())).'
-                                                </font>
-                                            </th>
-                                            <th align="centre" valign="top">
-                                                <font face="arial" color="#000000" size="3">
-                                                    '.$rent->getCarId().'
-                                                </font>
-                                            </th>
-                                            <th align="centre" valign="top">
-                                                <font face="arial" color="#000000" size="3">
-                                                    '.$rent->getOwnerId().'
-                                                </font>
-                                            </th>
-                                            <th align="centre" valign="top">
-                                                <font face="arial" color="#000000" size="3">
-                                                    '.$rent->getRenterId().'
-                                                </font>
-                                            </th>
-                                            <th align="centre" valign="top">
-                                                <font face="arial" color="#000000" size="3">
-                                                    '.$rent->getEmployeeId().'
-                                                </font>
-                                            </th>
-                                        </tr>';
-                                }
-                            ?>
+                            <?php include '../../Controller/AdminController/admin_dash_processor.php' ?>
                         </table>
                     </th>
                 </tr>
