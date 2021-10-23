@@ -1,4 +1,4 @@
-//output processor for admin dash page
+<!--output processor for admin dash page-->
 <?php
 foreach ($rents as $rent){
     echo '<tr>

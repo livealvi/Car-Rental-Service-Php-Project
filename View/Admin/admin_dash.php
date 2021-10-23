@@ -128,22 +128,22 @@ include '../../Controller/AdminController/admin_dash_handler.php';
                                         Rent Return Date
                                     </font>
                                 </th>
-                                <th align="center valign="top">
+                                <th align="center" valign="top">
                                     <font face="arial" color="#000000" size="3">
                                         Car Model
                                     </font>
                                 </th>
-                                <th align="center valign="top">
+                                <th align="center" valign="top">
                                     <font face="arial" color="#000000" size="3">
                                         Owner name
                                     </font>
                                 </th>
-                                <th align="center valign="top">
+                                <th align="center" valign="top">
                                     <font face="arial" color="#000000" size="3">
                                         Renter name
                                     </font>
                                 </th>
-                                <th align="center valign="top">
+                                <th align="center" valign="top">
                                     <font face="arial" color="#000000" size="3">
                                         Issuing Employee
                                     </font>
