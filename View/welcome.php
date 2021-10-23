@@ -82,19 +82,19 @@ setcookie ("password", "");
                                 <td>
                                     <p>
                                         <font face="arial" size="3" color="#ffffff">
-                                            Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-                                            Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                                            We are a team of highly experienced professionals who have been in the car renting business for 10 years. We promise
+                                            you a very pleasant experience in Renting or Lending a car.
                                         </font>
                                     </p>
                                     <p>
                                         <font face="arial" size="3" color="#ffffff">
-                                            Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-                                            Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                                            Renting or lending, whatever is your requirement, we have a solution for you. We provide a platform for you to lend your car,
+                                            If you have a spare one or want to use your idle car to earn extra. But if you need a car to rent, we have a variety of cars for you too.
                                         </font>
                                     </p>
                                     <hr noshade>
                                     <br/>
-                                    <a href="">
+                                    <a href="login.php">
                                         <button>
                                             <font face="arial" color="#000" size="5">
                                                 Rent a car
@@ -102,7 +102,7 @@ setcookie ("password", "");
                                         </button>
                                     </a>
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="">
+                                    <a href="login.php">
                                         <button>
                                             <font face="arial" color="#000" size="5">
                                                 Lend a car
