@@ -65,39 +65,39 @@
             </a>
         </td>
     </tr>
-    <tr>
-        <td align="center" valign="middle">
-            <a href="">
-                <button>
-                    <font face="arial" color="#000000" size="4">
-                        Car documents
-                    </font>
-                </button>
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td align="center" valign="middle">
-            <a href="">
-                <button>
-                    <font face="arial" color="#000000" size="4">
-                        User documents
-                    </font>
-                </button>
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td align="center" valign="middle">
-            <a href="">
-                <button>
-                    <font face="arial" color="#000000" size="4">
-                        Employee documents
-                    </font>
-                </button>
-            </a>
-        </td>
-    </tr>
+<!--    <tr>-->
+<!--        <td align="center" valign="middle">-->
+<!--            <a href="">-->
+<!--                <button>-->
+<!--                    <font face="arial" color="#000000" size="4">-->
+<!--                        Car documents-->
+<!--                    </font>-->
+<!--                </button>-->
+<!--            </a>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td align="center" valign="middle">-->
+<!--            <a href="">-->
+<!--                <button>-->
+<!--                    <font face="arial" color="#000000" size="4">-->
+<!--                        User documents-->
+<!--                    </font>-->
+<!--                </button>-->
+<!--            </a>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td align="center" valign="middle">-->
+<!--            <a href="">-->
+<!--                <button>-->
+<!--                    <font face="arial" color="#000000" size="4">-->
+<!--                        Employee documents-->
+<!--                    </font>-->
+<!--                </button>-->
+<!--            </a>-->
+<!--        </td>-->
+<!--    </tr>-->
     <tr>
         <td align="center" valign="middle">
             <a href="">
