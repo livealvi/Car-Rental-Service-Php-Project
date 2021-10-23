@@ -1,29 +1,34 @@
-<!--output processor for renter list page-->
+<!--output processor for car list page-->
 <?php
-foreach ($renters as $renter){
+foreach ($cars as $car){
     echo '<tr>
             <td align="center" valign="top">
                 <font face="arial" color="#000000" size="3">
-                    '.$renter->getUserId().'
+                    '.$car->getCarID().'
                 </font>
             </td>
             <td align="center" valign="top">
                 <font face="arial" color="#000000" size="3">
-                    '.$renter->getUserName().'
+                    '.$car->getCarModelName().'
                 </font>
             </td>
             <td align="center" valign="top">
                 <font face="arial" color="#000000" size="3">
-                    '.$renter->getUserEmail().'
+                    '.get_user_name_by_id($car->getOwnerId()).'
                 </font>
             </td>
             <td align="center" valign="top">
                 <font face="arial" color="#000000" size="3">
-                    '.$renter->getUserMobile().'
+                    '.$car->getCarRegNo().'
                 </font>
             </td>
             <td align="center" valign="top">
-                <img src="'.$renter->getUserImgUrl().'" alt="car_img">
+                <font face="arial" color="#000000" size="3">
+                    '.$car->getIsAvailable().'
+                </font>
+            </td>
+            <td align="center" valign="top">
+                <img src="'.$car->getCarImgUrl().'" alt="user_img">
             </td>
         </tr>';
 }

@@ -8,6 +8,32 @@ naming convention to prevent ambiguity among method names*/
 require_once 'Db_connector.php';
 require_once 'Classes/Car.php';
 
+//function to get all cars
+function get_all_car(){
+    $connection = new db();
+    $con_obj=$connection->open_con();
+    $result = $con_obj->query("SELECT * FROM Car");
+    if($result->num_rows > 0) {
+        $car_list = [];
+        while ($row = $result->fetch_assoc()) {
+            $car = new Car();
+            $car->setCarId($row["car_id"]);
+            $car->setOwnerId($row["owner_id"]);
+            $car->setCarModelName($row["car_model_name"]);
+            $car->setCarRegNo($row["car_reg_no"]);
+            $car->setIsAvailable($row["is_available"]);
+            $car->setCarImgUrl($row["car_img_url"]);
+            array_push($car_list, $car);
+        }
+        $connection->close_con($con_obj);
+        return $car_list;
+    }
+    else{
+        $connection->close_con($con_obj);
+        return null;
+    }
+}
+
 //function to get number of cars
 function get_car_num(){
     $connection = new db();
