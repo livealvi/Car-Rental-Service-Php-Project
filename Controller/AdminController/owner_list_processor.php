@@ -24,7 +24,7 @@ foreach ($owners as $owner) {
                 </font>
             </td>
             <td align="center" valign="top">
-                <img src="' . $owner->getUserImgUrl() . '" alt="user_img">
+                <img src="' . $owner->getUserImgUrl() . '" alt="user_img" width="100%" height="75">
             </td>
         </tr>';
 }

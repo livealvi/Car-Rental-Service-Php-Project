@@ -28,7 +28,7 @@ foreach ($cars as $car){
                 </font>
             </td>
             <td align="center" valign="top">
-                <img src="'.$car->getCarImgUrl().'" alt="car_img">
+                <img src="'.$car->getCarImgUrl().'" alt="car_img" width="100%" height="75">
             </td>
         </tr>';
 }
