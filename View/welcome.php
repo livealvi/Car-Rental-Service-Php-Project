@@ -1,8 +1,6 @@
 <!--Landing page-->
 <?php
 session_start();
-setcookie ("user_name", "");
-setcookie ("password", "");
 ?>
 
 <!doctype html>
