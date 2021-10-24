@@ -23,7 +23,7 @@ foreach ($renters as $renter){
                 </font>
             </td>
             <td align="center" valign="top">
-                <img src="'.$renter->getUserImgUrl().'" alt="car_img" width="100%" height="75">
+                <img src="'.$renter->getUserImgUrl().'" alt="car_img" width="75" height="75">
             </td>
         </tr>';
 }
