@@ -5,7 +5,7 @@ if(isset($_SESSION['user_type'])){
     if($_SESSION['user_type'] == 'admin') $account_forward_url = 'Admin/admin_dash.php';
     else if($_SESSION['user_type'] == 'renter') $account_forward_url = '';
     else if($_SESSION['user_type'] == 'owner') $account_forward_url = '';
-    else if($_SESSION['user_type'] == 'employee') $account_forward_url = '';
+    else if($_SESSION['user_type'] == 'employee') $account_forward_url = 'Employee/emp_dashboard.php';
 }
 if (isset($_SESSION['user_name'])) {
 ?>
@@ -38,7 +38,7 @@ if (isset($_SESSION['user_name'])) {
                         <td>
                                 <font face="arial" color="#ffffff" size="3">
                                     Signed in as: <a href="<?php echo $account_forward_url ?>">
-                                        <font face="arial" color="#ffffff" size="3"><?php echo $_SESSION['user_name']?></font>
+                                        <font face="arial" color="#ffffff" size="3"> <?php echo $_SESSION['user_name']?></font>
                                     </a>
                                 </font>
                         </td>
