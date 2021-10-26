@@ -8,6 +8,7 @@ class Rent{
     private $owner_id;
     private $renter_id;
     private $employee_id;
+    private $remarks;
 
     //default constructor
     public function __construct()
@@ -19,6 +20,7 @@ class Rent{
         $this->owner_id = 0;
         $this->renter_id = 0;
         $this->employee_id = 0;
+        $this->remarks = "";
     }
 
     //setter getter methods
@@ -92,4 +94,13 @@ class Rent{
         $this->employee_id = $employee_id;
     }
 
+    public function setRemarks($remarks)
+    {
+        $this->remarks = $remarks;
+    }
+
+    public function getRemarks()
+    {
+        return $this->remarks;
+    }
 }

@@ -95,6 +95,11 @@ include '../../Controller/EmployeeController/renter_list_handler.php';
                                         Renter Image
                                     </font>
                                 </th>
+                                <th align="centre" valign="top">
+                                    <font face="arial" color="#000000" size="3">
+                                    Remarks 
+                                    </font>
+                                </th>
                             </tr>
                             <?php include '../../Controller/EmployeeController/renter_list_processor.php' ?>
                         </table>

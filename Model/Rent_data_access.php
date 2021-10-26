@@ -24,6 +24,7 @@ function get_all_rent_info(){
             $rent->setEmployeeId($row["employee_id"]);
             $rent->setRentDate($row["rent_date"]);
             $rent->setRentReturnDate($row["rent_return_date"]);
+            $rent->setRemarks($row["remarks"]);
             array_push($rent_list, $rent);
         }
         $connection->close_con($con_obj);

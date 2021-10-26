@@ -25,5 +25,10 @@ foreach ($renters as $renter){
             <td align="center" valign="top">
                 <img src="'.$renter->getUserImgUrl().'" alt="car_img" width="75" height="75">
             </td>
+            <td align="center" valign="top">
+                <font face="arial" color="#000000" size="3">
+                '.$renter->getRemarks().'
+                </font>
+            </td>
         </tr>';
 }
