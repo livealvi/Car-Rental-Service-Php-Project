@@ -1,173 +1,87 @@
 <?php
 session_start();
-if(empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION["user_type"] != 'employee')) {
+if (empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION["user_type"] != 'employee')) {
     header("Location:../login.php");
 }
 
 include '../../Controller/EmployeeController/emp_dashboard_data_handler.php';
 
+
 ?>
 
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="emp_dashboard.css">
+    <link rel="stylesheet" href="emp_header.css">
+    <link rel="stylesheet" href="emp_side_panel.css">
+    <link rel="stylesheet" href="emp_footer.css">
 </head>
+
 <body>
-<!--Header inclusion-->
-<?php include 'emp_header.php' ?>
 
-<!--Main table structure-->
-<table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#b8e3ff">
-    <tr>
-        <td width="400">
-            <?php include 'emp_side_panel.php' ?>
-        </td>
-        <td align="center" valign="top">
-            <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" >
-                <tr>
-                    <td align="left" valign="top" height="50">
-                        <font face="arial" color="#000000" size="4">
-                            Dash Board
-                        </font>
-                    </td>
-                    <td align="right" valign="top" height="50">
-                        <font face="arial" color="#000000" size="4">
-                            Feedbacks:
-                        </font>
-                        &nbsp;
-                        <font face="arial" color="#000000" size="4">
-                            <?php echo $feedbacks ?>
-                        </font>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center" valign="top" width="300" height="50">
-                        <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#ffffff">
-                            <tr>
-                                <th>
-                                    <font face="arial" color="#000000" size="4">
-                                        Total Car Owner
-                                    </font>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <font face="arial" color="#000000" size="6">
-                                        <?php echo $num_of_owners ?>
-                                    </font>
-                                </th>
-                            </tr>
-                        </table>
-                    </td>
-                    <td align="center" valign="top" width="300">
-                        <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#ffffff">
-                            <tr>
-                                <th>
-                                    <font face="arial" color="#000000" size="4">
-                                        Total Car Renters
-                                    </font>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <font face="arial" color="#000000" size="6">
-                                        <?php echo $num_of_renters ?>
-                                    </font>
-                                </th>
-                            </tr>
-                        </table>
-                    </td>
-                    <td align="center" valign="top" width="300">
-                        <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#ffffff">
-                            <tr>
-                                <th>
-                                    <font face="arial" color="#000000" size="4">
-                                        Total Cars
-                                    </font>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <font face="arial" color="#000000" size="6">
-                                        <?php echo $num_of_cars ?>
-                                    </font>
-                                </th>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="left" valign="top" height="25">
-                        <font face="arial" color="#000000" size="4">
-                            Bookings:
-                        </font>
-                    </td>
-                </tr>
-                <tr>
-                    <th align="center" valign="top" colspan="4">
-                        <table border="2" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#ffffff">
-                            <tr>
-                                <th align="center" valign="top">
-                                    <font face="arial" color="#000000" size="3">
-                                        Rent Id
-                                    </font>
-                                </th>
-                                <th align="center" valign="top">
-                                    <font face="arial" color="#000000" size="3">
-                                        Rent Date
-                                    </font>
-                                </th>
-                                <th align="center" valign="top">
-                                    <font face="arial" color="#000000" size="3">
-                                        Rent Return Date
-                                    </font>
-                                </th>
-                                <th align="center" valign="top">
-                                    <font face="arial" color="#000000" size="3">
-                                        Car Model
-                                    </font>
-                                </th>
-                                <th align="center" valign="top">
-                                    <font face="arial" color="#000000" size="3">
-                                        Owner name
-                                    </font>
-                                </th>
-                                <th align="center" valign="top">
-                                    <font face="arial" color="#000000" size="3">
-                                        Renter name
-                                    </font>
-                                </th>
-                                <th align="center" valign="top">
-                                    <font face="arial" color="#000000" size="3">
-                                        Issuing Employee
-                                    </font>
-                                </th>
-                            </tr>
+
+    <!--Main Structure-->
+    <div class="main">
+        <div class="sidebar">
+            <!--Side Panel inclusion-->
+            <?php include 'emp_side_panel.php'; ?>
+        </div>
+        <div class="content">
+            <!--Header inclusion-->
+            <?php include 'emp_header.php' ?>
+            <div class="" style="padding:20px; margin-top:70px;">
+                <h2>Booking List</h2>
+                <div class="booking-list">
+                    <table>
+                        <tr>
+                            <th>Rent ID</th>
+                            <th>Rent Date</th>
+                            <th>Rent Return Date</th>
+                            <th>Car Model</th>
+                            <th>Owner Name</th>
+                            <th>Renter Name</th>
+                            <th>Issuing Employee</th>
+                        </tr>
+                        <tr>
                             <?php include '../../Controller/EmployeeController/emp_dashboard_show_processor.php' ?>
-                        </table>
-                    </th>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-<!--Main table structure end-->
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="" style="padding:20px; margin-top:70px;">
+                <h2>Renter List</h2>
+                <div class="booking-list">
+                    <table>
+                        <tr>
+                            <th>Rent ID</th>
+                            <th>Renter Name</th>
+                            <th>Renter Email</th>
+                            <th>Renter Mobile</th>
+                            <th>Renter Image</th>
+                        </tr>
 
-<!-- section padding bottom -->
-<tr>
-    <td height="60">
+                        <?php include '../../Controller/EmployeeController/renter_list_processor.php' ?>
 
-    </td>
-</tr>
-<!-- section padding bottom End-->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Main Structure end-->
+
+    <!-- section padding bottom -->
+
+    <!-- section padding bottom End-->
 
 
-<!--Footer inclusion-->
-<?php include 'emp_footer.php' ?>
+    <!--Footer inclusion-->
+    <?php include 'emp_footer.php' ?>
 </body>
+
 </html>

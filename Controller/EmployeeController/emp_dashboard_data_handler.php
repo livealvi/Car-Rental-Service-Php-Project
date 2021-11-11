@@ -7,9 +7,8 @@ $num_of_owners = get_user_num_by_type('owner');
 $num_of_renters = get_user_num_by_type('renter');
 $num_of_cars = get_car_num();
 
-$file_name = '../contact.json';
-$existing_data = file_get_contents($file_name);
-$temp_json_data = json_decode($existing_data);
-$feedbacks = count($temp_json_data);
-
 $rents = get_all_rent_info();
+
+
+
+$renters = get_all_user_by_type('renter');

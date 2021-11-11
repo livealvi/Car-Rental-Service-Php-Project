@@ -1,0 +1,126 @@
+.main1 {
+    margin: auto;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+
+}
+
+.form-box {
+    border-top: 1px solid #ccc;
+    padding: 10px 0 30px 0;
+}
+
+.form-view {
+    padding: 20px 0 10px 0;
+}
+
+/* .d-InlineBlock,
+.left-side,
+.right-side {
+    display: inline-block;
+}
+
+.d-InlineBlock input {
+    font-size: 21px;
+}
+
+.padding-left {
+    float: left;
+}
+
+
+
+.left-side {
+    font-size: 21px;
+}
+
+.right-side input {
+    font-size: 20px;
+    width: 100%;
+}
+
+.padding-right {
+    padding-right: 10px;
+    margin-top: 8px;
+    float: left;
+
+} */
+
+.padding-left .padding-right {
+    float: left;
+
+}
+
+.padding-right {
+    display: inline-block;
+    width: 20%;
+    margin: 6px;
+}
+
+.padding-left {
+    display: inline-block;
+    margin: 6px;
+}
+
+.view-padding {
+    padding-top: 5px;
+    margin-bottom: 2px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.all-button {
+    float: left;
+}
+
+.cancel-btn {
+    float: right;
+}
+
+input[type=text],
+input[type=password],
+select,
+textarea {
+    width: 450px;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 20px;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-size: 20px;
+}
+
+input[type=file] {
+    font-size: 20px;
+}
+
+
+input[type=submit],
+input[type=reset] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin: 5px;
+    font-size: 20px;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover {
+    background-color: #45a049;
+}

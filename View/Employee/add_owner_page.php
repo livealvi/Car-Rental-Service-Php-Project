@@ -23,7 +23,7 @@ include '../../Controller/EmployeeController/add_owner_handler.php';
 <?php include 'emp_header.php' ?>
 
 <!--Main table structure-->
-<table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#b8e3ff">
+<table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#e8ebe9">
     <tr>
         <td width="400">
             <?php include 'emp_side_panel.php' ?>
