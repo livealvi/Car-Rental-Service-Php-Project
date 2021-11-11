@@ -17,100 +17,54 @@ include '../../Controller/EmployeeController/owner_list_handler.php';
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Owner List</title>
+    <link rel="stylesheet" href="emp_main.css">
+    <link rel="stylesheet" href="emp_all_button.css">
+    <link rel="stylesheet" href="emp_input_box.css">
+    <link rel="stylesheet" href="emp_header.css">
+    <link rel="stylesheet" href="emp_side_panel.css">
+    <link rel="stylesheet" href="emp_footer.css">
 </head>
 
 <body>
-    <!--Header inclusion-->
-    <?php include 'emp_header.php' ?>
+    <!--Main Structure-->
+    <div class="main">
+        <div class="sidebar">
+            <!--Side Panel inclusion-->
+            <?php include 'emp_side_panel.php'; ?>
+        </div>
+        <!--Header inclusion-->
 
-    <!--Main table structure-->
-    <table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#e8ebe9">
-        <tr>
-            <td width="400">
-                <?php include 'emp_side_panel.php' ?>
-            </td>
-            <td align="center" valign="top">
-                <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center">
-                    <tr>
-                        <td align="left" valign="top" height="50">
-                            <font face="arial" color="#000000" size="6">
-                                Owner List Page
-                            </font>
-                        </td>
-                    </tr>
+        <div class="content">
+            <?php include 'emp_header.php' ?>
+            <div class="main-box">
+                <div>
+                    <div style="display:inline-block">
+                        <h2>Renter List</h2>
+                    </div>
+                    <div style="float:right">
+                        <a href="add_owner_page.php" class="button button2">Add Owner</a>
+                        <a href="#" class="button button2">Edit Owner Info</a>
+                        <a href="#" class="button button2">Owner Renter</a>
+                    </div>
+                </div>
 
-                    <tr>
-                        <td align="left" valign="top" height="25">
-                            <font face="arial" color="#000000" size="4">
-                                Owners:
-                            </font>
-                            <a href="add_owner_page.php">
-                                <button>
-                                    <font size="3" face="arial">Add Owner</font>
-                                </button>
-                            </a>
-                            &nbsp;
-                            <a href="">
-                                <button>
-                                    <font size="3" face="arial">Edit Owner Info</font>
-                                </button>
-                            </a>
-                            &nbsp;
-                            <a href="">
-                                <button>
-                                    <font size="3" face="arial">Archive Owner</font>
-                                </button>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th align="center" valign="top" colspan="4">
-                            <table border="2" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#ffffff">
-                                <tr>
-                                    <th align="centre" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Owner Id
-                                        </font>
-                                    </th>
-                                    <th align="centre" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Owner name
-                                        </font>
-                                    </th>
-                                    <th align="centre" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Owner Email
-                                        </font>
-                                    </th>
-                                    <th align="centre" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Owner Mobile Number
-                                        </font>
-                                    </th>
-                                    <th align="centre" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Owner Image
-                                        </font>
-                                    </th>
-                                </tr>
-                                <?php include '../../Controller/EmployeeController/owner_list_processor.php' ?>
-                            </table>
-                        </th>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <!--Main table structure end-->
+                <div class="booking-list">
+                    <table>
+                        <tr>
+                            <th>Owner ID</th>
+                            <th>Owner Name</th>
+                            <th>Owner Email</th>
+                            <th>Owner Mobile</th>
+                            <th>Owner Image</th>
 
-    <!-- section padding bottom -->
-    <tr>
-        <td height="60">
+                            <?php include '../../Controller/EmployeeController/owner_list_processor.php' ?>
 
-        </td>
-    </tr>
-    <!-- section padding bottom End-->
-
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Main Structure end-->
 
     <!--Footer inclusion-->
     <?php include 'emp_footer.php' ?>

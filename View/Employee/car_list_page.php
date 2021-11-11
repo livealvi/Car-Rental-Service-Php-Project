@@ -17,104 +17,54 @@ include '../../Controller/EmployeeController/car_list_handler.php';
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Car List</title>
+    <link rel="stylesheet" href="emp_main.css">
+    <link rel="stylesheet" href="emp_all_button.css">
+    <link rel="stylesheet" href="emp_input_box.css">
+    <link rel="stylesheet" href="emp_header.css">
+    <link rel="stylesheet" href="emp_side_panel.css">
+    <link rel="stylesheet" href="emp_footer.css">
 </head>
 
 <body>
-    <!--Header inclusion-->
-    <?php include 'emp_header.php' ?>
+    <!--Main Structure-->
+    <div class="main">
+        <div class="sidebar">
+            <!--Side Panel inclusion-->
+            <?php include 'emp_side_panel.php'; ?>
+        </div>
+        <!--Header inclusion-->
+        <div class="content">
+            <?php include 'emp_header.php' ?>
+            <div class="main-box">
+                <div>
+                    <div style="display:inline-block">
+                        <h2>Car List</h2>
+                    </div>
+                    <div style="float:right">
+                        <a href="add_car_page.php" class="button button2">Add New Car</a>
+                        <a href="#" class="button button2">Edit Car Info</a>
+                        <a href="#" class="button button2">Archive Cars</a>
+                    </div>
+                </div>
 
-    <!--Main table structure-->
-    <table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#e8ebe9">
-        <tr>
-            <td width="400">
-                <?php include 'emp_side_panel.php' ?>
-            </td>
-            <td align="center" valign="top">
-                <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center">
-                    <tr>
-                        <td align="left" valign="top" height="50">
-                            <font face="arial" color="#000000" size="6">
-                                Car List Page
-                            </font>
-                        </td>
-                    </tr>
+                <div class="car-list">
+                    <table>
+                        <tr>
+                            <th>Car ID</th>
+                            <th>Car Model Name</th>
+                            <th>Car Owner Name</th>
+                            <th>Car Registration Number</th>
+                            <th>Is Car Available?</th>
+                            <th>Car Image</th>
 
-                    <tr>
-                        <td align="left" valign="top" height="25">
-                            <font face="arial" color="#000000" size="4">
-                                Cars:
-                            </font>
-                            <a href="add_car_page.php">
-                                <button>
-                                    <font size="3" face="arial">Add Car</font>
-                                </button>
-                            </a>
-                            &nbsp;
-                            <a href="">
-                                <button>
-                                    <font size="3" face="arial">Edit Car Info</font>
-                                </button>
-                            </a>
-                            &nbsp;
-                            <a href="">
-                                <button>
-                                    <font size="3" face="arial">Archive Car</font>
-                                </button>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th align="center" valign="top" colspan="4">
-                            <table border="2" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#ffffff">
-                                <tr>
-                                    <th align="centre" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Car Id
-                                        </font>
-                                    </th>
-                                    <th align="centre" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Car model name
-                                        </font>
-                                    </th>
-                                    <th align="centre" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Car owner name
-                                        </font>
-                                    </th>
-                                    <th align="centre" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Car Registration number
-                                        </font>
-                                    </th>
-                                    <th align="centre" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Is Car available?
-                                        </font>
-                                    </th>
-                                    <th align="centre" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Car Image
-                                        </font>
-                                    </th>
-                                </tr>
-                                <?php include '../../Controller/EmployeeController/car_list_processor.php' ?>
-                            </table>
-                        </th>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <!--Main table structure end-->
+                            <?php include '../../Controller/EmployeeController/car_list_processor.php' ?>
 
-    <!-- section padding bottom -->
-    <tr>
-        <td height="60">
-
-        </td>
-    </tr>
-    <!-- section padding bottom End-->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Main Structure end-->
 
 
     <!--Footer inclusion-->

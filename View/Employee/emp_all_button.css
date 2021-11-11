@@ -1,0 +1,32 @@
+/* button */
+.all-button {
+    float: left;
+    padding-top: 22px;
+}
+
+.cancel-btn {
+    float: right;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 11px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 23px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button2 {
+    background-color: red;
+}
+
+.button2:hover {
+    background-color: rgb(180, 10, 10);
+    color: white;
+
+}

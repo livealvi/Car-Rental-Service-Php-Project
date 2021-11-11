@@ -1,22 +1,13 @@
-/* .content {
-    margin-left: 160px;
+.navbar {
+    margin: 0;
 }
-
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(236 236 236);
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.logout {
-    float: right;
-    padding-right: 10%;
+    background-color: #333;
 }
 
 li {
@@ -25,48 +16,26 @@ li {
 
 li a {
     display: block;
-    color: rgb(31, 31, 31);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: #77cfaf;
-}
-
-.active {
-    background-color: #04AA6D;
-} */
-
-body {
-    margin: 0;
-}
-
-.content {
-    margin-left: 160px;
-}
-
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    margin: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.navbar a {
-    float: left;
-    font-size: 16px;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
+li a:hover:not(.active) {
+    background-color: red;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+body {
+    margin: 0;
+}
+
 .dropdown {
-    float: right;
+    float: left;
     overflow: hidden;
 }
 
@@ -75,7 +44,7 @@ body {
     border: none;
     outline: none;
     color: white;
-    padding: 14px 250px;
+    padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;

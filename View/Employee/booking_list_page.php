@@ -17,106 +17,56 @@ include '../../Controller/EmployeeController/booking_list_handler.php';
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Booking List</title>
+    <link rel="stylesheet" href="emp_main.css">
+    <link rel="stylesheet" href="emp_all_button.css">
+    <link rel="stylesheet" href="emp_input_box.css">
+    <link rel="stylesheet" href="emp_header.css">
+    <link rel="stylesheet" href="emp_side_panel.css">
+    <link rel="stylesheet" href="emp_footer.css">
 </head>
 
 <body>
-    <!--Header inclusion-->
-    <?php include 'emp_header.php' ?>
+    <!--Main Structure-->
+    <div class="main">
+        <div class="sidebar">
+            <!--Side Panel inclusion-->
+            <?php include 'emp_side_panel.php'; ?>
+        </div>
+        <!--Header inclusion-->
 
-    <!--Main table structure-->
-    <table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#e8ebe9">
-        <tr>
-            <td width="400">
-                <?php include 'emp_side_panel.php' ?>
-            </td>
-            <td align="center" valign="top">
-                <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center">
-                    <tr>
-                        <td align="left" valign="top" height="50">
-                            <font face="arial" color="#000000" size="6">
-                                Booking List Page
-                            </font>
-                        </td>
+        <div class="content">
+            <?php include 'emp_header.php' ?>
+            <div class="main-box">
+                <div>
+                    <div style="display:inline-block">
+                        <h2>Booking List</h2>
+                    </div>
+                    <div style="float:right">
+                        <a href="add_booking_page.php" class="button button2">Add Booking</a>
+                        <a href="#" class="button button2">Edit Booking Info</a>
+                        <a href="#" class="button button2">Archive Booking</a>
+                    </div>
+                </div>
 
+                <div class="booking-list">
+                    <table>
+                        <tr>
+                            <th>Rent ID</th>
+                            <th>Rent Date</th>
+                            <th>Rent Return Date</th>
+                            <th>Car Model</th>
+                            <th>Owner Name</th>
+                            <th>Renter Name</th>
+                            <th>Issuing Employee</th>
 
-                    </tr>
+                            <?php include '../../Controller/EmployeeController/emp_dashboard_show_processor.php' ?>
 
-                    <tr>
-                        <td align="left" valign="top" height="25">
-                            <font face="arial" color="#000000" size="4">
-                                Bookings:
-                            </font>
-                            <a href="">
-                                <button>
-                                    <font size="3" face="arial">Edit Booking</font>
-                                </button>
-                            </a>
-                            &nbsp;
-                            <a href="">
-                                <button>
-                                    <font size="3" face="arial">Archive Booking</font>
-                                </button>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th align="center" valign="top" colspan="4">
-                            <table border="2" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#ffffff">
-                                <tr>
-                                    <th align="center" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Booking Id
-                                        </font>
-                                    </th>
-                                    <th align="center" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Booking Date
-                                        </font>
-                                    </th>
-                                    <th align="center" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Booking Return Date
-                                        </font>
-                                    </th>
-                                    <th align="center" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Car Model
-                                        </font>
-                                    </th>
-                                    <th align="center" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Owner name
-                                        </font>
-                                    </th>
-                                    <th align="center" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Renter name
-                                        </font>
-                                    </th>
-                                    <th align="center" valign="top">
-                                        <font face="arial" color="#000000" size="3">
-                                            Issuing Employee
-                                        </font>
-                                    </th>
-                                </tr>
-                                <?php include '../../Controller/EmployeeController/booking_list_processor.php' ?>
-                            </table>
-                        </th>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <!--Main table structure end-->
-
-    <!-- section padding bottom -->
-    <tr>
-        <td height="60">
-
-        </td>
-    </tr>
-    <!-- section padding bottom End-->
-
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Main Structure end-->
 
     <!--Footer inclusion-->
     <?php include 'emp_footer.php' ?>

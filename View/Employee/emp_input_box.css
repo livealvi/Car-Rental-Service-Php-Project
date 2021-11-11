@@ -1,10 +1,15 @@
-.main1 {
+.main-form {
     margin: auto;
     width: 60%;
     border: 1px solid #ccc;
     border-radius: 4px;
-    padding: 10px;
+    padding: 15px;
+    height: 600px;
+    margin-top: 60px;
+}
 
+.main-form h1 {
+    padding-bottom: 15px;
 }
 
 .form-box {
@@ -16,50 +21,18 @@
     padding: 20px 0 10px 0;
 }
 
-/* .d-InlineBlock,
-.left-side,
-.right-side {
-    display: inline-block;
-}
 
-.d-InlineBlock input {
-    font-size: 21px;
-}
-
-.padding-left {
+.for-input .for-label {
     float: left;
 }
 
-
-
-.left-side {
-    font-size: 21px;
-}
-
-.right-side input {
-    font-size: 20px;
-    width: 100%;
-}
-
-.padding-right {
-    padding-right: 10px;
-    margin-top: 8px;
-    float: left;
-
-} */
-
-.padding-left .padding-right {
-    float: left;
-
-}
-
-.padding-right {
+.for-label {
     display: inline-block;
     width: 20%;
     margin: 6px;
 }
 
-.padding-left {
+.for-input {
     display: inline-block;
     margin: 6px;
 }
@@ -69,19 +42,10 @@
     margin-bottom: 2px;
 }
 
-
 .row:after {
     content: "";
     display: table;
     clear: both;
-}
-
-.all-button {
-    float: left;
-}
-
-.cancel-btn {
-    float: right;
 }
 
 input[type=text],
@@ -105,7 +69,6 @@ label {
 input[type=file] {
     font-size: 20px;
 }
-
 
 input[type=submit],
 input[type=reset] {

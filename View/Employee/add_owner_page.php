@@ -1,7 +1,7 @@
 <!--Add owner page-->
 <?php
 session_start();
-if(empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION["user_type"] != 'employee')) {
+if (empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION["user_type"] != 'employee')) {
     header("Location:../login.php");
 }
 
@@ -11,140 +11,112 @@ include '../../Controller/EmployeeController/add_owner_handler.php';
 
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add Owner</title>
+    <link rel="stylesheet" href="emp_main.css">
+    <link rel="stylesheet" href="emp_all_button.css">
+    <link rel="stylesheet" href="emp_input_box.css">
+    <link rel="stylesheet" href="emp_header.css">
+    <link rel="stylesheet" href="emp_side_panel.css">
+    <link rel="stylesheet" href="emp_footer.css">
 </head>
+
 <body>
-<!--Header inclusion-->
-<?php include 'emp_header.php' ?>
+    <!--Main Structure-->
+    <div class="main">
+        <div class="sidebar">
+            <!--Side Panel inclusion-->
+            <?php include 'emp_side_panel.php'; ?>
+        </div>
+        <!--Header inclusion-->
 
-<!--Main table structure-->
-<table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#e8ebe9">
-    <tr>
-        <td width="400">
-            <?php include 'emp_side_panel.php' ?>
-        </td>
-        <td align="center" valign="top">
-            <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" >
-                <tr>
-                    <td align="left" valign="top" height="50">
-                        <font face="arial" color="#000000" size="6">
-                            Add new Owner
-                        </font>
-                    </td>
-                    <td align="right" valign="top" height="50">
-                        <a href="owner_list_page.php">
-                            <button>
-                                <font size="3" face="arial">Cancel add operation</font>
-                            </button>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center" valign="top">
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data">
-                            <table border="0" width="55%" cellpadding="20" cellspacing="0" align="center" bgcolor="#0077b6">
-                                <tr>
-                                    <td>
-                                        <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" bgcolor="#0077b6">
-                                            <tr>
-                                                <td width="30%">
-                                                    <font face="arial" size="4" color="#ffffff">
-                                                        User Name
-                                                    </font>
-                                                </td>
-                                                <td width="70%">
-                                                    <input type="text" name="user_name" size="50">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="30%">
-                                                    <font face="arial" size="4" color="#ffffff">
-                                                        Email
-                                                    </font>
-                                                </td>
-                                                <td width="70%">
-                                                    <input type="text" name="user_email" size="50">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="30%">
-                                                    <font face="arial" size="4" color="#ffffff">
-                                                        Mobile
-                                                    </font>
-                                                </td>
-                                                <td width="70%">
-                                                    <input type="text" name="user_mobile" size="50">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="30%">
-                                                    <font face="arial" size="4" color="#ffffff">
-                                                        Password
-                                                    </font>
-                                                </td>
-                                                <td width="70%">
-                                                    <input type="password" name="user_password" size="50">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="30%">
-                                                    <font face="arial" size="4" color="#ffffff">
-                                                        Confirm Password
-                                                    </font>
-                                                </td>
-                                                <td width="70%">
-                                                    <input type="password" name="user_password_confirm" size="50">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="30%">
-                                                    <font face="arial" size="4" color="#ffffff">
-                                                        Image
-                                                    </font>
-                                                </td>
-                                                <td width="70%">
-                                                    <input type="file" name="img_file" id="img_file" size="50">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="30%">
-                                                    &nbsp;
-                                                </td>
-                                                <td width="70%">
-                                                    <button type="submit" name="submit" value="submit">
-                                                        <font size="5" face="arial">Add owner</font>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <?php include '../../Controller/EmployeeController/add_owner_processor.php';?>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
+        <div class="content">
+            <?php include 'emp_header.php' ?>
+            <div class="main-box">
+                <div class="main-form">
+                    <div>
+                        <h1>Add New Owner</h1>
+                    </div>
+                    <div class="form-box">
+                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
+                            <!-- --input-label-- -->
+                            <div class="form-view ">
+                                <div class="row">
+                                    <div class="for-label">
+                                        <label for="Username">Username:</label>
+                                    </div>
+                                    <div class="for-input">
+                                        <input type="text" name="user_name" size="50">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="for-label">
+                                        <label for="Email">Email:</label>
+                                    </div>
+                                    <div class="for-input">
+                                        <input type="text" name="user_email" size="50">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="for-label">
+                                        <label for="Mobile">Mobile:</label>
+                                    </div>
+                                    <div class="for-input">
+                                        <input type="text" name="user_mobile" size="50">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="for-label">
+                                        <label for="Password">Password:</label>
+                                    </div>
+                                    <div class="for-input">
+                                        <input type="password" name="user_password" size="50">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="for-label">
+                                        <label for="ConfirmPassword">Confirm Password:</label>
+                                    </div>
+                                    <div class="for-input">
+                                        <input type="password" name="user_password_confirm" size="50">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="for-label">
+                                        <label for="image_file">Please Choose a Image</label>
+                                    </div>
+                                    <div class="for-input">
+                                        <input type="file" name="img_file" id="img_file" size="50">
+                                    </div>
+                                </div>
+
+                                <!-- --buttons-- -->
+                                <div>
+                                    <div class="all-button">
+                                        <div class="cancel-btn">
+                                            <a href="owner_list_page.php" class="button button2">Cancel</a>
+                                        </div>
+                                        <input type="reset" name="reset" value="Reset">
+                                        <input type="submit" name="submit" value="Submit">
+                                    </div>
+                                </div>
+                                <!-- --buttons-- -->
                         </form>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-<!--Main table structure end-->
+                    </div>
+                    <?php include '../../Controller/EmployeeController/add_owner_processor.php'; ?>
+                </div>
+            </div>
 
-<!-- section padding bottom -->
-<tr>
-    <td height="60">
+        </div>
+    </div>
+    <!--Main Structure end-->
 
-    </td>
-</tr>
-<!-- section padding bottom End-->
-
-
-<!--Footer inclusion-->
-<?php include 'emp_footer.php' ?>
+    <!--Footer inclusion-->
+    <?php include 'emp_footer.php' ?>
 </body>
+
 </html>
