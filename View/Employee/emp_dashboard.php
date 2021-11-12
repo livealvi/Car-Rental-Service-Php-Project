@@ -39,9 +39,9 @@ include '../../Controller/EmployeeController/emp_dashboard_data_handler.php';
         <div class="content">
             <?php include 'emp_header.php' ?>
             <div class="main-box">
-                <div class="" style=" margin-top:70px;">
+                <div class="booking-lis style=" margin-top:70px;">
                     <h2>Booking List</h2>
-                    <div class="booking-list">
+                    <div class="">
                         <table>
                             <tr>
                                 <th>Rent ID</th>
@@ -58,9 +58,9 @@ include '../../Controller/EmployeeController/emp_dashboard_data_handler.php';
                         </table>
                     </div>
                 </div>
-                <div class="" style=" margin-top:70px;">
+                <div class="rent-list" style=" margin-top:70px;">
                     <h2>Renter List</h2>
-                    <div class="rent-list">
+                    <div class="">
                         <table>
                             <tr>
                                 <th>Rent ID</th>
@@ -96,6 +96,29 @@ include '../../Controller/EmployeeController/emp_dashboard_data_handler.php';
                         </table>
                     </div>
                 </div>
+
+                <div class="car-list">
+
+                    <div class="">
+                        <div style="display:inline-block">
+                            <h2>Car List</h2>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <table>
+                            <tr>
+                                <th>Car ID</th>
+                                <th>Car Model Name</th>
+                                <th>Car Owner Name</th>
+                                <th>Car Registration Number</th>
+                                <th>Is Car Available?</th>
+                                <th>Car Image</th>
+                                <?php include '../../Controller/EmployeeController/car_list_processor.php' ?>
+                        </table>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

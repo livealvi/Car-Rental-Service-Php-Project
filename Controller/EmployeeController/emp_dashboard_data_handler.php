@@ -14,3 +14,5 @@ $rents = get_all_rent_info();
 $renters = get_all_user_by_type('renter');
 
 $owners = get_all_user_by_type('owner');
+
+$cars = get_all_car();
