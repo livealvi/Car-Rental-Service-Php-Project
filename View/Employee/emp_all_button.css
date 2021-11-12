@@ -1,7 +1,12 @@
 /* button */
 .all-button {
     float: left;
-    padding-top: 22px;
+    /* padding-top: 22px; */
+
+}
+
+.btn-block {
+    display: block;
 }
 
 .cancel-btn {
@@ -21,12 +26,57 @@
     border-radius: 4px;
 }
 
-.button2 {
-    background-color: red;
+.btn-blue {
+    background-color: #007bff;
 }
 
-.button2:hover {
-    background-color: rgb(180, 10, 10);
+.btn-blue:hover {
+    background-color: #005dc0;
     color: white;
+}
 
+.btn-red {
+    background-color: #dc3545;
+}
+
+.btn-red:hover {
+    background-color: #b32332;
+    color: white;
+}
+
+.btn-green {
+    background-color: #28a745;
+}
+
+.btn-green:hover {
+    background-color: #23913c;
+    color: white;
+}
+
+.btn-cyan {
+    background-color: #17a2b8;
+}
+
+.btn-cyan:hover {
+    background-color: #138a9c;
+    color: white;
+}
+
+
+
+
+input[type=submit] {
+    background-color: #28a745;
+}
+
+input[type=submit]:hover {
+    background-color: #23913c;
+}
+
+input[type=reset] {
+    background-color: #007bff;
+}
+
+input[type=reset]:hover {
+    background-color: #005dc0;
 }

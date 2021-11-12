@@ -42,9 +42,9 @@ include '../../Controller/EmployeeController/owner_list_handler.php';
                         <h2>Renter List</h2>
                     </div>
                     <div style="float:right">
-                        <a href="add_owner_page.php" class="button button2">Add Owner</a>
-                        <a href="#" class="button button2">Edit Owner Info</a>
-                        <a href="#" class="button button2">Owner Renter</a>
+                        <a href="add_owner_page.php" class="button btn-green">Add Owner</a>
+                        <a href="#" class="button btn-cyan">Edit Owner Info</a>
+                        <a href="#" class="button btn-red">Owner Renter</a>
                     </div>
                 </div>
 

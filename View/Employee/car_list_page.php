@@ -41,9 +41,9 @@ include '../../Controller/EmployeeController/car_list_handler.php';
                         <h2>Car List</h2>
                     </div>
                     <div style="float:right">
-                        <a href="add_car_page.php" class="button button2">Add New Car</a>
-                        <a href="#" class="button button2">Edit Car Info</a>
-                        <a href="#" class="button button2">Archive Cars</a>
+                        <a href="add_car_page.php" class="button btn-green">Add New Car</a>
+                        <a href="#" class="button btn-cyan">Edit Car Info</a>
+                        <a href="#" class="button btn-red">Archive Cars</a>
                     </div>
                 </div>
 

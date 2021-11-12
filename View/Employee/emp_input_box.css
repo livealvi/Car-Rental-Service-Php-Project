@@ -4,7 +4,6 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 15px;
-    height: 600px;
     margin-top: 60px;
 }
 
@@ -14,7 +13,7 @@
 
 .form-box {
     border-top: 1px solid #ccc;
-    padding: 10px 0 30px 0;
+    padding: 10px 0 25px 0;
 }
 
 .form-view {
@@ -24,6 +23,10 @@
 
 .for-input .for-label {
     float: left;
+}
+
+.for-btn {
+    display: block;
 }
 
 .for-label {
@@ -72,7 +75,6 @@ input[type=file] {
 
 input[type=submit],
 input[type=reset] {
-    background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -81,9 +83,4 @@ input[type=reset] {
     float: right;
     margin: 5px;
     font-size: 20px;
-}
-
-input[type=submit]:hover,
-input[type=reset]:hover {
-    background-color: #45a049;
 }

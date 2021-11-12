@@ -52,59 +52,61 @@ include '../../Controller/EmployeeController/add_owner_handler.php';
                                     <div class="for-input">
                                         <input type="text" name="user_name" size="50">
                                     </div>
-                                </div>
-                                <div>
-                                    <div class="for-label">
-                                        <label for="Email">Email:</label>
-                                    </div>
-                                    <div class="for-input">
-                                        <input type="text" name="user_email" size="50">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="for-label">
-                                        <label for="Mobile">Mobile:</label>
-                                    </div>
-                                    <div class="for-input">
-                                        <input type="text" name="user_mobile" size="50">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="for-label">
-                                        <label for="Password">Password:</label>
-                                    </div>
-                                    <div class="for-input">
-                                        <input type="password" name="user_password" size="50">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="for-label">
-                                        <label for="ConfirmPassword">Confirm Password:</label>
-                                    </div>
-                                    <div class="for-input">
-                                        <input type="password" name="user_password_confirm" size="50">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="for-label">
-                                        <label for="image_file">Please Choose a Image</label>
-                                    </div>
-                                    <div class="for-input">
-                                        <input type="file" name="img_file" id="img_file" size="50">
-                                    </div>
-                                </div>
 
-                                <!-- --buttons-- -->
-                                <div>
-                                    <div class="all-button">
-                                        <div class="cancel-btn">
-                                            <a href="owner_list_page.php" class="button button2">Cancel</a>
+                                    <div>
+                                        <div class="for-label">
+                                            <label for="Email">Email:</label>
                                         </div>
-                                        <input type="reset" name="reset" value="Reset">
-                                        <input type="submit" name="submit" value="Submit">
+                                        <div class="for-input">
+                                            <input type="text" name="user_email" size="50">
+                                        </div>
                                     </div>
+                                    <div>
+                                        <div class="for-label">
+                                            <label for="Mobile">Mobile:</label>
+                                        </div>
+                                        <div class="for-input">
+                                            <input type="text" name="user_mobile" size="50">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="for-label">
+                                            <label for="Password">Password:</label>
+                                        </div>
+                                        <div class="for-input">
+                                            <input type="password" name="user_password" size="50">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="for-label">
+                                            <label for="ConfirmPassword">Confirm Password:</label>
+                                        </div>
+                                        <div class="for-input">
+                                            <input type="password" name="user_password_confirm" size="50">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="for-label">
+                                            <label for="image_file">Please Choose a Image</label>
+                                        </div>
+                                        <div class="for-input">
+                                            <input type="file" name="img_file" id="img_file" size="50">
+                                        </div>
+                                    </div>
+
+                                    <!-- --buttons-- -->
+                                    <div>
+                                        <div class="all-button">
+                                            <div class="cancel-btn">
+                                                <a href="owner_list_page.php" class="button btn-red">Cancel</a>
+                                            </div>
+                                            <input type="reset" name="reset" value="Reset">
+                                            <input type="submit" name="submit" value="Submit">
+                                        </div>
+                                    </div>
+                                    <!-- --buttons-- -->
                                 </div>
-                                <!-- --buttons-- -->
+                            </div>
                         </form>
                     </div>
                     <?php include '../../Controller/EmployeeController/add_owner_processor.php'; ?>

@@ -44,9 +44,9 @@ include '../../Controller/EmployeeController/renter_list_handler.php';
                         <h2>Renter List</h2>
                     </div>
                     <div style="float:right">
-                        <a href="add_renter_page.php" class="button button2">Add Renter</a>
-                        <a href="#" class="button button2">Edit Renter Info</a>
-                        <a href="#" class="button button2">Archive Renter</a>
+                        <a href="add_renter_page.php" class="button btn-green">Add Renter</a>
+                        <a href="#" class="button btn-cyan">Edit Renter Info</a>
+                        <a href="#" class="button btn-red">Archive Renter</a>
                     </div>
                 </div>
 

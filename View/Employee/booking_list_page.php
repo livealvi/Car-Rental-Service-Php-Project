@@ -42,9 +42,9 @@ include '../../Controller/EmployeeController/booking_list_handler.php';
                         <h2>Booking List</h2>
                     </div>
                     <div style="float:right">
-                        <a href="add_booking_page.php" class="button button2">Add Booking</a>
-                        <a href="#" class="button button2">Edit Booking Info</a>
-                        <a href="#" class="button button2">Archive Booking</a>
+                        <a href="add_booking_page.php" class="button btn-green">Add Booking</a>
+                        <a href="#" class="button btn-cyan">Edit Booking Info</a>
+                        <a href="#" class="button btn-red">Archive Booking</a>
                     </div>
                 </div>
 

@@ -51,49 +51,49 @@ include '../../Controller/EmployeeController/add_car_handler.php';
                                     <div class="for-input">
                                         <input type="text" name="owner_id" size="50">
                                     </div>
-                                </div>
-                                <div>
-                                    <div class="for-label">
-                                        <label for="car_model_name">Car Model Name:</label>
-                                    </div>
-                                    <div class="for-input">
-                                        <input type="text" name="car_model_name" size="50">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="for-label">
-                                        <label for="car_reg_no">Car Registration No:</label>
-                                    </div>
-                                    <div class="for-input">
-                                        <input type="text" name="car_reg_no" size="50">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="for-label">
-                                        <label for="image_file">Please Choose a Image</label>
-                                    </div>
-                                    <div class="for-input">
-                                        <input type="file" name="img_file" id="img_file" size="50">
-                                    </div>
-                                </div>
 
-                                <!-- --buttons-- -->
-                                <div>
-                                    <div class="all-button">
-                                        <div class="cancel-btn">
-                                            <a href="car_list_page.php" class="button button2">Cancel</a>
+                                    <div>
+                                        <div class="for-label">
+                                            <label for="car_model_name">Car Model Name:</label>
                                         </div>
-                                        <input type="reset" name="reset" value="Reset">
-                                        <input type="submit" name="submit" value="Submit">
+                                        <div class="for-input">
+                                            <input type="text" name="car_model_name" size="50">
+                                        </div>
                                     </div>
+                                    <div>
+                                        <div class="for-label">
+                                            <label for="car_reg_no">Car Registration No:</label>
+                                        </div>
+                                        <div class="for-input">
+                                            <input type="text" name="car_reg_no" size="50">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="for-label">
+                                            <label for="image_file">Please Choose a Image</label>
+                                        </div>
+                                        <div class="for-input">
+                                            <input type="file" name="img_file" id="img_file" size="50">
+                                        </div>
+                                    </div>
+                                    <!-- --buttons-- -->
+                                    <div>
+                                        <div class="all-button">
+                                            <div class="cancel-btn">
+                                                <a href="car_list_page.php" class="button btn-red">Cancel</a>
+                                            </div>
+                                            <input type="reset" name="reset" value="Reset">
+                                            <input type="submit" name="submit" value="Submit">
+                                        </div>
+                                    </div>
+                                    <!-- --buttons-- -->
                                 </div>
-                                <!-- --buttons-- -->
+                            </div>
                         </form>
                     </div>
                     <?php include '../../Controller/EmployeeController/add_renter_processor.php'; ?>
                 </div>
             </div>
-
         </div>
     </div>
     <!--Main Structure end-->
