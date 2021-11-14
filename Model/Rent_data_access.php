@@ -9,12 +9,13 @@ require_once 'Db_connector.php';
 require_once 'Classes/Rent.php';
 
 //function to get all rent data
-function get_all_rent_info(){
+function get_all_rent_info()
+{
     $connection = new db();
-    $con_obj=$connection->open_con();
-    
+    $con_obj = $connection->open_con();
+
     $result = $con_obj->query("SELECT * FROM Rent");
-    if($result->num_rows > 0){
+    if ($result->num_rows > 0) {
         $rent_list = [];
         while ($row = $result->fetch_assoc()) {
             $rent = new Rent();
@@ -29,9 +30,18 @@ function get_all_rent_info(){
         }
         $connection->close_con($con_obj);
         return $rent_list;
-    }
-    else{
+    } else {
         $connection->close_con($con_obj);
         return null;
     }
+}
+
+
+function add_booking($rent_date, $rent_return_date, $car_id, $owner_id, $renter_id, $employee_id)
+{
+    $connection = new db();
+    $con_obj = $connection->open_con();
+    $result = $con_obj->query("INSERT INTO Rent ( rent_date, rent_return_date, car_id, owner_id, renter_id, employee_id)
+                                     VALUES ('$rent_date', '$rent_return_date', '$car_id', '$owner_id', '$renter_id', $employee_id)");
+    return $result;
 }

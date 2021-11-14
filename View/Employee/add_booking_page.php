@@ -1,16 +1,10 @@
-<!--Add renter page-->
 <?php
-
-if (isset($_GET['ids'])) {
-    $id = $_GET['ids'];
-}
-
 session_start();
 if (empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION["user_type"] != 'employee')) {
     header("Location:../login.php");
 }
 
-include '../../Controller/EmployeeController/edit_renter_list_handler.php';
+include '../../Controller/EmployeeController/add_booking_handler.php';
 
 ?>
 
@@ -21,7 +15,7 @@ include '../../Controller/EmployeeController/edit_renter_list_handler.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Renter</title>
+    <title>Add New Booking</title>
     <link rel="stylesheet" href="css/emp_main.css">
     <link rel="stylesheet" href="css/emp_all_button.css">
     <link rel="stylesheet" href="css/emp_input_box.css">
@@ -37,71 +31,85 @@ include '../../Controller/EmployeeController/edit_renter_list_handler.php';
         <div class="sidebar">
             <!--Side Panel inclusion-->
             <?php include 'emp_side_panel.php'; ?>
-
         </div>
         <div class="content">
             <!--Header inclusion-->
             <?php include 'emp_header.php' ?>
-
             <div class="main-box">
                 <div class="main-form">
                     <div>
-                        <h1>Update Renter</h1>
+                        <h1>Add New Booking</h1>
                     </div>
                     <div class="form-box">
-                        <form method="post" action="#" enctype="multipart/form-data">
+                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
                             <!-- --input-label-- -->
                             <div class="form-view ">
                                 <div class="row">
-                                    <div>
-                                        <div class="for-label">
-                                            <label for="UserID">User ID:</label>
-                                        </div>
-                                        <div class="for-input">
-                                            <input type="text" name="user_id" size="50" value="<?php echo $user_id; ?>">
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="for-label">
-                                            <label for="Username">Username:</label>
-                                        </div>
-                                        <div class="for-input">
-                                            <input type="text" name="user_name" size="50" value="<?php echo $user_name; ?>">
-                                        </div>
-                                    </div>
 
                                     <div>
                                         <div class="for-label">
-                                            <label for="Email">Email:</label>
+                                            <label for="rent_date">Rent Date:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="text" name="user_email" size="50" value="<?php echo $user_email; ?>">
+                                            <input type="date" name="rent_date" size="50">
                                         </div>
                                     </div>
                                     <div>
                                         <div class="for-label">
-                                            <label for="Mobile">Mobile:</label>
+                                            <label for="rent_return_date">Rent Return Date:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="text" name="user_mobile" size="50" value="<?php echo $user_mobile; ?>">
+                                            <input type="date" name="rent_return_date" size="50">
                                         </div>
                                     </div>
-
+                                    <div>
+                                        <div class="for-label">
+                                            <label for="car_id">Car ID:</label>
+                                        </div>
+                                        <div class="for-input">
+                                            <input type="text" name="car_id" size="50">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="for-label">
+                                            <label for="owner_id">Owner ID:</label>
+                                        </div>
+                                        <div class="for-input">
+                                            <input type="text" name="owner_id" size="50">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="for-label">
+                                            <label for="employee_id">Employee ID:</label>
+                                        </div>
+                                        <div class="for-input">
+                                            <input type="text" name="employee_id" size="50">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="for-label">
+                                            <label for="renter_id">Renter ID:</label>
+                                        </div>
+                                        <div class="for-input">
+                                            <input type="text" name="renter_id" size="50">
+                                        </div>
+                                    </div>
+                                    <!-- --buttons-- -->
                                     <div>
                                         <div class="all-button">
                                             <div class="cancel-btn">
-                                                <a href="renter_list_page.php" class="button btn-red">Back</a>
+                                                <a href="booking_list_page.php" class="button btn-red">Cancel</a>
                                             </div>
-                                            <input type="submit" name="update" value="Update" <?= $id ?>>
+                                            <input type="reset" name="reset btn-blue" value="Reset">
+                                            <input type="submit" name="submit" value="Add Booking">
                                         </div>
                                     </div>
                                     <!-- --buttons-- -->
                                 </div>
                             </div>
-                            <?php include '../../Controller/EmployeeController/edit_renter_processors.php'; ?>
                         </form>
                     </div>
-
+                    <?php include '../../Controller/EmployeeController/add_booking_processor.php'; ?>
                 </div>
             </div>
 

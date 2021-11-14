@@ -1,8 +1,14 @@
 /* button */
+.button-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
 .all-button {
     float: left;
-    /* padding-top: 22px; */
-
 }
 
 .btn-block {
@@ -11,6 +17,11 @@
 
 .cancel-btn {
     float: right;
+}
+
+.btn-edit-delete {
+    float: left;
+    display: inline-block;
 }
 
 .button {
@@ -61,9 +72,6 @@
     background-color: #138a9c;
     color: white;
 }
-
-
-
 
 input[type=submit] {
     background-color: #28a745;

@@ -17,12 +17,12 @@ include '../../Controller/EmployeeController/emp_dashboard_data_handler.php';
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Employee Dashboard</title>
-    <link rel="stylesheet" href="emp_main.css">
-    <link rel="stylesheet" href="emp_all_button.css">
-    <link rel="stylesheet" href="emp_input_box.css">
-    <link rel="stylesheet" href="emp_header.css">
-    <link rel="stylesheet" href="emp_side_panel.css">
-    <link rel="stylesheet" href="emp_footer.css">
+    <link rel="stylesheet" href="css/emp_main.css">
+    <link rel="stylesheet" href="css/emp_all_button.css">
+    <link rel="stylesheet" href="css/emp_input_box.css">
+    <link rel="stylesheet" href="css/emp_header.css">
+    <link rel="stylesheet" href="css/emp_side_panel.css">
+    <link rel="stylesheet" href="css/emp_footer.css">
 </head>
 
 <body>
@@ -68,6 +68,7 @@ include '../../Controller/EmployeeController/emp_dashboard_data_handler.php';
                                 <th>Renter Email</th>
                                 <th>Renter Mobile</th>
                                 <th>Renter Image</th>
+                                <th>Edit / Delete</th>
                             </tr>
 
                             <?php include '../../Controller/EmployeeController/renter_list_processor.php' ?>
@@ -75,7 +76,7 @@ include '../../Controller/EmployeeController/emp_dashboard_data_handler.php';
                         </table>
                     </div>
                 </div>
-                <div class="owner-list">
+                <div class="owner-list" style=" margin-top:70px;">
                     <div>
                         <div style="display:inline-block">
                             <h2>Owner List</h2>

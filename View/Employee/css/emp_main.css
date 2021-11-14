@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    margin-left: 220px;
+}
+
+.main-box {
+    padding: 20px 20px 20px 20px;
+}
+
+.main-form {
+    margin: auto;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 60px;
+}
+
+.main-form h1 {
+    padding-bottom: 15px;
+}
+
+.form-box {
+    border-top: 1px solid #ccc;
+    padding: 10px 0 25px 0;
+}
+
+.form-view {
+    padding: 20px 0 10px 0;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+td,
+th {
+    border: 1px solid #bababa;
+
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.table-last-child {
+    position: relative;
+}
+
+.car-list {
+    margin-bottom: 10%;
+    margin-top: 70px;
+}

@@ -4,7 +4,6 @@ session_start();
 if (empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION["user_type"] != 'employee')) {
     header("Location:../login.php");
 }
-
 include '../../Controller/EmployeeController/renter_list_handler.php';
 
 ?>
@@ -17,12 +16,12 @@ include '../../Controller/EmployeeController/renter_list_handler.php';
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Renter List</title>
-    <link rel="stylesheet" href="emp_main.css">
-    <link rel="stylesheet" href="emp_all_button.css">
-    <link rel="stylesheet" href="emp_input_box.css">
-    <link rel="stylesheet" href="emp_header.css">
-    <link rel="stylesheet" href="emp_side_panel.css">
-    <link rel="stylesheet" href="emp_footer.css">
+    <link rel="stylesheet" href="css/emp_main.css">
+    <link rel="stylesheet" href="css/emp_all_button.css">
+    <link rel="stylesheet" href="css/emp_input_box.css">
+    <link rel="stylesheet" href="css/emp_header.css">
+    <link rel="stylesheet" href="css/emp_side_panel.css">
+    <link rel="stylesheet" href="css/emp_footer.css">
 </head>
 
 <body>
@@ -45,7 +44,7 @@ include '../../Controller/EmployeeController/renter_list_handler.php';
                     </div>
                     <div style="float:right">
                         <a href="add_renter_page.php" class="button btn-green">Add Renter</a>
-                        <a href="#" class="button btn-cyan">Edit Renter Info</a>
+                        <a href="edit_renter.php" class="button btn-cyan">Edit Renter Info</a>
                         <a href="#" class="button btn-red">Archive Renter</a>
                     </div>
                 </div>
@@ -58,6 +57,7 @@ include '../../Controller/EmployeeController/renter_list_handler.php';
                             <th>Renter Email</th>
                             <th>Renter Mobile</th>
                             <th>Renter Image</th>
+                            <th>Edit / Delete</th>
 
                             <?php include '../../Controller/EmployeeController/renter_list_processor.php' ?>
 

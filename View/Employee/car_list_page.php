@@ -17,12 +17,12 @@ include '../../Controller/EmployeeController/car_list_handler.php';
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Car List</title>
-    <link rel="stylesheet" href="emp_main.css">
-    <link rel="stylesheet" href="emp_all_button.css">
-    <link rel="stylesheet" href="emp_input_box.css">
-    <link rel="stylesheet" href="emp_header.css">
-    <link rel="stylesheet" href="emp_side_panel.css">
-    <link rel="stylesheet" href="emp_footer.css">
+    <link rel="stylesheet" href="css/emp_main.css">
+    <link rel="stylesheet" href="css/emp_all_button.css">
+    <link rel="stylesheet" href="css/emp_input_box.css">
+    <link rel="stylesheet" href="css/emp_header.css">
+    <link rel="stylesheet" href="css/emp_side_panel.css">
+    <link rel="stylesheet" href="css/emp_footer.css">
 </head>
 
 <body>
@@ -56,8 +56,8 @@ include '../../Controller/EmployeeController/car_list_handler.php';
                             <th>Car Registration Number</th>
                             <th>Is Car Available?</th>
                             <th>Car Image</th>
-
-                            <?php include '../../Controller/EmployeeController/car_list_processor.php' ?>
+                        </tr>
+                        <?php include '../../Controller/EmployeeController/car_list_processor.php' ?>
 
                     </table>
                 </div>
