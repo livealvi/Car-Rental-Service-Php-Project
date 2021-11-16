@@ -7,8 +7,10 @@ body {
     margin-left: 220px;
 }
 
+.main {}
+
 .main-box {
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 140px 20px;
 }
 
 .main-form {

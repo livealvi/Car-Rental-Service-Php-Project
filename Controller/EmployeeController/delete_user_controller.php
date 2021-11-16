@@ -12,4 +12,4 @@ require_once('../../Model/User_data_access.php');
 
 $result = delete_user_by_id($id);
 
-header('location: ../../View/Employee/renter_list_page.php');
+header('location: ../../View/Employee/renter/renter_list_page.php');

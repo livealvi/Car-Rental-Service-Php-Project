@@ -1,6 +1,7 @@
 <?php
 //User class model for db
-class User{
+class User
+{
     private $user_id;
     private $user_name;
     private $user_email;
@@ -91,5 +92,4 @@ class User{
     {
         $this->user_img_url = $user_img_url;
     }
-
 }
