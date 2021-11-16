@@ -10,6 +10,7 @@ foreach ($renters as $renter) {
         <td> <?= $renter->getUserName() ?> </td>
         <td> <?= $renter->getUserEmail() ?> </td>
         <td><?= $renter->getUserMobile() ?> </td>
+        <td><?= $renter->getArchiveStatus() ?> </td>
         <td> <img src="<?= $renter->getUserImgUrl() ?> " alt="car_img" width="75" height="75"></td>
         <td class="table-last-child">
             <div class="button-center">

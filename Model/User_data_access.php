@@ -45,6 +45,7 @@ function get_all_user_by_type($user_type)
             $user->setUserMobile($row["user_mobile"]);
             $user->setUserPassword($row["user_password"]);
             $user->setUserType($row["user_type"]);
+            $user->setArchiveStatus($row["archive_status"]);
             $user->setUserImgUrl($row["user_img_url"]);
             array_push($user_list, $user);
         }
@@ -114,12 +115,12 @@ function delete_user_by_id($user_id)
 }
 
 //function to update user
-function update_user($user_id, $user_name, $user_email, $user_mobile)
+function update_user($user_id, $user_name, $user_email, $user_mobile, $archive_status)
 {
     $connection = new db();
     $con_obj = $connection->open_con();
 
-    $sql = "UPDATE User SET user_name='$user_name', user_email='$user_email',  user_mobile='$user_mobile' WHERE user_id='$user_id'";
+    $sql = "UPDATE User SET user_name='$user_name', user_email='$user_email',  user_mobile='$user_mobile', archive_status='$archive_status' WHERE user_id='$user_id'";
 
     if ($con_obj->query($sql) === TRUE) {
         $result = TRUE;

@@ -9,6 +9,7 @@ class User
     private $user_password;
     private $user_type;
     private $user_img_url;
+    private $archive_status;
 
     //default constructor
     public function __construct()
@@ -20,6 +21,7 @@ class User
         $this->user_password = "";
         $this->user_type = "";
         $this->user_img_url = "";
+        $this->archive_status = "";
     }
 
     //getter and setter methods
@@ -91,5 +93,15 @@ class User
     public function setUserImgUrl($user_img_url)
     {
         $this->user_img_url = $user_img_url;
+    }
+
+    public function getArchiveStatus()
+    {
+        return $this->archive_status;
+    }
+
+    public function setArchiveStatus($archive_status)
+    {
+        $this->archive_status = $archive_status;
     }
 }

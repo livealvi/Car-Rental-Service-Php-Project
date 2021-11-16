@@ -55,8 +55,9 @@ include '../../../Controller/EmployeeController/owner/owner_list_handler.php';
                             <th>Owner Name</th>
                             <th>Owner Email</th>
                             <th>Owner Mobile</th>
+                            <th>Status</th>
                             <th>Owner Image</th>
-
+                            <th>Edit / Delete</th>
                         </tr>
                         <?php include '../../../Controller/EmployeeController/owner/owner_list_processor.php' ?>
 

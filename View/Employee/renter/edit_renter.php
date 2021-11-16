@@ -86,6 +86,20 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
                                             <input type="text" name="user_mobile" size="50" value="<?php echo $user_mobile; ?>">
                                         </div>
                                     </div>
+                                    <div>
+                                        <div class="for-label">
+                                            <label for="Status">Status:</label>
+                                        </div>
+                                        <div class="for-input">
+                                            <input type="radio" name="archive_status" <?php echo $not_archive; ?> value="Not Archive">
+                                            <label for="not_archive">Not Archive</label>
+
+                                        </div>
+                                        <div class="for-input">
+                                            <input type="radio" name="archive_status" <?php echo $archive; ?> value="Archive">
+                                            <label for="archive">Archive</label>
+                                        </div>
+                                    </div>
 
                                     <div>
                                         <div class="all-button">

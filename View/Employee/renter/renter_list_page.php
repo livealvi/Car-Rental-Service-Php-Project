@@ -56,6 +56,7 @@ include '../../../Controller/EmployeeController/renter/renter_list_handler.php';
                             <th>Renter Name</th>
                             <th>Renter Email</th>
                             <th>Renter Mobile</th>
+                            <th>Status</th>
                             <th>Renter Image</th>
                             <th>Edit / Delete</th>
 

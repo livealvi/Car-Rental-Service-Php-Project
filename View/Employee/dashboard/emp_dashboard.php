@@ -53,12 +53,12 @@ include '../../../Controller/EmployeeController/dashboard/emp_dashboard_data_han
                                 <th>Issuing Employee</th>
                             </tr>
 
-                            <?php include '../../../Controller/EmployeeController/dashboard/emp_dashboard_show_processor.php' ?>
+                            <?php include '../../../Controller/EmployeeController/booking/booking_list_processor.php' ?>
 
                         </table>
                     </div>
                 </div>
-                <div class="rent-list" style="">
+                <div class="rent-list" style="margin-top:70px;">
                     <h2>Renter List</h2>
                     <div class="">
                         <table>
@@ -67,6 +67,7 @@ include '../../../Controller/EmployeeController/dashboard/emp_dashboard_data_han
                                 <th>Renter Name</th>
                                 <th>Renter Email</th>
                                 <th>Renter Mobile</th>
+                                <th>Status</th>
                                 <th>Renter Image</th>
                                 <th>Edit / Delete</th>
                             </tr>
@@ -90,8 +91,9 @@ include '../../../Controller/EmployeeController/dashboard/emp_dashboard_data_han
                                 <th>Owner Name</th>
                                 <th>Owner Email</th>
                                 <th>Owner Mobile</th>
+                                <th>Status</th>
                                 <th>Owner Image</th>
-
+                                <th>Edit / Delete</th>
                                 <?php include '../../../Controller/EmployeeController/owner/owner_list_processor.php' ?>
 
                         </table>
