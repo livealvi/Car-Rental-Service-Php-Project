@@ -16,9 +16,6 @@ So, the aim of our project is to bring together car owners and car renters throu
 
 This project will demonstrate a basic design of the platform which can be extended later based on business requirements and needs.
 
-**This Repo / Project is based on course [CSC 3215](https://www.aiub.edu/faculties/fst/ug-course-catalog/ "AIUB - Faculty of Science and Technology (Undergraduate Course)"). Learning about - Basic HTML & CSS, JSON, XML, Session & Cookies, CRUD Operations in Php using MySQL and Create MVC (Model–View–Controller) from scratch. Just learning about web technologies, Not focusing on UI (Bootsrap or other 3rd-Party UI libraries or frameworks).**
-<br>- _**Learning in progress & depends on git commits**_
-
 ## COURSE DESCRIPTION [CSC 3215](https://www.aiub.edu/faculties/fst/ug-course-catalog/ "AIUB - Faculty of Science and Technology (Undergraduate Course)") <br>
 <details>
   <summary>Click to More</summary>
