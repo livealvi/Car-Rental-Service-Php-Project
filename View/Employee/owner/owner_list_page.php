@@ -43,7 +43,7 @@ include '../../../Controller/EmployeeController/owner/owner_list_handler.php';
                     </div>
                     <div style="float:right">
                         <a href="add_owner_page.php" class="button btn-green">Add Owner</a>
-                        <a href="#" class="button btn-cyan">Edit Owner Info</a>
+                        <a href="edit_owner.php" class="button btn-cyan">Edit Owner Info</a>
                         <a href="#" class="button btn-red">Owner Renter</a>
                     </div>
                 </div>
