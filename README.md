@@ -52,7 +52,7 @@ Make [Database](#database) follow this [Diagram](#database-diagram)
 
 #### Step - 3
 Goto folder ```XAMPP``` > ```htdocs``` > [Download](#step---1) or [Clone](#step---1) **Car-Rental-Service** 
-<<<<<<< HEAD
+
 <br> Or **Copy** ```Car-Rental-Service``` from download location and **Paste** on ```XAMPP``` > ```htdocs```
 
 #### Step - 4
