@@ -97,3 +97,13 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.header-btn {
+    font: 20px Arial, sans-serif;
+    border: 2px solid black;
+    outline: none;
+    color: white;
+    background-color: #0077b6;
+    padding: 0;
+    margin: 0;
+}
+

@@ -25,11 +25,11 @@ if (isset($_SESSION['user_name'])) {
         <li id="logo"><h2>Elite Rentals</h2></li>
         <div id="nav-right">
             <ul class="navbar">
-                <li><a href="#">Home</a></h6></li>
+                <li><a href="#home">Home</a></h6></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="login.php"><button>Sign in</button></a></li>
-                <li><a href="register.php"><button>Register</button></a></li>
+                <li><a href="login.php"><button class="header-btn">Sign in</button></a></li>
+                <li><a href="register.php"><button class="header-btn">Register</button></a></li>
             </ul>
         </div>
     </ul>
