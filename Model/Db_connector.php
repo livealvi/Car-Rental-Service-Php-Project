@@ -5,9 +5,9 @@ class Db{
 //Function to connect to database
     function open_con()
     {
-        $servername = "144.208.125.220";
-        $username = "alvihasa_CarRental";
-        $password = "CarRental1";
+        $servername = "localhost";
+        $username = "root";
+        $password = "276914049";
         $dbname = "alvihasa_CarRentalServiceDB";
 
         $connection = new mysqli($servername, $username, $password, $dbname);
