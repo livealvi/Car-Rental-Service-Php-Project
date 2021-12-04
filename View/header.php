@@ -13,7 +13,7 @@ if (isset($_SESSION['user_name'])) {
         <ul class="navbar">
             <li id="logo"><h2>Elite Rentals</h2></li>
             <ul class="dropdown">
-                <button class="dropbtn">Signed in as: <span> - </span> <?php echo $_SESSION['user_name'] ?></button>
+                <a href="<?php echo $account_forward_url ?>"><button class="dropbtn">Signed in as: <span> - </span> <?php echo $_SESSION['user_name'] ?></button></a>
                 <div class="dropdown-content">
                     <a href=../Controller/logout_handler.php>Logout</a>
                 </div>
