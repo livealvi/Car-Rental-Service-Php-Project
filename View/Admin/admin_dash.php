@@ -24,14 +24,14 @@ include '../../Controller/AdminController/admin_dash_handler.php';
 <!--Main table structure-->
 <table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#b8e3ff">
     <tr>
-        <td width="400">
+        <td width="300">
             <?php include 'admin_side_panel.php' ?>
         </td>
         <td align="center" valign="top">
             <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" >
                 <tr>
                     <td align="left" valign="top" height="50">
-                        <font face="arial" color="#000000" size="4">
+                        <font face="arial" color="#000000" size="6">
                             Dash Board
                         </font>
                     </td>

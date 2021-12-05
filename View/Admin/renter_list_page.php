@@ -24,7 +24,7 @@ include '../../Controller/AdminController/renter_list_handler.php';
 <!--Main table structure-->
 <table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#b8e3ff">
     <tr>
-        <td width="400">
+        <td width="300">
             <?php include 'admin_side_panel.php' ?>
         </td>
         <td align="center" valign="top">
@@ -92,6 +92,11 @@ include '../../Controller/AdminController/renter_list_handler.php';
                                 <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
                                         Renter Image
+                                    </font>
+                                </th>
+                                <th align="center" valign="top">
+                                    <font face="arial" color="#000000" size="3">
+                                        Edit/Delete
                                     </font>
                                 </th>
                             </tr>
