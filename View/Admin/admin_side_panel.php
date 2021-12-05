@@ -1,5 +1,8 @@
 <div class="sidenav">
     <div class="nav-element">
+        <a href="../welcome.php"><h2>Elite Rentals</h2></a>
+    </div>
+    <div class="nav-element">
         <a href="admin_dash.php">Dashboard</a>
     </div>
     <div class="nav-element">
