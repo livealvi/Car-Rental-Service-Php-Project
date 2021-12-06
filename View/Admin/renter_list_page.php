@@ -35,24 +35,10 @@ include '../../Controller/AdminController/renter_list_handler.php';
                             Renter List Page
                         </font>
                     </td>
-                    <td align="right" valign="top" height="50">
+                    <td align="left" valign="top" height="50">
                         <a href="add_renter_page.php">
                             <button>
                                 <font size="3" face="arial">Add Renter</font>
-                            </button>
-                        </a>
-                    </td>
-                    <td align="center" valign="top" height="50">
-                        <a href="">
-                            <button>
-                                <font size="3" face="arial">Edit Renter</font>
-                            </button>
-                        </a>
-                    </td>
-                    <td align="left" valign="top" height="50">
-                        <a href="">
-                            <button>
-                                <font size="3" face="arial">Remove Renter</font>
                             </button>
                         </a>
                     </td>
@@ -121,5 +107,7 @@ include '../../Controller/AdminController/renter_list_handler.php';
 
 <!--Footer inclusion-->
 <?php include 'admin_footer.php' ?>
+
+<script src="js/ajaxFunctions.js"></script>
 </body>
 </html>
