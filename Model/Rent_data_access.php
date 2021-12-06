@@ -45,3 +45,10 @@ function add_booking($rent_date, $rent_return_date, $car_id, $owner_id, $renter_
                                      VALUES ('$rent_date', '$rent_return_date', '$car_id', '$owner_id', '$renter_id', $employee_id)");
     return $result;
 }
+
+function delete_booking($rent_id){
+    $connection = new db();
+    $con_obj=$connection->open_con();
+    $result = $con_obj->query("DELETE FROM Rent WHERE rent_id='$rent_id'");
+    return $result;
+}

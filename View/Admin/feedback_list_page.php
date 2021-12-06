@@ -35,13 +35,6 @@ include '../../Controller/AdminController/feedback_list_handler.php';
                             Feedback List Page
                         </font>
                     </td>
-                    <td align="left" valign="top" height="50">
-                        <a href="">
-                            <button>
-                                <font size="3" face="arial">Remove Feedback</font>
-                            </button>
-                        </a>
-                    </td>
                 </tr>
 
                 <tr>
@@ -73,11 +66,6 @@ include '../../Controller/AdminController/feedback_list_handler.php';
                                 <th align="centre" valign="top">
                                     <font face="arial" color="#000000" size="3">
                                         Feedback Message
-                                    </font>
-                                </th>
-                                <th align="center" valign="top">
-                                    <font face="arial" color="#000000" size="3">
-                                        Delete
                                     </font>
                                 </th>
                             </tr>

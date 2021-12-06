@@ -15,6 +15,9 @@
         <a href="owner_list_page.php">Car Owners List</a>
     </div>
     <div class="nav-element">
+        <a href="employee_list_page.php">Employee List</a>
+    </div>
+    <div class="nav-element">
         <a href="booking_list_page.php">Bookings List</a>
     </div>
     <div class="nav-element">

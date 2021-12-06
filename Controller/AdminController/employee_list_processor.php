@@ -1,6 +1,7 @@
 <!--output processor for employee list page-->
 <?php
 foreach ($employees as $employee){
+    $employeeId = $employee->getUserId();
     echo '<tr>
             <td align="center" valign="top">
                 <font face="arial" color="#000000" size="3">
@@ -24,6 +25,18 @@ foreach ($employees as $employee){
             </td>
             <td align="center" valign="top">
                 <img src="'.$employee->getUserImgUrl().'" alt="user_img" width="75" height="75">
+            </td>
+            <td align="center" valign="top">
+                <a href="edit_employee_page.php">
+                    <button>
+                        <font size="3" face="arial">Edit Renter</font>
+                    </button>
+                </a>
+                <a href="#">
+                    <button onclick="deleteUser('.$employeeId.')">
+                        <font size="3" face="arial">Delete Renter</font>
+                    </button>
+                </a>
             </td>
         </tr>';
 }
