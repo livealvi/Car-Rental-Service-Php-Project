@@ -35,27 +35,14 @@ include '../../Controller/AdminController/car_list_handler.php';
                             Car List Page
                         </font>
                     </td>
-                    <td align="right" valign="top" height="50">
+                    <td align="left" valign="top" height="50">
                         <a href="add_car_page.php">
                             <button>
                                 <font size="3" face="arial">Add Car</font>
                             </button>
                         </a>
                     </td>
-                    <td align="center" valign="top" height="50">
-                        <a href="">
-                            <button>
-                                <font size="3" face="arial">Edit Car</font>
-                            </button>
-                        </a>
-                    </td>
-                    <td align="left" valign="top" height="50">
-                        <a href="">
-                            <button>
-                                <font size="3" face="arial">Remove Car</font>
-                            </button>
-                        </a>
-                    </td>
+
                 </tr>
 
                 <tr>
@@ -126,5 +113,7 @@ include '../../Controller/AdminController/car_list_handler.php';
 
 <!--Footer inclusion-->
 <?php include 'admin_footer.php' ?>
+
+<script src="js/ajaxFunctions.js"></script>
 </body>
 </html>
