@@ -108,6 +108,6 @@ include '../../Controller/AdminController/employee_list_handler.php';
 <!--Footer inclusion-->
 <?php include 'admin_footer.php' ?>
 
-<script src="js/ajaxFunctions.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

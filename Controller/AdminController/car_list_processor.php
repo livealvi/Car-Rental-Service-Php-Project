@@ -32,7 +32,7 @@ foreach ($cars as $car) {
                 <img src="' . $car->getCarImgUrl() . '" alt="car_img" width="75" height="75">
             </td>
             <td align="center" valign="top">
-                <a href="edit_car_page.php">
+                <a href="edit_car_page.php?id='. $carId. '">
                     <button>
                         <font size="3" face="arial">Edit Car</font>
                     </button>

@@ -114,3 +114,9 @@ body {
 #home{
     height: 800px;
 }
+
+.error-list{
+    list-style: none;
+    color: red;
+    background-color: #0077b6;
+}
