@@ -84,7 +84,7 @@ function update_car($owner_id, $car_model_name, $car_reg_no, $is_available, $car
     $connection = new db();
     $con_obj = $connection->open_con();
 
-    $sql = "UPDATE Car SET owner_id='$owner_id',  car_model_name='$car_model_name', car_reg_no='$car_reg_no', is_available='$is_available',  WHERE car_id='$car_id'";
+    $sql = "UPDATE Car SET owner_id='$owner_id',  car_model_name='$car_model_name', car_reg_no='$car_reg_no', is_available='$is_available'  WHERE car_id='$car_id'";
 
     if ($con_obj->query($sql) === TRUE) {
         $result = TRUE;
