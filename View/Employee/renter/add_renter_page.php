@@ -42,15 +42,18 @@ include '../../../Controller/EmployeeController/renter/add_renter_handler.php';
                         <h1>Add New Renter</h1>
                     </div>
                     <div class="form-box">
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
+                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data" onsubmit="return validateForm()">
                             <!-- --input-label-- -->
                             <div class="form-view ">
                                 <div class="row">
+                                    <div class="message-box">
+                                        <p id="message" class="message error"></p>
+                                    </div>
                                     <div class="for-label">
                                         <label for="Username">Username:</label>
                                     </div>
                                     <div class="for-input">
-                                        <input type="text" name="user_name" size="50">
+                                        <input type="text" id="user_name" name="user_name" size="50">
                                     </div>
 
                                     <div>
@@ -58,7 +61,7 @@ include '../../../Controller/EmployeeController/renter/add_renter_handler.php';
                                             <label for="Email">Email:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="email" name="user_email" size="50">
+                                            <input type="email" id="email" name="user_email" size="50">
                                         </div>
                                     </div>
                                     <div>
@@ -66,7 +69,7 @@ include '../../../Controller/EmployeeController/renter/add_renter_handler.php';
                                             <label for="Mobile">Mobile:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="text" name="user_mobile" size="50">
+                                            <input type="text" id="user_mobile" name="user_mobile" size="50">
                                         </div>
                                     </div>
                                     <div>
@@ -74,7 +77,7 @@ include '../../../Controller/EmployeeController/renter/add_renter_handler.php';
                                             <label for="Password">Password:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="password" name="user_password" size="50">
+                                            <input type="password" id="user_password" name="user_password" size="50">
                                         </div>
                                     </div>
                                     <div>
@@ -82,7 +85,7 @@ include '../../../Controller/EmployeeController/renter/add_renter_handler.php';
                                             <label for="ConfirmPassword">Confirm Password:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="password" name="user_password_confirm" size="50">
+                                            <input type="password" id="user_password_confirm" name="user_password_confirm" size="50">
                                         </div>
                                     </div>
                                     <div>
@@ -119,6 +122,7 @@ include '../../../Controller/EmployeeController/renter/add_renter_handler.php';
 
     <!--Footer inclusion-->
     <?php include '../emp_footer.php' ?>
+    <script type="text/javascript" src="../../../View/Employee/js/main.js"></script>
 </body>
 
 </html>

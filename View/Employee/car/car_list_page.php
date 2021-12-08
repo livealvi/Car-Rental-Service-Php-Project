@@ -56,6 +56,7 @@ include '../../../Controller/EmployeeController/car/car_list_handler.php';
                             <th>Car Registration Number</th>
                             <th>Is Car Available?</th>
                             <th>Car Image</th>
+                            <th>Edit / Delete</th>
                         </tr>
                         <?php include '../../../Controller/EmployeeController/car/car_list_processor.php' ?>
 

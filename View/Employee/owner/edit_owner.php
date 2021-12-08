@@ -21,7 +21,7 @@ include '../../../Controller/EmployeeController/owner/edit_owner_list_handler.ph
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edit Renter</title>
+    <title>Edit Owner</title>
     <link rel="stylesheet" href="../css/emp_main.css">
     <link rel="stylesheet" href="../css/emp_all_button.css">
     <link rel="stylesheet" href="../css/emp_input_box.css">
@@ -58,7 +58,7 @@ include '../../../Controller/EmployeeController/owner/edit_owner_list_handler.ph
                                             <!-- <label for="UserID">User ID:</label> -->
                                         </div>
                                         <div class="for-input">
-                                            <input type="hidden" name="user_id" size="50" value="<?php echo $user_id; ?>">
+                                            <input type="hidden" name="rent_id" size="50" value="<?php echo $rent_id; ?>">
                                         </div>
                                     </div>
                                     <div>

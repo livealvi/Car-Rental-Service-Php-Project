@@ -100,7 +100,7 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
                                             <label for="archive">Archive</label>
                                         </div>
                                     </div>
-
+                                    <!-- --buttons-- -->
                                     <div>
                                         <div class="all-button">
                                             <div class="cancel-btn">

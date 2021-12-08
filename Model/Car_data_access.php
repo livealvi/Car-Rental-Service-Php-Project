@@ -9,11 +9,12 @@ require_once 'Db_connector.php';
 require_once 'Classes/Car.php';
 
 //function to get all cars
-function get_all_car(){
+function get_all_car()
+{
     $connection = new db();
-    $con_obj=$connection->open_con();
+    $con_obj = $connection->open_con();
     $result = $con_obj->query("SELECT * FROM Car");
-    if($result->num_rows > 0) {
+    if ($result->num_rows > 0) {
         $car_list = [];
         while ($row = $result->fetch_assoc()) {
             $car = new Car();
@@ -27,17 +28,17 @@ function get_all_car(){
         }
         $connection->close_con($con_obj);
         return $car_list;
-    }
-    else{
+    } else {
         $connection->close_con($con_obj);
         return null;
     }
 }
 
 //function to get number of cars
-function get_car_num(){
+function get_car_num()
+{
     $connection = new db();
-    $con_obj=$connection->open_con();
+    $con_obj = $connection->open_con();
     $result = $con_obj->query("SELECT * FROM Car");
     $num = $result->num_rows;
 
@@ -46,26 +47,49 @@ function get_car_num(){
 }
 
 //function to get car_name by ID
-function get_car_name_by_id($car_id){
+function get_car_name_by_id($car_id)
+{
     $connection = new db();
-    $con_obj=$connection->open_con();
+    $con_obj = $connection->open_con();
     $result = $con_obj->query("SELECT * FROM Car WHERE car_id='$car_id'");
-    if($result->num_rows == 1){
+    if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
 
         $connection->close_con($con_obj);
         return $row["car_model_name"];
-    }
-    else return '';
+    } else return '';
 }
 
 //function to add car
-function add_car($owner_id, $car_model_name, $car_reg_no, $is_available, $car_img_url){
+function add_car($owner_id, $car_model_name, $car_reg_no, $is_available, $car_img_url)
+{
     $connection = new db();
-    $con_obj=$connection->open_con();
+    $con_obj = $connection->open_con();
     $result = $con_obj->query("INSERT INTO Car (owner_id, car_model_name, car_reg_no, is_available, car_img_url)
                                      VALUES ('$owner_id', '$car_model_name', '$car_reg_no', '$is_available', '$car_img_url')");
     return $result;
 }
 
-?>
+function find_car_by_id($car_id)
+{
+    $connection = new db();
+    $con_obj = $connection->open_con();
+
+    $result = $con_obj->query("SELECT * FROM Car WHERE car_id='$car_id'");
+    return $result;
+}
+
+function update_car($owner_id, $car_model_name, $car_reg_no, $is_available, $car_id)
+{
+    $connection = new db();
+    $con_obj = $connection->open_con();
+
+    $sql = "UPDATE Car SET owner_id='$owner_id',  car_model_name='$car_model_name', car_reg_no='$car_reg_no', is_available='$is_available',  WHERE car_id='$car_id'";
+
+    if ($con_obj->query($sql) === TRUE) {
+        $result = TRUE;
+    } else {
+        $result = FALSE;
+    }
+    return  $result;
+}

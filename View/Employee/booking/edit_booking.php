@@ -1,10 +1,15 @@
 <?php
+
+if (isset($_GET['ids'])) {
+    $id = $_GET['ids'];
+}
+
 session_start();
 if (empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION["user_type"] != 'employee')) {
     header("Location:../login.php");
 }
 
-include '../../../Controller/EmployeeController/booking/add_booking_handler.php';
+include '../../../Controller/EmployeeController/booking/edit_booking_list_handler.php';
 
 ?>
 
@@ -15,7 +20,7 @@ include '../../../Controller/EmployeeController/booking/add_booking_handler.php'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add New Booking</title>
+    <title>Edit Booking</title>
     <link rel="stylesheet" href="../css/emp_main.css">
     <link rel="stylesheet" href="../css/emp_all_button.css">
     <link rel="stylesheet" href="../css/emp_input_box.css">
@@ -30,7 +35,7 @@ include '../../../Controller/EmployeeController/booking/add_booking_handler.php'
     <div class="main">
         <div class="sidebar">
             <!--Side Panel inclusion-->
-            <?php include '../emp_side_panel.php'; ?>
+
         </div>
         <div class="content">
             <!--Header inclusion-->
@@ -38,20 +43,22 @@ include '../../../Controller/EmployeeController/booking/add_booking_handler.php'
             <div class="main-box">
                 <div class="main-form">
                     <div>
-                        <h1>Add New Booking</h1>
+                        <h1>Update Booking</h1>
                     </div>
                     <div class="form-box">
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
+                        <form method="post" action="#" enctype="multipart/form-data">
                             <!-- --input-label-- -->
                             <div class="form-view ">
                                 <div class="row">
-
+                                    <div class="for-input">
+                                        <input type="hidden" name="rent_id" size="50" value="<?php echo $rent_id; ?>">
+                                    </div>
                                     <div>
                                         <div class="for-label">
                                             <label for="rent_date">Rent Date:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="date" name="rent_date" size="50">
+                                            <input type="date" name="rent_date" size="50" value="<?php echo $rent_date; ?>">
                                         </div>
                                     </div>
                                     <div>
@@ -59,7 +66,7 @@ include '../../../Controller/EmployeeController/booking/add_booking_handler.php'
                                             <label for="rent_return_date">Rent Return Date:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="date" name="rent_return_date" size="50">
+                                            <input type="date" name="rent_return_date" size="50" value="<?php echo $rent_return_date; ?>">
                                         </div>
                                     </div>
                                     <div>
@@ -67,7 +74,7 @@ include '../../../Controller/EmployeeController/booking/add_booking_handler.php'
                                             <label for="car_id">Car ID:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="text" name="car_id" size="50">
+                                            <input type="text" name="car_id" size="50" value="<?php echo $car_id; ?>">
                                         </div>
                                     </div>
                                     <div>
@@ -75,7 +82,7 @@ include '../../../Controller/EmployeeController/booking/add_booking_handler.php'
                                             <label for="owner_id">Owner ID:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="text" name="owner_id" size="50">
+                                            <input type="text" name="owner_id" size="50" value="<?php echo $owner_id; ?>">
                                         </div>
                                     </div>
                                     <div>
@@ -83,7 +90,7 @@ include '../../../Controller/EmployeeController/booking/add_booking_handler.php'
                                             <label for="employee_id">Employee ID:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="text" name="employee_id" size="50">
+                                            <input type="text" name="employee_id" size="50" value="<?php echo $employee_id; ?>">
                                         </div>
                                     </div>
                                     <div>
@@ -91,16 +98,16 @@ include '../../../Controller/EmployeeController/booking/add_booking_handler.php'
                                             <label for="renter_id">Renter ID:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="text" name="renter_id" size="50">
+                                            <input type="text" name="renter_id" size="50" value="<?php echo $renter_id; ?>">
                                         </div>
                                     </div>
                                     <!-- --buttons-- -->
                                     <div>
                                         <div class="all-button">
                                             <div class="cancel-btn">
-                                                <a href="booking_list_page.php" class="button btn-red">Cancel</a>
+                                                <a href="booking_list_page.php" class="button btn-red">Back</a>
                                             </div>
-                                            <input type="submit" name="submit" value="Add Booking">
+                                            <input type="submit" name="update" value="Update" <?= $id ?>>
                                         </div>
                                     </div>
                                     <!-- --buttons-- -->
@@ -108,7 +115,7 @@ include '../../../Controller/EmployeeController/booking/add_booking_handler.php'
                             </div>
                         </form>
                     </div>
-                    <?php include '../../../Controller/EmployeeController/booking/add_booking_processor.php'; ?>
+                    <?php include '../../../Controller/EmployeeController/booking/edit_booking_list_processors.php'; ?>
                 </div>
             </div>
 

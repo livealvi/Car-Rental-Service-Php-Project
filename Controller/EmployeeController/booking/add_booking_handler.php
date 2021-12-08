@@ -58,16 +58,16 @@ if ((isset($_POST['submit']))) {
     }
 
 
-    // $userQuery = add_booking($rent_date, $rent_return_date, $car_id, $owner_id, $renter_id, $employee_id);
+    $userQuery = add_booking($rent_date, $rent_return_date, $car_id, $owner_id, $renter_id, $employee_id);
 
-    // if ($userQuery == TRUE) {
-    //     array_push($val_err, "Update Data");
-    // } else {
-    //     array_push($val_err, "Could not update");
-    // }
+    if ($userQuery == TRUE) {
+        array_push($val_err, "Update Data");
+    } else {
+        array_push($val_err, "Could not update");
+    }
 
-    // if (empty($val_err) && empty($req_err)) {
-    //     $success = add_booking($car_id, $owner_id, $renter_id, $employee_id, $rent_date, $rent_return_date);
-    //     if ($success == false) array_push($val_err, "Booking not be added");
-    // }
+    if (empty($val_err) && empty($req_err)) {
+        $success = add_booking($car_id, $owner_id, $renter_id, $employee_id, $rent_date, $rent_return_date);
+        if ($success == false) array_push($val_err, "Booking not be added");
+    }
 }

@@ -58,6 +58,7 @@ include '../../../Controller/EmployeeController/booking/booking_list_handler.php
                             <th>Owner Name</th>
                             <th>Renter Name</th>
                             <th>Issuing Employee</th>
+                            <th>Edit / Delete</th>
                         </tr>
                         <?php include '../../../Controller/EmployeeController/booking/booking_list_processor.php' ?>
 

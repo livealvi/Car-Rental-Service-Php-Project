@@ -51,6 +51,7 @@ include '../../../Controller/EmployeeController/dashboard/emp_dashboard_data_han
                                 <th>Owner Name</th>
                                 <th>Renter Name</th>
                                 <th>Issuing Employee</th>
+                                <th>Edit / Delete</th>
                             </tr>
 
                             <?php include '../../../Controller/EmployeeController/booking/booking_list_processor.php' ?>
@@ -117,6 +118,7 @@ include '../../../Controller/EmployeeController/dashboard/emp_dashboard_data_han
                                 <th>Car Registration Number</th>
                                 <th>Is Car Available?</th>
                                 <th>Car Image</th>
+                                <th>Edit / Delete</th>
                                 <?php include '../../../Controller/EmployeeController/car/car_list_processor.php' ?>
                         </table>
                     </div>

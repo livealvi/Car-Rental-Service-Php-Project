@@ -27,14 +27,31 @@
 .button {
     border: none;
     color: white;
-    padding: 10px 25px;
+    padding: 11px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 23px;
+    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 4px;
+}
+
+.booking-button {
+    border: none;
+    color: white;
+    padding: 3px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cancel-btn a {
+    font-size: 23px;
 }
 
 .btn-blue {

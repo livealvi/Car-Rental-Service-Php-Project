@@ -42,5 +42,4 @@ if ((isset($_POST['update']))) {
     } else {
         array_push($val_err, "Could not update");
     }
-    //header('location : ../../../../View/Employee/renter_list_page.php');
 }
