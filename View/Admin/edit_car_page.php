@@ -39,7 +39,7 @@ else $carId = "";
                     <td align="right" valign="top" height="50">
                         <a href="car_list_page.php">
                             <button>
-                                <font size="3" face="arial">Cancel add operation</font>
+                                <font size="3" face="arial">Cancel Edit operation</font>
                             </button>
                         </a>
                     </td>
