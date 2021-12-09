@@ -68,6 +68,13 @@ function add_car($owner_id, $car_model_name, $car_reg_no, $is_available, $car_im
     return $result;
 }
 
+function update_car($car_id, $owner_id, $car_model_name, $car_reg_no, $is_available){
+    $connection = new db();
+    $con_obj=$connection->open_con();
+    $result = $con_obj->query("UPDATE Car SET owner_id='$owner_id', car_model_name='$car_model_name',  car_reg_no='$car_reg_no', is_available='$is_available' WHERE car_id='$car_id'");
+    return $result;
+}
+
 function delete_car($car_id){
     $connection = new db();
     $con_obj=$connection->open_con();

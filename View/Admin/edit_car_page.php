@@ -83,6 +83,16 @@ else $carId = "";
                                             </tr>
                                             <tr>
                                                 <td width="30%">
+                                                    <font face="arial" size="4" color="#ffffff">
+                                                        Is available?
+                                                    </font>
+                                                </td>
+                                                <td width="70%">
+                                                    <input type="text" name="car_available" id="isAvailable" size="50">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="30%">
                                                     &nbsp;
                                                 </td>
                                                 <td width="70%">
