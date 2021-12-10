@@ -39,7 +39,7 @@ else $carId = "";
                     <td align="right" valign="top" height="50">
                         <a href="car_list_page.php">
                             <button>
-                                <font size="3" face="arial">Cancel add operation</font>
+                                <font size="3" face="arial">Cancel Edit operation</font>
                             </button>
                         </a>
                     </td>
@@ -79,6 +79,16 @@ else $carId = "";
                                                 </td>
                                                 <td width="70%">
                                                     <input type="text" name="car_reg_no" id="regNo" size="50">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="30%">
+                                                    <font face="arial" size="4" color="#ffffff">
+                                                        Is available?
+                                                    </font>
+                                                </td>
+                                                <td width="70%">
+                                                    <input type="text" name="car_available" id="isAvailable" size="50">
                                                 </td>
                                             </tr>
                                             <tr>

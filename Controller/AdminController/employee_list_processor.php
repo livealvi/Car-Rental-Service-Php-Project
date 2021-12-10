@@ -27,14 +27,14 @@ foreach ($employees as $employee){
                 <img src="'.$employee->getUserImgUrl().'" alt="user_img" width="75" height="75">
             </td>
             <td align="center" valign="top">
-                <a href="edit_employee_page.php">
+                <a href="edit_employee_page.php?id='. $employeeId. '">
                     <button>
-                        <font size="3" face="arial">Edit Renter</font>
+                        <font size="3" face="arial">Edit Employee</font>
                     </button>
                 </a>
                 <a href="#">
                     <button onclick="deleteUser('.$employeeId.')">
-                        <font size="3" face="arial">Delete Renter</font>
+                        <font size="3" face="arial">Delete Employee</font>
                     </button>
                 </a>
             </td>

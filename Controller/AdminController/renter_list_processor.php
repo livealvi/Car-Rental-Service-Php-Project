@@ -33,7 +33,7 @@ foreach ($renters as $renter){
                     </button>
                 </a>
                 <a href="#">
-                    <button onclick="deleteRenter('.$renterId.')">
+                    <button onclick="deleteUser('.$renterId.')">
                         <font size="3" face="arial">Delete Renter</font>
                     </button>
                 </a>
