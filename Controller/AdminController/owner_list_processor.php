@@ -28,7 +28,7 @@ foreach ($owners as $owner) {
                 <img src="' . $owner->getUserImgUrl() . '" alt="user_img" width="75" height="75">
             </td>
             <td align="center" valign="top">
-                <a href="edit_owner_page.php">
+                <a href="edit_owner_page.php?id='. $ownerId. '">
                     <button>
                         <font size="3" face="arial">Edit Renter</font>
                     </button>

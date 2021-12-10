@@ -27,7 +27,7 @@ foreach ($renters as $renter){
                 <img src="'.$renter->getUserImgUrl().'" alt="car_img" width="75" height="75">
             </td>
             <td align="center" valign="top">
-                <a href="edit_renter_page.php">
+                <a href="edit_renter_page.php?id='. $renterId. '">
                     <button>
                         <font size="3" face="arial">Edit Renter</font>
                     </button>
