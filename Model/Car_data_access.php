@@ -70,7 +70,6 @@ function add_car($owner_id, $car_model_name, $car_reg_no, $is_available, $car_im
     return $result;
 }
 
-<<<<<<< HEAD
 function find_car_by_id($car_id)
 {
     $connection = new db();
@@ -80,32 +79,18 @@ function find_car_by_id($car_id)
     return $result;
 }
 
-function update_car($owner_id, $car_model_name, $car_reg_no, $is_available, $car_id)
+function update_car($car_id, $owner_id, $car_model_name, $car_reg_no, $is_available)
 {
     $connection = new db();
     $con_obj = $connection->open_con();
-
-    $sql = "UPDATE Car SET owner_id='$owner_id',  car_model_name='$car_model_name', car_reg_no='$car_reg_no', is_available='$is_available'  WHERE car_id='$car_id'";
-
-    if ($con_obj->query($sql) === TRUE) {
-        $result = TRUE;
-    } else {
-        $result = FALSE;
-    }
-    return  $result;
-}
-=======
-function update_car($car_id, $owner_id, $car_model_name, $car_reg_no, $is_available){
-    $connection = new db();
-    $con_obj=$connection->open_con();
     $result = $con_obj->query("UPDATE Car SET owner_id='$owner_id', car_model_name='$car_model_name',  car_reg_no='$car_reg_no', is_available='$is_available' WHERE car_id='$car_id'");
     return $result;
 }
 
->>>>>>> 513ce580c37425ee4cf609ae4dd342c6e89c7f7b
-function delete_car($car_id){
+function delete_car($car_id)
+{
     $connection = new db();
-    $con_obj=$connection->open_con();
+    $con_obj = $connection->open_con();
     $result = $con_obj->query("DELETE FROM Car WHERE car_id='$car_id'");
     return $result;
 }

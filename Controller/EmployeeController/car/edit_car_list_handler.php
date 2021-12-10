@@ -34,7 +34,7 @@ if ($userQuery->num_rows > 0) {
 
 if ((isset($_POST['update']))) {
 
-    $userQuery = update_car($_POST['owner_id'], $_POST['car_model_name'], $_POST['car_reg_no'], $_POST['is_available'], $_POST['car_id']);
+    $userQuery = update_car($_POST['car_id'], $_POST['owner_id'], $_POST['car_model_name'], $_POST['car_reg_no'], $_POST['is_available']);
 
     if ($userQuery == TRUE) {
         array_push($val_err, "Update Data");
