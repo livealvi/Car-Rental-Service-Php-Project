@@ -8,7 +8,7 @@ class Db
     {
         $servername = "localhost";
         $username = "root";
-        $password = "276914049";
+        $password = "";
         $dbname = "alvihasa_CarRentalServiceDB";
         $connection = new mysqli($servername, $username, $password, $dbname);
 
