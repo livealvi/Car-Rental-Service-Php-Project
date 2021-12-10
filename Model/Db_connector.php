@@ -8,7 +8,7 @@ class Db
     {
         $servername = "localhost";
         $username = "root";
-        $password = "276914049";
+        $password = "";
         $connection = new mysqli($servername, $username, $password);
 
         if ($connection->connect_error) {
