@@ -14,9 +14,8 @@ function test_mail($mail){
     $mail = trim($mail);
     $mail = stripslashes($mail);
     $mail = htmlspecialchars($mail);
-    $chars = str_split($mail);
-    foreach ($chars as $char){
-        if($char == '@') return true;
+    if(strpos($mail, '@') !== false && strpos($mail, '.com') !== false){
+        return true;
     }
     return false;
 }

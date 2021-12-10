@@ -7,11 +7,12 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Car Entry</h1>
-        <hr>
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <div class="carcontainer">
+        <h1 class="title">Car Entry</h1>
+        <form class="cartop" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <label for="name">Company:</label> <input type="text" name="name" ><br>
             <label for="model">Model No:</label> <input type="text" name="model" ><br>
 
@@ -22,7 +23,7 @@
             <br>
 
             <label for="cars">Vehicle Type:</label>
-            <select name="year" id="year" multiple>
+            <select name="year" id="year">
             <option value="sedan">Sedan</option>
             <option value="Sports">Sports</option>
             <option value="wagon">Station Wagon</option>
@@ -34,7 +35,7 @@
            </select>
          <br>
 
-            <label for="sereal">Car Sereal No :</label> <input type="text" name="Sereal"><br>
+            <label for="serial">Car Sereal No :</label> <input type="text" name="serial"><br>
             <label for="number">Car No :</label> <input type="text" name="number"><br>
 
             <label for="status">Vehicle Status:</label>
@@ -63,12 +64,14 @@
             <br>
         </form>
 
-        <form action="submission.php" method="POST">
+        <form class="bottom btn2" method="POST">
              <input type="submit"/>
-             </form>
+        </form>
+
+      </div>
 
     <?php
-   /* if($_SERVER["REQUEST_METHOD"] == "POST") {
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($val_err) && empty($req_err)) {
             echo "<h2>Your Input: </h2><br>";
             echo "First_Name: " . $first_name . "<br>";
@@ -87,7 +90,7 @@
                 echo $v_err."<br>";
             }
         }
-    }*/
+    }
     ?>
     </body>
 </html>

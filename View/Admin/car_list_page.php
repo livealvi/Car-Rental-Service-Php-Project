@@ -12,11 +12,10 @@ include '../../Controller/AdminController/car_list_handler.php';
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Car List</title>
+    <link rel="stylesheet" href="css/admin_header.css">
+    <link rel="stylesheet" href="css/admin_footer.css">
+    <link rel="stylesheet" href="css/admin_side_panel.css">
 </head>
 <body>
 <!--Header inclusion-->
@@ -25,7 +24,7 @@ include '../../Controller/AdminController/car_list_handler.php';
 <!--Main table structure-->
 <table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#b8e3ff">
     <tr>
-        <td width="400">
+        <td width="300">
             <?php include 'admin_side_panel.php' ?>
         </td>
         <td align="center" valign="top">
@@ -36,27 +35,14 @@ include '../../Controller/AdminController/car_list_handler.php';
                             Car List Page
                         </font>
                     </td>
-                    <td align="right" valign="top" height="50">
+                    <td align="left" valign="top" height="50">
                         <a href="add_car_page.php">
                             <button>
                                 <font size="3" face="arial">Add Car</font>
                             </button>
                         </a>
                     </td>
-                    <td align="center" valign="top" height="50">
-                        <a href="">
-                            <button>
-                                <font size="3" face="arial">Edit Car</font>
-                            </button>
-                        </a>
-                    </td>
-                    <td align="left" valign="top" height="50">
-                        <a href="">
-                            <button>
-                                <font size="3" face="arial">Remove Car</font>
-                            </button>
-                        </a>
-                    </td>
+
                 </tr>
 
                 <tr>
@@ -100,6 +86,11 @@ include '../../Controller/AdminController/car_list_handler.php';
                                         Car Image
                                     </font>
                                 </th>
+                                <th align="center" valign="top">
+                                    <font face="arial" color="#000000" size="3">
+                                        Edit/Delete
+                                    </font>
+                                </th>
                             </tr>
                             <?php include '../../Controller/AdminController/car_list_processor.php' ?>
                         </table>
@@ -122,5 +113,7 @@ include '../../Controller/AdminController/car_list_handler.php';
 
 <!--Footer inclusion-->
 <?php include 'admin_footer.php' ?>
+
+<script src="js/script.js"></script>
 </body>
 </html>

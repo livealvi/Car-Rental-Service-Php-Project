@@ -7,11 +7,12 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Edit Profile</h1>
-        <hr>
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <div class="container">
+        <h1 class="title" >Edit Profile</h1>
+        <form class="top" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
             <label for="first_name">First Name:</label> <input type="text" name="first_name" ><br>
             <label for="last_name">Last Name:</label> <input type="text" name="last_name"><br>
@@ -32,12 +33,13 @@
             
         </form>
 
-        <form action="submission.php" method="POST">
+        <form class="bottom"  method="POST">
              <input type="submit"/>
-             </form>
+        </form>
+        </div>
 
     <?php
-   /* if($_SERVER["REQUEST_METHOD"] == "POST") {
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($val_err) && empty($req_err)) {
             echo "<h2>Your Input: </h2><br>";
             echo "First_Name: " . $first_name . "<br>";
@@ -56,7 +58,7 @@
                 echo $v_err."<br>";
             }
         }
-    }*/
+    }
     ?>
     </body>
 </html>

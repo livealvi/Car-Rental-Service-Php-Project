@@ -93,3 +93,9 @@ function update_car($owner_id, $car_model_name, $car_reg_no, $is_available, $car
     }
     return  $result;
 }
+function delete_car($car_id){
+    $connection = new db();
+    $con_obj=$connection->open_con();
+    $result = $con_obj->query("DELETE FROM Car WHERE car_id='$car_id'");
+    return $result;
+}

@@ -8,11 +8,12 @@
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>MidProject</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Registration</h1>
-        <hr>
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <div class="container">
+        <h1 class="title" >Registration</h1>
+        <form class="top" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <label for="first_name">First Name:</label> <input type="text" name="first_name" ><br>
             <label for="last_name">Last Name:</label> <input type="text" name="last_name"><br>
 
@@ -34,22 +35,23 @@
             <label >Password : 
             <input name="password" id="Password" type="Password" /></label> <br>    
             <label>Confirm password:
-            <input type="password" name="Confirm_password" id="Confirm_password" />
+            <input type="password" name="cpassword" id="Confirm_password" />
             </label>
             <br>
 
         </form>
-        <form action="submission.php" method="POST">
+        <form class="bottom"  method="POST">
              <input type="submit"/>
-             </form>
+        </form>
+        </div>
 
     <?php
-   /* if($_SERVER["REQUEST_METHOD"] == "POST") {
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($val_err) && empty($req_err)) {
             echo "<h2>Your Input: </h2><br>";
             echo "First_Name: " . $first_name . "<br>";
-            echo "Last_Name: " . $last_name . "<br>";  </body>
-</html>
+            echo "Last_Name: " . $last_name . "<br>";  
+
             echo "Date of Birth: " . $age . "<br>";
             echo "Designation: " . $designation . "<br>";
             echo "Preferred Language: " . $language . "<br>";
@@ -64,7 +66,7 @@
                 echo $v_err."<br>";
             }
         }
-    }*/
+    }
     ?>
     </body>
 </html>

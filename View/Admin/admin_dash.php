@@ -12,11 +12,10 @@ include '../../Controller/AdminController/admin_dash_handler.php';
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin dashboard</title>
+    <link rel="stylesheet" href="css/admin_header.css">
+    <link rel="stylesheet" href="css/admin_footer.css">
+    <link rel="stylesheet" href="css/admin_side_panel.css">
 </head>
 <body>
 <!--Header inclusion-->
@@ -25,14 +24,14 @@ include '../../Controller/AdminController/admin_dash_handler.php';
 <!--Main table structure-->
 <table border="0" id="home" width="100%" cellpadding="0" cellspacing="0" bgcolor="#b8e3ff">
     <tr>
-        <td width="400">
+        <td width="300">
             <?php include 'admin_side_panel.php' ?>
         </td>
         <td align="center" valign="top">
             <table border="0" width="100%" cellpadding="15" cellspacing="0" align="center" >
                 <tr>
                     <td align="left" valign="top" height="50">
-                        <font face="arial" color="#000000" size="4">
+                        <font face="arial" color="#000000" size="6">
                             Dash Board
                         </font>
                     </td>

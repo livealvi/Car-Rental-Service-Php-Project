@@ -7,14 +7,9 @@ class Db
     function open_con()
     {
         $servername = "localhost";
-        $username = "alvihasa_CarRental";
-        $password = "CarRental1";
-        $dbname = "alvihasa_CarRentalServiceDB";
-        $dbhost = "localhost";
-        $dbuser = "root";
-        $dbpass = "";
-        $db = "alvihasa_CarRentalServiceDB";
-        $connection = new mysqli($servername, $username, $password, $dbname);
+        $username = "root";
+        $password = "276914049";
+        $connection = new mysqli($servername, $username, $password);
 
         if ($connection->connect_error) {
             die("Connection failed: " . $connection->connect_error);

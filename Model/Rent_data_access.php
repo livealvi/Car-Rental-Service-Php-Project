@@ -68,4 +68,11 @@ function update_booking($rent_id, $car_id, $owner_id, $renter_id,  $employee_id,
         $result = FALSE;
     }
     return  $result;
+    function delete_booking($rent_id)
+    {
+        $connection = new db();
+        $con_obj = $connection->open_con();
+        $result = $con_obj->query("DELETE FROM Rent WHERE rent_id='$rent_id'");
+        return $result;
+    }
 }

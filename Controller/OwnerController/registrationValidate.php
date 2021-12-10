@@ -42,7 +42,7 @@ function trimmer($data) {
 
 
 
-/*$first_name = $last_name= $age = $designation = $language = $email = $password = "";
+$first_name = $last_name= $age = $address = $cpassword = $email = $password = "";
 
 $req_err = [];//stores errors if a required field is empty
 $val_err = [];//stores errors if input is not valid
@@ -62,12 +62,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             array_push($val_err, "Last name must be 5 characters long and without numbers");
         }
     }
-    if(empty($_POST["age"])) array_push($req_err, "Age Required");
-    else $age = trimmer($_POST["age"]);
-    if(empty($_POST["designation"])) array_push($req_err, "Designation Required");
-    else $designation = trimmer($_POST["designation"]);
-    if(empty($_POST["language"])) array_push($req_err, "language Required");
-    else $language = trimmer($_POST["language"]);
+
     if(empty($_POST["email"])) array_push($req_err, "Email Required");
     else{
         if(test_mail($_POST["email"])) $email = trimmer($_POST["email"]);
@@ -75,6 +70,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             array_push($val_err, "E-mail must contain @");
         }
     }
+
+    if(empty($_POST["address"])) array_push($req_err, "Address is Required");
+    else $address = trimmer($_POST["address"]);
+
+
+    if(empty($_POST["birthday"])) array_push($req_err, "DOB Required");
+    else $age = trimmer($_POST["birthday"]);
+
+
+    if(empty($_POST["no"])) array_push($req_err, "NID number is Required");
+    else{
+        if(test_name($_POST["no"])) $car_no = trimmer($_POST["no"]);
+        else{
+            array_push($val_err, "must be 5 characters long");
+        }
+    }
+
+    if(!isset($_POST["up_file"])) array_push($req_err, "File selection Required");
+
+   
     if(empty($_POST["password"])) array_push($req_err, "Password Required");
     else{
         if(test_pass($_POST["password"])) $password = trimmer($_POST["password"]);
@@ -82,7 +97,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             array_push($val_err, "Password must be 8 characters long.");
         }
     }
-    if(!isset($_POST["up_file"])) array_push($req_err, "File selection Required");
+
+    if(empty($_POST["cpassword"])) array_push($req_err, "Confirm Password Required");
+    else{
+        if(test_pass($_POST["cpassword"])) $cpassword = trimmer($_POST["cpassword"]);
+        else{
+            array_push($val_err, "Confirm Password must be match with Password.");
+        }
+    }
 }
 
-?>*/
+?>
