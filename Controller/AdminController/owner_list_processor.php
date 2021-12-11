@@ -30,12 +30,12 @@ foreach ($owners as $owner) {
             <td align="center" valign="top">
                 <a href="edit_owner_page.php?id='. $ownerId. '">
                     <button>
-                        <font size="3" face="arial">Edit Renter</font>
+                        <font size="3" face="arial">Edit Owner</font>
                     </button>
                 </a>
                 <a href="#">
                     <button onclick="deleteUser('.$ownerId.')">
-                        <font size="3" face="arial">Delete Renter</font>
+                        <font size="3" face="arial">Delete Owner</font>
                     </button>
                 </a>
             </td>
