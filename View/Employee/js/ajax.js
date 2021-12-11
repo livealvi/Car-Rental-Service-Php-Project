@@ -72,7 +72,7 @@ function search_user() {
         cell4.innerHTML = result[i].user_mobile;
         cell5.innerHTML = result[i].archive_status;
         cell6.innerHTML =
-          "<img width='50' height='50' src='" +
+          "<img width='75' height='75' src='" +
           result[i].user_img_url +
           "'  alt='' />";
         cell7.innerHTML = "btn";

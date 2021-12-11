@@ -53,6 +53,10 @@ input[type=file] {
     font-size: 20px;
 }
 
+.search input[type=text] {
+    width: 92%;
+}
+
 input[type=submit],
 input[type=reset] {
     color: white;

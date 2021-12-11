@@ -51,9 +51,9 @@ include '../../../Controller/EmployeeController/renter/renter_list_handler.php';
 
                 </div>
 
-                <div>
-                    <input type="text" name="search_user" id="search_user" onkeyup="search_user()" placeholder="Search Renter">
-                    <button class="button btn-cyan" onclick="clearQuery()">Clear</button>
+                <div class="search">
+                    <input class="input-search" type="text" name="search_user" id="search_user" onkeyup="search_user()" placeholder="Search Renter">
+                    <button class="button btn-orange" onclick="clearQuery()">Clear</button>
 
                 </div>
 
