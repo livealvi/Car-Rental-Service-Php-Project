@@ -46,7 +46,7 @@ if((isset($_POST['submit']))){
             $_SESSION["user_type"] = $user->getUserType();
             if($remember){
                 setcookie ("user_name", $user->getUserName(), time()+ (86400*30));
-                setcookie ("password", $user->getUserPassword(), time()+ (86400*30));
+                setcookie ("password", "");
             }
             else{
                 setcookie ("user_name", "");
