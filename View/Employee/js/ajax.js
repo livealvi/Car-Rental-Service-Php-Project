@@ -3,15 +3,15 @@ function delete_user_by_id(user_id) {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       if (this.responseText === "successful") {
-        alert("User deleted successfully");
+        alert("User Deleted Successfully");
         window.location.reload();
       } else {
-        alert("User could not be deleted");
+        alert("User Could Not Be Deleted");
         window.location.reload();
       }
     } else {
       setTimeout(function () {
-        alert("An unexpected error has occurred");
+        alert("An Unexpected Error Has Occurred");
       }, 10000);
       console.log(this.status);
     }
@@ -30,7 +30,6 @@ function search_user() {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       if (this.responseText === "reset") {
-        // alert("User deleted successfully");
         window.location.reload();
         return;
       }
@@ -39,7 +38,6 @@ function search_user() {
 
       let table = document.getElementById("user_table");
       let rows = table.rows.length;
-      // console.log(rows);
 
       for (let i = rows - 1; i > 0; i--) {
         table.deleteRow(i);
