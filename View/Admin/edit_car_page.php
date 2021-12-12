@@ -8,6 +8,8 @@ if (isset($_GET['id'])) {
     $carId = $_GET['id'];
 }
 else $carId = "";
+
+include '../../Controller/AdminController/edit_car_processor.php';
 ?>
 
 <!doctype html>
@@ -58,7 +60,7 @@ else $carId = "";
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="owner_id" id="ownerId" size="50">
+                                                    <input type="text" name="owner_id" id="ownerId" size="50" value="<?php echo $car['owner_id']?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -68,7 +70,7 @@ else $carId = "";
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="car_model_name" id="carModel" size="50">
+                                                    <input type="text" name="car_model_name" id="carModel" size="50" value="<?php echo $car['car_model_name']?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -78,7 +80,7 @@ else $carId = "";
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="car_reg_no" id="regNo" size="50">
+                                                    <input type="text" name="car_reg_no" id="regNo" size="50" value="<?php echo $car['car_reg_no']?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -88,7 +90,7 @@ else $carId = "";
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="car_available" id="isAvailable" size="50">
+                                                    <input type="text" name="car_available" id="isAvailable" size="50" value="<?php echo $car['is_available']?>">
                                                 </td>
                                             </tr>
                                             <tr>

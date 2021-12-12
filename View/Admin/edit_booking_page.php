@@ -8,6 +8,8 @@ if (isset($_GET['id'])) {
     $bookingId = $_GET['id'];
 }
 else $bookingId = "";
+
+include '../../Controller/AdminController/edit_booking_processor.php';
 ?>
 
 <!doctype html>
@@ -58,7 +60,7 @@ else $bookingId = "";
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="car_id" id="carId" size="50">
+                                                    <input type="text" name="car_id" id="carId" size="50" value="<?php echo $booking['car_id'] ?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -68,7 +70,7 @@ else $bookingId = "";
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="owner_id" id="ownerId" size="50">
+                                                    <input type="text" name="owner_id" id="ownerId" size="50" value="<?php echo $booking['owner_id'] ?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -78,7 +80,7 @@ else $bookingId = "";
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="renter_id" id="renterId" size="50">
+                                                    <input type="text" name="renter_id" id="renterId" size="50" value="<?php echo $booking['renter_id'] ?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -88,7 +90,7 @@ else $bookingId = "";
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="employee_id" id="employeeId" size="50">
+                                                    <input type="text" name="employee_id" id="employeeId" size="50" value="<?php echo $booking['employee_id'] ?>">
                                                 </td>
                                             </tr>
 
@@ -99,7 +101,7 @@ else $bookingId = "";
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="rent_date" id="rentDate" size="50">
+                                                    <input type="text" name="rent_date" id="rentDate" size="50" value="<?php echo $booking['rent_date'] ?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -109,7 +111,7 @@ else $bookingId = "";
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="rent_return_date" id="rentReturnDate" size="50">
+                                                    <input type="text" name="rent_return_date" id="rentReturnDate" size="50" value="<?php echo $booking['rent_return_date'] ?>">
                                                 </td>
                                             </tr>
                                             <tr>
