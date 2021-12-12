@@ -13,7 +13,7 @@ else $carId = "";
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Add Car</title>
+    <title>Edit Car</title>
     <link rel="stylesheet" href="css/admin_header.css">
     <link rel="stylesheet" href="css/admin_footer.css">
     <link rel="stylesheet" href="css/admin_side_panel.css">

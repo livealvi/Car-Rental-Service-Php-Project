@@ -220,3 +220,70 @@ function editUser(editUserId){
         return false
     }
 }
+
+function editBooking(editBookingID){
+    document.getElementById('display').innerHTML = ''
+
+    let reqErr = []
+
+    let carId = document.getElementById('carId').value
+    let ownerId = document.getElementById('ownerId').value
+    let renterId = document.getElementById('renterId').value
+    let employeeId = document.getElementById('employeeId').value
+    let rentDate = document.getElementById('rentDate').value
+    let rentReturnDate = document.getElementById('rentReturnDate').value
+
+    if(carId === '') reqErr.push('Car Id is required')
+    if(ownerId === '') reqErr.push('Owner Id is required')
+    if(renterId === '') reqErr.push('Renter Id is required')
+    if(employeeId === '') reqErr.push('Employee Id is required')
+    if(rentDate === '') reqErr.push('Rent date is required')
+    if(rentReturnDate === '') reqErr.push('Rent return date is required')
+
+    if (reqErr.length === 0) {
+        const bookingObj = {
+            rent_id: editBookingID,
+            car_id: carId,
+            owner_id: ownerId,
+            renter_id: renterId,
+            employee_id: employeeId,
+            rent_date: rentDate,
+            rent_return_date: rentReturnDate
+        }
+        const bookingJSON = JSON.stringify(bookingObj)
+        console.log(bookingJSON)
+        var xhttp = new XMLHttpRequest()
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                if(this.responseText === 'successful'){
+                    alert('Booking information updated successfully')
+                    window.location.reload()
+                }
+                else{
+                    alert('Booking information could not be edited')
+                    window.location.reload()
+                }
+            }
+            else
+            {
+                setTimeout(function() { alert("An unexpected error has occurred") }, 10000)
+                console.log(this.status)
+            }
+        }
+        xhttp.open("POST", "/Car-Rental-Service/Controller/AdminController/edit_booking_handler.php", true)
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+        xhttp.send("x=" + bookingJSON)
+        return false
+    }
+    else{
+        let list = document.createElement('ul')
+        list.classList.add('error-list')
+        for (let i = 0; i < reqErr.length; i++) {
+            let listItem = document.createElement('h3')
+            listItem.appendChild(document.createTextNode(reqErr[i]))
+            list.appendChild(listItem)
+        }
+        document.getElementById('display').appendChild(list)
+        return false
+    }
+}
