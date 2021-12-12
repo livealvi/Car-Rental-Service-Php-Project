@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif ;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 500px;
+    height:600px;
+    background-color: white;
+    color: crimson;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.carcontainer{
+    width: 600px;
+    height:800px;
+    background-color: white;
+    color: crimson;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+.title{
+    margin-top: 1rem;
+}
+.top{
+  width: 550px;
+  height: 480px;
+  text-align: left;
+  margin: 2rem auto
+}
+.top input{
+    margin-bottom: 1rem;
+    padding: .2rem .5rem;
+    border: 1px solid crimson;
+    border-radius: 5px;
+}
+.cartop{
+    width: 450px;
+    height: 650px;
+    text-align: left;
+    margin: .5rem auto
+  }
+.cartop input{
+    margin: 1rem 0;
+    padding: .2rem .5rem;
+    border: 1px solid crimson;
+    border-radius: 5px;
+}
+
+
+
+.bottom input[type='submit']{
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: .8rem 2rem;
+}
+
+.btn2{
+    position: absolute;
+    right: 1rem ;
+    bottom: .4rem;
+}
