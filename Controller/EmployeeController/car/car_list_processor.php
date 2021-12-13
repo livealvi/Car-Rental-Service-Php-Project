@@ -16,7 +16,7 @@ foreach ($cars as $car) {
                     <a class="button btn-green" href="../../../View/Employee/car/edit_car_page.php?ids=<?= $id ?>">Edit</a>
                 </div>
                 <div class="btn-edit-delete">
-                    <a class="button btn-red" href="../../../Controller/EmployeeController/delete_user_controller.php?id=<?= $id ?>">Delete</a>
+                    <a class="button btn-red" onclick="delete_car(<?= $id ?>)">Delete</a>
                 </div>
             </div>
         </td>

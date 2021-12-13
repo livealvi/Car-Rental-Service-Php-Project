@@ -42,15 +42,23 @@ include '../../../Controller/EmployeeController/renter/renter_list_handler.php';
                     <div style="display:inline-block">
                         <h2>Renter List</h2>
                     </div>
+
                     <div style="float:right">
                         <a href="add_renter_page.php" class="button btn-green">Add Renter</a>
                         <a href="edit_renter.php" class="button btn-cyan">Edit Renter Info</a>
                         <a href="#" class="button btn-red">Archive Renter</a>
                     </div>
+
+                </div>
+
+                <div class="search">
+                    <input class="input-search" type="text" name="search_renter" id="search_renter" onkeyup="search_renter()" placeholder="Search Renter">
+                    <button class="button btn-orange" onclick="clearQuery()">Clear</button>
+
                 </div>
 
                 <div class="renter-list">
-                    <table>
+                    <table id="renter_table">
                         <tr>
                             <th>Rent ID</th>
                             <th>Renter Name</th>
@@ -64,7 +72,11 @@ include '../../../Controller/EmployeeController/renter/renter_list_handler.php';
                         <?php include '../../../Controller/EmployeeController/renter/renter_list_processor.php' ?>
 
                     </table>
+                    <div class="search-message">
+                        <h1 id="msg"></h1>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -72,6 +84,7 @@ include '../../../Controller/EmployeeController/renter/renter_list_handler.php';
 
     <!--Footer inclusion-->
     <?php include '../emp_footer.php' ?>
+    <script src="../js/ajax.js"></script>
 </body>
 
 </html>

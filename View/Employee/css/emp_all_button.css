@@ -90,6 +90,15 @@
     color: white;
 }
 
+.btn-orange {
+    background-color: #FF8C00;
+}
+
+.btn-orange:hover {
+    background-color: #FFA500;
+    color: white;
+}
+
 input[type=submit] {
     background-color: #28a745;
 }

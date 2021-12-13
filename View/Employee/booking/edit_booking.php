@@ -34,8 +34,9 @@ include '../../../Controller/EmployeeController/booking/edit_booking_list_handle
     <!--Main Structure-->
     <div class="main">
         <div class="sidebar">
-            <!--Side Panel inclusion-->
 
+            <!--Side Panel inclusion-->
+            <?php include '../emp_side_panel.php'; ?>
         </div>
         <div class="content">
             <!--Header inclusion-->

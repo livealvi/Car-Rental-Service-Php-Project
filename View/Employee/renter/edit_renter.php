@@ -37,7 +37,6 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
         <div class="sidebar">
             <!--Side Panel inclusion-->
             <?php include '../emp_side_panel.php'; ?>
-
         </div>
         <div class="content">
             <!--Header inclusion-->
@@ -49,7 +48,7 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
                         <h1>Update Renter</h1>
                     </div>
                     <div class="form-box">
-                        <form method="post" action="#" enctype="multipart/form-data">
+                        <form method="post" action="#" enctype="multipart/form-data" onsubmit="editUser(<?php echo $user_id ?>)">
                             <!-- --input-label-- -->
                             <div class="form-view ">
                                 <div class="row">
@@ -58,7 +57,7 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
                                             <!-- <label for="UserID">User ID:</label> -->
                                         </div>
                                         <div class="for-input">
-                                            <input type="hidden" name="user_id" size="50" value="<?php echo $user_id; ?>">
+                                            <input type="hidden" id="user_id" name="user_id" size="50" value="<?php echo $user_id; ?>">
                                         </div>
                                     </div>
                                     <div>
@@ -66,7 +65,7 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
                                             <label for="Username">Username:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="text" name="user_name" size="50" value="<?php echo $user_name; ?>">
+                                            <input type="text" id="user_name" name="user_name" size="50" value="<?php echo $user_name; ?>">
                                         </div>
                                     </div>
 
@@ -75,7 +74,7 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
                                             <label for="Email">Email:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="text" name="user_email" size="50" value="<?php echo $user_email; ?>">
+                                            <input type="text" id="user_email" name="user_email" size="50" value="<?php echo $user_email; ?>">
                                         </div>
                                     </div>
                                     <div>
@@ -83,7 +82,7 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
                                             <label for="Mobile">Mobile:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="text" name="user_mobile" size="50" value="<?php echo $user_mobile; ?>">
+                                            <input type="text" id="user_mobile" name="user_mobile" size="50" value="<?php echo $user_mobile; ?>">
                                         </div>
                                     </div>
                                     <div>
@@ -91,12 +90,12 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
                                             <label for="Status">Status:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="radio" name="archive_status" <?php echo $not_archive; ?> value="Not Archive">
+                                            <input type="radio" id="archive_status" name="archive_status" <?php echo $not_archive; ?> value="Not Archive">
                                             <label for="not_archive">Not Archive</label>
 
                                         </div>
                                         <div class="for-input">
-                                            <input type="radio" name="archive_status" <?php echo $archive; ?> value="Archive">
+                                            <input type="radio" id="archive_status" name="archive_status" <?php echo $archive; ?> value="Archive">
                                             <label for="archive">Archive</label>
                                         </div>
                                     </div>
@@ -106,7 +105,7 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
                                             <div class="cancel-btn">
                                                 <a href="renter_list_page.php" class="button btn-red">Back</a>
                                             </div>
-                                            <input type="submit" name="update" value="Update" <?= $id ?>>
+                                            <input type="submit" name="submit" value="Update" <?= $id ?>>
                                         </div>
                                     </div>
                                     <!-- --buttons-- -->
@@ -115,6 +114,11 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
                             <?php include '../../../Controller/EmployeeController/renter/edit_renter_processors.php'; ?>
                         </form>
                     </div>
+
+                    <td bgcolor="#0077b6" id="display">
+
+                    </td>
+
 
                 </div>
             </div>
@@ -125,6 +129,7 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
 
     <!--Footer inclusion-->
     <?php include '../emp_footer.php' ?>
+    <script src="../js/ajax.js"></script>
 </body>
 
 </html>

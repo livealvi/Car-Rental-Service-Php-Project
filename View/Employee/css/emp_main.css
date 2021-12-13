@@ -82,3 +82,12 @@ tr:nth-child(even) {
     background-color: red;
     text-align: center;
 }
+
+.search {
+    margin-bottom: 20px;
+}
+
+.search-message {
+    text-align: center;
+    padding-top: 10%;
+}

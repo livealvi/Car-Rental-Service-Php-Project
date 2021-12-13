@@ -1,13 +1,12 @@
 <?php
-
+//header("Content-Type: application/json; charset=UTF-8");
 include '../../../Model/User_data_access.php';
 include __DIR__ . '/../validator/user_validate.php';
-
 
 $user_id = $user_name = $user_email = $user_mobile = $user_password = $user_img_url = $archive_status = "";
 $archive = "";
 $not_archive = "";
-$user_type = "renter";
+
 
 $req_err = []; //stores errors if a required field is empty
 $val_err = []; //stores errors if input is not valid
@@ -33,13 +32,20 @@ if ($userQuery->num_rows > 0) {
 }
 
 
-if ((isset($_POST['update']))) {
+// if ((isset($_POST['update']))) {
 
-    $userQuery = update_user($_POST['user_id'], $_POST['user_name'], $_POST['user_email'], $_POST['user_mobile'], $_POST['archive_status']);
+//     $userQuery = update_user($_POST['user_id'], $_POST['user_name'], $_POST['user_email'], $_POST['user_mobile'], $_POST['archive_status']);
 
-    if ($userQuery == TRUE) {
-        array_push($val_err, "Update Data");
-    } else {
-        array_push($val_err, "Could not update");
-    }
-}
+//     if ($userQuery == TRUE) {
+//         array_push($val_err, "Update Data");
+//     } else {
+//         array_push($val_err, "Could not update");
+//     }
+// }
+
+
+$obj = json_decode($_POST["x"], false);
+
+$success = update_user($obj->user_id, $obj->user_name, $obj->user_email, $obj->user_mobile, $obj->archive_status);
+if ($success) echo 'successful';
+else echo 'failed';
