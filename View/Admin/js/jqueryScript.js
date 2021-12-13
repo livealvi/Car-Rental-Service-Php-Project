@@ -23,14 +23,14 @@ $(document).ready(function(){
         }
     );
 
-    $("input").focus(
+    $('input').focus(
         function()
         {
             $(this).css("background-color", "lightgray");
         }
     );
 
-    $("input").blur(
+    $('input').blur(
         function(){
             $(this).css("background-color", "white");
         }
