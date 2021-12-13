@@ -50,7 +50,7 @@ include '../../../Controller/EmployeeController/owner/owner_list_handler.php';
 
                 <div class="search">
                     <input class="input-search" type="text" name="search_owner" id="search_owner" onkeyup="search_owner()" placeholder="Search Owner">
-                    <button class="button btn-orange" onclick="clearQuery()">Clear</button>
+                    <button class="button btn-orange" onclick="clearSearchOwner()">Clear</button>
 
                 </div>
 

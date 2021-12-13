@@ -1,14 +1,16 @@
 <!--Add renter page-->
 <?php
 
+mysqli_report(MYSQLI_REPORT_STRICT | MYSQLI_REPORT_ERROR);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 if (isset($_GET['ids'])) {
     $id = $_GET['ids'];
 }
 
 session_start();
-if (empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION["user_type"] != 'employee')) {
-    header("Location:../login.php");
-}
 
 include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.php';
 
@@ -48,7 +50,7 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
                         <h1>Update Renter</h1>
                     </div>
                     <div class="form-box">
-                        <form method="post" action="#" enctype="multipart/form-data" onsubmit="editUser(<?php echo $user_id ?>)">
+                        <form method="post" action="#" onsubmit="editUser(<?php echo $user_id ?> )">
                             <!-- --input-label-- -->
                             <div class="form-view ">
                                 <div class="row">
@@ -90,7 +92,7 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
                                             <label for="Status">Status:</label>
                                         </div>
                                         <div class="for-input">
-                                            <input type="radio" id="archive_status" name="archive_status" <?php echo $not_archive; ?> value="Not Archive">
+                                            <input type="radio" id="archive_status_not" name="archive_status" <?php echo $not_archive; ?> value="Not Archive">
                                             <label for="not_archive">Not Archive</label>
 
                                         </div>
@@ -105,7 +107,7 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
                                             <div class="cancel-btn">
                                                 <a href="renter_list_page.php" class="button btn-red">Back</a>
                                             </div>
-                                            <input type="submit" name="submit" value="Update" <?= $id ?>>
+                                            <input type="submit" name="submit" id="submit" value="Update" <?= $id ?>>
                                         </div>
                                     </div>
                                     <!-- --buttons-- -->
@@ -133,3 +135,69 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
 </body>
 
 </html>
+
+<!-- <script>
+    document.getElementById("submit").addEventListener("click", function(event) {
+
+
+        let req_err = [];
+        let val_err = [];
+
+        let userName = document.getElementById("user_name").value;
+        let email = document.getElementById("user_email").value;
+        let mobileNo = document.getElementById("user_mobile").value;
+        let archiveStatus = document.getElementById("archive_status").checked;
+        console.log(archiveStatus);
+
+        if (userName === "") req_err.push("username is required");
+        else {
+            if (!checkName(userName)) val_err.push("username is not valid");
+        }
+        if (email === "") req_err.push("email is required");
+        else {
+            if (!checkMail(email)) val_err.push("email is not valid");
+        }
+        if (mobileNo === "") req_err.push("mobile number is required");
+        else {
+            if (!checkMobile(mobileNo)) val_err.push("mobile no is not valid");
+        }
+
+        if (req_err.length === 0) {
+            const userObj = {
+                user_id: <?= $user_id ?>,
+                archive_status: document.getElementById("archive_status").checked ?
+                    "Archive" : "Not Archive",
+                user_name: userName,
+                user_email: email,
+                user_mobile: mobileNo,
+            };
+            const userJSON = JSON.stringify(userObj);
+            console.log(userJSON);
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    if (this.responseText === "successful") {
+                        alert("User Information Updated Successfully");
+                        window.location.reload();
+                    } else {
+                        alert("User Information Could Not Be Edited");
+                        window.location.reload();
+                    }
+                }
+                // else {
+                //     setTimeout(function() {}, 10000);
+                //     alert("An Unexpected Error Has Occurred");
+                //     console.log(this.status);
+                // }
+            };
+            xhttp.open(
+                "POST",
+                "/project/Car-Rental-Service/Controller/EmployeeController/edit_renter_controller.php",
+                true
+            );
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("x=" + userJSON);
+        }
+    });
+</script> -->
