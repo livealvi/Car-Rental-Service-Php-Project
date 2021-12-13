@@ -130,16 +130,21 @@ function update_user($user_id, $user_name, $user_email, $user_mobile, $archive_s
     return  $result;
 }
 
-//function search for update_user
-function search_user($user)
+//function to search
+function search_renter($user)
 {
     $connection = new db();
     $con_obj = $connection->open_con();
 
-    // $sql = "SELECT * FROM  User WHERE user_id like '%" . $user . "%' or user_name like '%" . $user . "%' or user_mobile like '%" . $user . "%' or user_email like '%" . $user . "%' or archive_status like '%" . $user . "%'";
-
-    // echo $sql;
-
     $result = $con_obj->query("SELECT * FROM  User WHERE user_type='renter' and (user_id like '%" . $user . "%' or user_name like '%" . $user . "%' or user_mobile like '%" . $user . "%' or user_email like '%" . $user . "%' or archive_status like '%" . $user . "%')");
+    return $result;
+}
+
+function search_owner($user)
+{
+    $connection = new db();
+    $con_obj = $connection->open_con();
+
+    $result = $con_obj->query("SELECT * FROM  User WHERE user_type='owner' and (user_id like '%" . $user . "%' or user_name like '%" . $user . "%' or user_mobile like '%" . $user . "%' or user_email like '%" . $user . "%' or archive_status like '%" . $user . "%')");
     return $result;
 }

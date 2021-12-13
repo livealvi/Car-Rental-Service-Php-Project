@@ -52,13 +52,13 @@ include '../../../Controller/EmployeeController/renter/renter_list_handler.php';
                 </div>
 
                 <div class="search">
-                    <input class="input-search" type="text" name="search_user" id="search_user" onkeyup="search_user()" placeholder="Search Renter">
+                    <input class="input-search" type="text" name="search_renter" id="search_renter" onkeyup="search_renter()" placeholder="Search Renter">
                     <button class="button btn-orange" onclick="clearQuery()">Clear</button>
 
                 </div>
 
                 <div class="renter-list">
-                    <table id="user_table">
+                    <table id="renter_table">
                         <tr>
                             <th>Rent ID</th>
                             <th>Renter Name</th>
@@ -72,8 +72,11 @@ include '../../../Controller/EmployeeController/renter/renter_list_handler.php';
                         <?php include '../../../Controller/EmployeeController/renter/renter_list_processor.php' ?>
 
                     </table>
-                    <p id="msg"></p>
+                    <div class="search-message">
+                        <h1 id="msg"></h1>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>

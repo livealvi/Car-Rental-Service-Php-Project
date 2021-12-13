@@ -16,8 +16,7 @@ function checkMobile(mobile) {
   }
 }
 
-//User - Edit
-
+//Edit ===============
 function editUser(user_id) {
   //document.getElementById("display").innerHTML = "";
 
@@ -98,6 +97,7 @@ function editUser(user_id) {
   }
 }
 
+// Delete ===============
 function delete_user_by_id(user_id) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
@@ -152,7 +152,8 @@ function delete_car(car_id) {
   xhttp.send();
 }
 
-function search_user() {
+// Search ===============
+function search_renter() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -163,7 +164,7 @@ function search_user() {
 
       console.log(this.responseText);
 
-      let table = document.getElementById("user_table");
+      let table = document.getElementById("renter_table");
       let rows = table.rows.length;
 
       for (let i = rows - 1; i > 0; i--) {
@@ -171,7 +172,7 @@ function search_user() {
       }
 
       if (this.responseText === "empty") {
-        document.getElementById("msg").innerHTML = "No users found";
+        document.getElementById("msg").innerHTML = "No Renter Found";
         return;
       }
 
@@ -206,14 +207,77 @@ function search_user() {
   };
   xhttp.open(
     "GET",
-    "/project/Car-Rental-Service/Controller/EmployeeController/search_user_controller.php?query=" +
-      document.getElementById("search_user").value,
+    "/project/Car-Rental-Service/Controller/EmployeeController/search_renter_controller.php?query=" +
+      document.getElementById("search_renter").value,
+    true
+  );
+  xhttp.send();
+}
+
+function search_owner() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      if (this.responseText === "reset") {
+        window.location.reload();
+        return;
+      }
+
+      console.log(this.responseText);
+
+      let table = document.getElementById("owner_table");
+      let rows = table.rows.length;
+
+      for (let i = rows - 1; i > 0; i--) {
+        table.deleteRow(i);
+      }
+
+      if (this.responseText === "empty") {
+        document.getElementById("msg").innerHTML = "No Owner Found";
+        return;
+      }
+
+      document.getElementById("msg").innerHTML = "";
+
+      let result = JSON.parse(this.responseText);
+
+      console.log(result);
+
+      for (let i = 0; i < result.length; i++) {
+        let row = table.insertRow(i + 1);
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        let cell3 = row.insertCell(2);
+        let cell4 = row.insertCell(3);
+        let cell5 = row.insertCell(4);
+        let cell6 = row.insertCell(5);
+        let cell7 = row.insertCell(6);
+
+        cell1.innerHTML = result[i].user_id;
+        cell2.innerHTML = result[i].user_name;
+        cell3.innerHTML = result[i].user_email;
+        cell4.innerHTML = result[i].user_mobile;
+        cell5.innerHTML = result[i].archive_status;
+        cell6.innerHTML =
+          "<img width='75' height='75' src='" +
+          result[i].user_img_url +
+          "'  alt='' />";
+        cell7.innerHTML = "btn";
+      }
+    }
+  };
+  xhttp.open(
+    "GET",
+    "/project/Car-Rental-Service/Controller/EmployeeController/search_owner_controller.php?query=" +
+      document.getElementById("search_owner").value,
     true
   );
   xhttp.send();
 }
 
 function clearQuery() {
-  document.getElementById("search_user").value = "";
-  search_user();
+  document.getElementById("search_renter").value = "";
+  document.getElementById("search_owner").value = "";
+  search_renter();
+  search_owner();
 }

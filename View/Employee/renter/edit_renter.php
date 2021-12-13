@@ -37,7 +37,6 @@ include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.
         <div class="sidebar">
             <!--Side Panel inclusion-->
             <?php include '../emp_side_panel.php'; ?>
-
         </div>
         <div class="content">
             <!--Header inclusion-->

@@ -39,17 +39,23 @@ include '../../../Controller/EmployeeController/owner/owner_list_handler.php';
             <div class="main-box">
                 <div>
                     <div style="display:inline-block">
-                        <h2>Renter List</h2>
+                        <h2>Owner List</h2>
                     </div>
                     <div style="float:right">
                         <a href="add_owner_page.php" class="button btn-green">Add Owner</a>
                         <a href="edit_owner.php" class="button btn-cyan">Edit Owner Info</a>
-                        <a href="#" class="button btn-red">Owner Renter</a>
+                        <a href="#" class="button btn-red">Owner Archive</a>
                     </div>
                 </div>
 
+                <div class="search">
+                    <input class="input-search" type="text" name="search_owner" id="search_owner" onkeyup="search_owner()" placeholder="Search Owner">
+                    <button class="button btn-orange" onclick="clearQuery()">Clear</button>
+
+                </div>
+
                 <div class="booking-list">
-                    <table>
+                    <table id="owner_table">
                         <tr>
                             <th>Owner ID</th>
                             <th>Owner Name</th>
@@ -62,6 +68,10 @@ include '../../../Controller/EmployeeController/owner/owner_list_handler.php';
                         <?php include '../../../Controller/EmployeeController/owner/owner_list_processor.php' ?>
 
                     </table>
+
+                </div>
+                <div class="search-message">
+                    <h1 id="msg"></h1>
                 </div>
             </div>
         </div>
@@ -70,6 +80,7 @@ include '../../../Controller/EmployeeController/owner/owner_list_handler.php';
 
     <!--Footer inclusion-->
     <?php include '../emp_footer.php' ?>
+    <script src="../js/ajax.js"></script>
 </body>
 
 </html>

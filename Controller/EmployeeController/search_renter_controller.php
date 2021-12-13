@@ -3,7 +3,7 @@ mysqli_report(MYSQLI_REPORT_STRICT | MYSQLI_REPORT_ERROR);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require_once '../../Model/User_data_access.php';
+include '../../Model/User_data_access.php';
 
 
 $query = $_GET['query'];
@@ -13,7 +13,7 @@ if ($query == "") {
     return;
 }
 
-$result = search_user($query);
+$result = search_renter($query);
 
 $arr = $result->fetch_all(MYSQLI_ASSOC);
 
