@@ -53,7 +53,7 @@ include '../../../Controller/EmployeeController/renter/renter_list_handler.php';
 
                 <div class="search">
                     <input class="input-search" type="text" name="search_renter" id="search_renter" onkeyup="search_renter()" placeholder="Search Renter">
-                    <button class="button btn-orange" onclick="clearQuery()">Clear</button>
+                    <button class="button btn-orange" onclick="clearSearchRenter()">Clear</button>
 
                 </div>
 
