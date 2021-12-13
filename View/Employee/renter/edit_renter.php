@@ -12,12 +12,7 @@ if (isset($_GET['ids'])) {
 
 session_start();
 
-
 include '../../../Controller/EmployeeController/renter/edit_renter_list_handler.php';
-
-// echo "dhsbcjhdb";
-
-// return;
 
 ?>
 
