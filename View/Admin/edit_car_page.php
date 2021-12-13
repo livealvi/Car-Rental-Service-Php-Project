@@ -19,6 +19,17 @@ include '../../Controller/AdminController/edit_car_processor.php';
     <link rel="stylesheet" href="css/admin_header.css">
     <link rel="stylesheet" href="css/admin_footer.css">
     <link rel="stylesheet" href="css/admin_side_panel.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script>
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css("background-color", "yellow");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color", "green");
+            });
+        });
+    </script>-->
 </head>
 <body>
 <!--Header inclusion-->
@@ -137,5 +148,6 @@ include '../../Controller/AdminController/edit_car_processor.php';
 <?php include 'admin_footer.php' ?>
 
 <script src="js/script.js"></script>
+<script src="js/jqueryScript.js"></script>
 </body>
 </html>

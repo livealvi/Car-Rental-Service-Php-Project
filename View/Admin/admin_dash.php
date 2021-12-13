@@ -16,6 +16,7 @@ include '../../Controller/AdminController/admin_dash_handler.php';
     <link rel="stylesheet" href="css/admin_header.css">
     <link rel="stylesheet" href="css/admin_footer.css">
     <link rel="stylesheet" href="css/admin_side_panel.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <!--Header inclusion-->
@@ -169,5 +170,8 @@ include '../../Controller/AdminController/admin_dash_handler.php';
 
 <!--Footer inclusion-->
 <?php include 'admin_footer.php' ?>
+
+<script src="js/script.js"></script>
+<script src="js/jqueryScript.js"></script>
 </body>
 </html>

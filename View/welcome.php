@@ -9,6 +9,7 @@ session_start();
     <title>Welcome to Elite Rentals</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <!--Header inclusion-->
@@ -223,5 +224,7 @@ session_start();
 
 <!--Footer inclusion-->
 <?php include 'footer.php' ?>
+
+<script src="js/jqueryScript.js"></script>
 </body>
 </html>

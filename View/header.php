@@ -28,11 +28,11 @@ if (isset($_SESSION['user_name'])) {
             <li id="logo"><h2>Elite Rentals</h2></li>
             <div id="nav-right">
                 <ul class="navbar">
-                    <li><a href="welcome.php">Home</a></h6></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="login.php"><button class="header-btn">Sign in</button></a></li>
-                    <li><a href="register.php"><button class="header-btn">Register</button></a></li>
+                    <li><a href="welcome.php" class="nav-item">Home</a></h6></li>
+                    <li><a href="#about" class="nav-item">About</a></li>
+                    <li><a href="#contact" class="nav-item">Contact</a></li>
+                    <li><a href="login.php" class="nav-item"><button class="header-btn">Sign in</button></a></li>
+                    <li><a href="register.php" class="nav-item"><button class="header-btn">Register</button></a></li>
                 </ul>
             </div>
         </ul>
