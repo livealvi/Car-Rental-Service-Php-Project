@@ -74,7 +74,6 @@ function find_car_by_id($car_id)
 {
     $connection = new db();
     $con_obj = $connection->open_con();
-
     $result = $con_obj->query("SELECT * FROM Car WHERE car_id='$car_id'");
     return $result;
 }

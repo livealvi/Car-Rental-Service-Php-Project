@@ -39,7 +39,7 @@ foreach ($rents as $rent){
                 </font>
             </td>
             <td align="center" valign="top">
-                <a href="edit_booking_page.php">
+                <a href="edit_booking_page.php?id='. $rentId. '">
                     <button>
                         <font size="3" face="arial">Edit Booking</font>
                     </button>

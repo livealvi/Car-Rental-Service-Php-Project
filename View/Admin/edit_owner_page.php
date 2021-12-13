@@ -5,15 +5,17 @@ if(empty($_SESSION["user_name"]) || empty($_SESSION["user_type"]) || ($_SESSION[
 }
 
 if (isset($_GET['id'])) {
-    $ownerId = $_GET['id'];
+    $userId = $_GET['id'];
 }
-else $ownerId = "";
+else $userId = "";
+
+include '../../Controller/AdminController/edit_user_processor.php';
 ?>
 
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Add Car</title>
+    <title>Edit Owner</title>
     <link rel="stylesheet" href="css/admin_header.css">
     <link rel="stylesheet" href="css/admin_footer.css">
     <link rel="stylesheet" href="css/admin_side_panel.css">
@@ -46,7 +48,7 @@ else $ownerId = "";
                 </tr>
                 <tr>
                     <td align="center" valign="top">
-                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return editUser(<?php echo $ownerId ?>)">
+                        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return editUser(<?php echo $userId ?>)">
                             <table border="0" width="55%" cellpadding="20" cellspacing="0" align="center" bgcolor="#0077b6">
                                 <tr>
                                     <td>
@@ -58,7 +60,7 @@ else $ownerId = "";
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="user_name" id="userName" size="50">
+                                                    <input type="text" name="user_name" id="userName" size="50" value="<?php echo $user['user_name']?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -68,7 +70,7 @@ else $ownerId = "";
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="email" id="email" size="50">
+                                                    <input type="text" name="email" id="email" size="50" value="<?php echo $user['user_email']?>">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -78,7 +80,7 @@ else $ownerId = "";
                                                     </font>
                                                 </td>
                                                 <td width="70%">
-                                                    <input type="text" name="mobile_no" id="mobileNo" size="50">
+                                                    <input type="text" name="mobile_no" id="mobileNo" size="50" value="<?php echo $user['user_mobile']?>">
                                                 </td>
                                             </tr>
                                             <tr>
