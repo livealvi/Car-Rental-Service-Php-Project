@@ -136,6 +136,7 @@ include '../../../Controller/EmployeeController/dashboard/emp_dashboard_data_han
 
     <!--Footer inclusion-->
     <?php include '../emp_footer.php' ?>
+    <script src="../js/ajax.js"></script>
 </body>
 
 </html>

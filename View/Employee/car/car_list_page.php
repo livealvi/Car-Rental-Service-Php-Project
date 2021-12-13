@@ -70,6 +70,7 @@ include '../../../Controller/EmployeeController/car/car_list_handler.php';
 
     <!--Footer inclusion-->
     <?php include '../emp_footer.php' ?>
+    <script src="../js/ajax.js"></script>
 </body>
 
 </html>
