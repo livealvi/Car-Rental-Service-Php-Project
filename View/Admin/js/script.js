@@ -169,7 +169,7 @@ function editUser(editUserId){
         if(!testMobile(mobileNo)) valErr.push('Mobile no is not valid')
     }
 
-    if (reqErr.length === 0) {
+    if (reqErr.length === 0 && valErr.length === 0) {
         const userObj = {
             user_id: editUserId,
             archive_status: 'Not Archive',
