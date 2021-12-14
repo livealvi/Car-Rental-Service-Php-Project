@@ -26,9 +26,8 @@ function editUser(user_id) {
   let userName = document.getElementById("user_name").value;
   let email = document.getElementById("user_email").value;
   let mobileNo = document.getElementById("user_mobile").value;
-  let archiveStatus = (document.getElementById(
-    "archive_status"
-  ).checked = true);
+  let archiveStatus = document.getElementById("archive_status").checked;
+  console.log(archiveStatus);
 
   if (userName === "") req_err.push("username is required");
   else {
@@ -46,13 +45,16 @@ function editUser(user_id) {
   if (req_err.length === 0) {
     const userObj = {
       user_id: user_id,
-      archive_status: archiveStatus,
+      archive_status: document.getElementById("archive_status").checked
+        ? "Archive"
+        : "Not Archive",
       user_name: userName,
       user_email: email,
       user_mobile: mobileNo,
     };
     const userJSON = JSON.stringify(userObj);
     console.log(userJSON);
+
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -63,20 +65,21 @@ function editUser(user_id) {
           alert("User Information Could Not Be Edited");
           window.location.reload();
         }
-      } else {
-        setTimeout(function () {
-          alert("An Unexpected Error Has Occurred");
-        }, 10000);
-        console.log(this.status);
       }
+      // else {
+      //     setTimeout(function() {}, 10000);
+      //     alert("An Unexpected Error Has Occurred");
+      //     console.log(this.status);
+      // }
     };
     xhttp.open(
       "POST",
-      "/project/Car-Rental-Service/Controller/EmployeeController/renter/edit_renter_list_handler.php",
+      "/project/Car-Rental-Service/Controller/EmployeeController/edit_renter_controller.php",
       true
     );
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("x=" + userJSON);
+
     return false;
   } else {
     let list = document.createElement("ul");
@@ -214,6 +217,11 @@ function search_renter() {
   xhttp.send();
 }
 
+function clearSearchRenter() {
+  document.getElementById("search_renter").value = "";
+  search_renter();
+}
+
 function search_owner() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
@@ -275,9 +283,73 @@ function search_owner() {
   xhttp.send();
 }
 
-function clearQuery() {
-  document.getElementById("search_renter").value = "";
+function clearSearchOwner() {
   document.getElementById("search_owner").value = "";
-  search_renter();
   search_owner();
+}
+
+function search_car() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      if (this.responseText === "reset") {
+        window.location.reload();
+        return;
+      }
+
+      console.log(this.responseText);
+
+      let table = document.getElementById("car_table");
+      let rows = table.rows.length;
+
+      for (let i = rows - 1; i > 0; i--) {
+        table.deleteRow(i);
+      }
+
+      if (this.responseText === "empty") {
+        document.getElementById("msg").innerHTML = "No Car Found";
+        return;
+      }
+
+      document.getElementById("msg").innerHTML = "";
+
+      let result = JSON.parse(this.responseText);
+
+      console.log(result);
+
+      for (let i = 0; i < result.length; i++) {
+        let row = table.insertRow(i + 1);
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        let cell3 = row.insertCell(2);
+        let cell4 = row.insertCell(3);
+        let cell5 = row.insertCell(4);
+        let cell6 = row.insertCell(5);
+        let cell7 = row.insertCell(6);
+
+        cell1.innerHTML = result[i].car_id;
+        cell2.innerHTML = result[i].car_model_name;
+        cell3.innerHTML = result[i].owner_id;
+        cell4.innerHTML = result[i].car_reg_no;
+        cell5.innerHTML = result[i].is_available;
+        cell6.innerHTML = result[i].car_img_url;
+        "<img width='75' height='75' src='" +
+          result[i].user_img_url +
+          "'  alt='' />";
+        cell7.innerHTML = "btn";
+      }
+    }
+  };
+  xhttp.open(
+    "GET",
+    "/project/Car-Rental-Service/Controller/EmployeeController/search_car_controller.php?query=" +
+      document.getElementById("search_car").value,
+    true
+  );
+  xhttp.send();
+}
+
+function clearSearchCar() {
+  document.getElementById("search_car").value = "";
+  search_car();
 }

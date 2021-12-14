@@ -93,3 +93,13 @@ function delete_car($car_id)
     $result = $con_obj->query("DELETE FROM Car WHERE car_id='$car_id'");
     return $result;
 }
+
+//function to search
+function search_car($car)
+{
+    $connection = new db();
+    $con_obj = $connection->open_con();
+
+    $result = $con_obj->query(" SELECT * FROM Car WHERE car_id like '%" . $car . "%' or owner_id like '%" . $car . "%' or car_model_name like '%" . $car . "%' or car_reg_no like '%" . $car . "%' or is_available like '%" . $car . "%' ");
+    return $result;
+}

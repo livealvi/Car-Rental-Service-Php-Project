@@ -122,6 +122,8 @@ function update_user($user_id, $user_name, $user_email, $user_mobile, $archive_s
 
     $sql = "UPDATE User SET user_name='$user_name', user_email='$user_email',  user_mobile='$user_mobile', archive_status='$archive_status' WHERE user_id='$user_id'";
 
+    return $con_obj->query($sql);
+
     if ($con_obj->query($sql) === TRUE) {
         $result = TRUE;
     } else {

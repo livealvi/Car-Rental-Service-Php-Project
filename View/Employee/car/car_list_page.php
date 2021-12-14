@@ -47,10 +47,14 @@ include '../../../Controller/EmployeeController/car/car_list_handler.php';
                     </div>
                 </div>
 
+                <div class="search">
+                    <input class="input-search" type="text" name="search_car" id="search_car" onkeyup="search_car()" placeholder="Search Car">
+                    <button class="button btn-orange" onclick="clearSearchCar()">Clear</button>
 
+                </div>
 
                 <div class="car-list">
-                    <table>
+                    <table id="car_table">
                         <tr>
                             <th>Car ID</th>
                             <th>Car Model Name</th>
@@ -63,6 +67,9 @@ include '../../../Controller/EmployeeController/car/car_list_handler.php';
                         <?php include '../../../Controller/EmployeeController/car/car_list_processor.php' ?>
 
                     </table>
+                    <div class="search-message">
+                        <h1 id="msg"></h1>
+                    </div>
                 </div>
             </div>
         </div>

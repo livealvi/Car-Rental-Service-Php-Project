@@ -1,5 +1,5 @@
 <?php
-//header("Content-Type: application/json; charset=UTF-8");
+
 include '../../../Model/User_data_access.php';
 include __DIR__ . '/../validator/user_validate.php';
 
@@ -11,10 +11,12 @@ $not_archive = "";
 $req_err = []; //stores errors if a required field is empty
 $val_err = []; //stores errors if input is not valid
 
+$id = $_GET['ids'];
+
 $userQuery = find_user_by_id($id);
 
 if ($userQuery->num_rows > 0) {
-    // output data of each row
+
     while ($row = $userQuery->fetch_assoc()) {
 
         $user_id = $row["user_id"];
@@ -31,7 +33,6 @@ if ($userQuery->num_rows > 0) {
     echo "0 results";
 }
 
-
 // if ((isset($_POST['update']))) {
 
 //     $userQuery = update_user($_POST['user_id'], $_POST['user_name'], $_POST['user_email'], $_POST['user_mobile'], $_POST['archive_status']);
@@ -42,10 +43,3 @@ if ($userQuery->num_rows > 0) {
 //         array_push($val_err, "Could not update");
 //     }
 // }
-
-
-$obj = json_decode($_POST["x"], false);
-
-$success = update_user($obj->user_id, $obj->user_name, $obj->user_email, $obj->user_mobile, $obj->archive_status);
-if ($success) echo 'successful';
-else echo 'failed';
